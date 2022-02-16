@@ -1,2 +1,19 @@
 # files generated during the lubuild process
 generated/
+**/node_modules
+
+*.js.map
+.env
+.history
+.config/.env.local
+build
+dist
+**/.DS_Store
+.nyc_output
+# Local .terraform directories
+**/.terraform/*
+!example.json
+*.pfx
+# .tfstate files
+*.tfstate
+*.tfstate.*
