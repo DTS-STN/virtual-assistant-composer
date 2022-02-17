@@ -9,14 +9,14 @@ environments:
 
 releases:
 
-  - name: oasubapi-{{ requiredEnv "BRANCH" }}
-    chart: ../helm/charts/oas-unblock-bot-bdm-dev
-    namespace: oas-ub-{{ requiredEnv "BRANCH" }}
+  - name: varayapi-{{ requiredEnv "BRANCH" }}
+    chart: ../helm/charts/va-ray-bot-bdm-dev
+    namespace: va-ray-{{ requiredEnv "BRANCH" }}
     values:
-      - overrides/oas-unblock-bot-bdm-dev-api.yaml.gotmpl
+      - overrides/va-ray-bot-bdm-dev-api.yaml.gotmpl
     labels:
         category: prototype
-        app: oas-unblock-bot-bdm-dev
+        app: va-av-ray-mvp
         tier: api
     wait: false
     installed: true
