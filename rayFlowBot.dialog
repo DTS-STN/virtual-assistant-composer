@@ -44,14 +44,6 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "Eb0TOi"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "service-updateEmail"
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
                     "id": "kxdpWm"
                   },
                   "activityProcessed": true,

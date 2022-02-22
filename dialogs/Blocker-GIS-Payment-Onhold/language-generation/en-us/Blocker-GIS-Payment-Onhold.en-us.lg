@@ -46,21 +46,6 @@ I realize that my personal information is governed by the Privacy Act and may be
     Text = ${ChoiceInput_Prompt_KsCK9C_text()}
 ]
 
-# ChoiceInput_InvalidPrompt_KsCK9C_text()
-- Test text for GIS blocker rorr invalid prompt
-# ChoiceInput_InvalidPrompt_KsCK9C()
-[Activity
-    Text = ${ChoiceInput_InvalidPrompt_KsCK9C_text()}
-]
-
-# ChoiceInput_DefaultValueResponse_KsCK9C_text()
-- Error handling in progress
-- Test text for errors 
-# ChoiceInput_DefaultValueResponse_KsCK9C()
-[Activity
-    Text = ${ChoiceInput_DefaultValueResponse_KsCK9C_text()}
-]
-
 # SendActivity_bseUqk_text()
 - ```Ok, let's see. Every year, we review your income tax filing to see what your Guaranteed Income Supplement should be. We don't have a tax filing for you from 2020\-2021. That's why your payments have been suspended.
 ```

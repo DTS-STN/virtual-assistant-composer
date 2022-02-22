@@ -23,8 +23,8 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 1,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_KsCK9C()}",
           "choiceOptions": {
@@ -43,9 +43,31 @@
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
+          }
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "d650ZA"
           },
-          "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_KsCK9C()}",
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_KsCK9C()}"
+          "condition": "=dialog.GISFlowChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "tuI8Po"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "RezJMQ"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",
