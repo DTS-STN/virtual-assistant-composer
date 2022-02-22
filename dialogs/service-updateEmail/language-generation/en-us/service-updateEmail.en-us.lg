@@ -13,4 +13,4 @@
 ]
 
 # TextInput_InvalidPrompt_UKCgwj_text()
-- ${this.value} is not a valid email, please try again.
+- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.

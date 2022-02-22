@@ -1,0 +1,38 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "j1Gj1u",
+    "name": "error-userError-Response",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "y074j0"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "aaWSMM"
+          },
+          "activity": "${SendActivity_aaWSMM()}"
+        },
+        {
+          "$kind": "Microsoft.EndTurn",
+          "$designer": {
+            "id": "jIfiyM"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "error-userError-Response.lg",
+  "recognizer": "error-userError-Response.lu.qna",
+  "id": "error-userError-Response"
+}

@@ -30,39 +30,59 @@
             "id": "UKCgwj"
           },
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "property": "user.userEmail",
           "prompt": "${TextInput_Prompt_UKCgwj()}",
           "validations": [
             "isMatch(this.value, '^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$')"
           ],
-          "invalidPrompt": "${TextInput_InvalidPrompt_UKCgwj()}"
+          "invalidPrompt": "${TextInput_InvalidPrompt_UKCgwj()}",
+          "unrecognizedPrompt": "${TextInput_UnrecognizedPrompt_UKCgwj()}"
         },
         {
-          "$kind": "Microsoft.HttpRequest",
+          "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "aiv8NS"
+            "id": "pxxiih"
           },
-          "resultProperty": "turn.results",
-          "body": {
-            "records": [
-              {
-                "id": "recrzEemVpbkeFE5C",
-                "fields": {
-                  "Employer Contact Email": "${user.userEmail}"
-                }
-              }
-            ]
-          },
-          "method": "PATCH",
-          "url": "https://api.airtable.com/v0/apprmDv9NMLgnZBuV/EI%20Data",
-          "headers": {
-            "Authorization": "Bearer key5vC3ALZrd3PHPG"
-          },
-          "responseType": "json",
-          "contentType": "application/json"
+          "condition": "=user.userEmail",
+          "actions": [
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "DYyEqb"
+              },
+              "resultProperty": "turn.results",
+              "body": {
+                "records": [
+                  {
+                    "id": "recrzEemVpbkeFE5C",
+                    "fields": {
+                      "Employer Contact Email": "${user.userEmail}"
+                    }
+                  }
+                ]
+              },
+              "method": "PATCH",
+              "url": "https://api.airtable.com/v0/apprmDv9NMLgnZBuV/EI%20Data",
+              "headers": {
+                "Authorization": "Bearer key5vC3ALZrd3PHPG"
+              },
+              "responseType": "json",
+              "contentType": "application/json"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "gORMlk"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            }
+          ]
         }
       ]
     }

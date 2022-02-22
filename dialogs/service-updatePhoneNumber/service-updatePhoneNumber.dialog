@@ -30,38 +30,56 @@
             "id": "SDugR7"
           },
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "property": "user.userPhoneNumber",
           "prompt": "${TextInput_Prompt_SDugR7()}"
         },
         {
-          "$kind": "Microsoft.HttpRequest",
+          "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "r4FEmR"
+            "id": "8lCEG9"
           },
-          "resultProperty": "turn.results",
-          "body": {
-            "records": [
-              {
-                "id": "recrzEemVpbkeFE5C",
-                "fields": {
-                  "Callback Phone Number": "${user.userPhoneNumber}"
-                }
-              }
-            ]
-          },
-          "method": "PATCH",
-          "url": "https://api.airtable.com/v0/apprmDv9NMLgnZBuV/EI%20Data",
-          "headers": {
-            "Authorization": "Bearer key5vC3ALZrd3PHPG"
-          },
-          "responseType": "json",
-          "contentType": "application/json"
+          "condition": "=user.userPhoneNumber",
+          "actions": [
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "ym3LEY"
+              },
+              "resultProperty": "turn.results",
+              "body": {
+                "records": [
+                  {
+                    "id": "recrzEemVpbkeFE5C",
+                    "fields": {
+                      "Callback Phone Number": "${user.userPhoneNumber}"
+                    }
+                  }
+                ]
+              },
+              "method": "PATCH",
+              "url": "https://api.airtable.com/v0/apprmDv9NMLgnZBuV/EI%20Data",
+              "headers": {
+                "Authorization": "Bearer key5vC3ALZrd3PHPG"
+              },
+              "responseType": "json",
+              "contentType": "application/json"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "11cYbW"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            }
+          ]
         }
       ]
     }
