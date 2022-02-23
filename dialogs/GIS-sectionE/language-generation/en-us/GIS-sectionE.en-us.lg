@@ -36,14 +36,6 @@
     Text = ${ChoiceInput_InvalidPrompt_oV9zx0_text()}
 ]
 
-# ChoiceInput_DefaultValueResponse_oV9zx0_text()
-- Error handling in progress
-- Test text for errors 
-# ChoiceInput_DefaultValueResponse_oV9zx0()
-[Activity
-    Text = ${ChoiceInput_DefaultValueResponse_oV9zx0_text()}
-]
-
 # SendActivity_xE0FcH()
 [Activity
     Text = ${SendActivity_xE0FcH_text()}

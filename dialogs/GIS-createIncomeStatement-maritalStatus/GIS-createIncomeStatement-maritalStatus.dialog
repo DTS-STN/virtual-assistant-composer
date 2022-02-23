@@ -23,13 +23,12 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_qTyq0n()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -42,7 +41,35 @@
             "No"
           ],
           "property": "dialog.GIS.newIncomeStatement.martialStatus",
-          "style": "heroCard"
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          }
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "kzqER6"
+          },
+          "condition": "=dialog.GIS.newIncomeStatement.martialStatus",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "A3HnxV"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "d7mUS7"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -58,13 +85,11 @@
               },
               "defaultLocale": "en-us",
               "disabled": false,
-              "maxTurnCount": 3,
-              "alwaysPrompt": false,
+              "maxTurnCount": 2,
+              "alwaysPrompt": true,
               "allowInterruptions": false,
               "prompt": "${ChoiceInput_Prompt_3JRbEn()}",
               "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": "",
               "choiceOptions": {
                 "includeNumbers": true,
                 "inlineOrMore": ", or ",
@@ -78,6 +103,30 @@
               ],
               "property": "dialog.GIS.newIncomeStatement.martialConfirm",
               "style": "heroCard"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "NW6rdV"
+              },
+              "condition": "=dialog.GIS.newIncomeStatement.martialConfirm",
+              "actions": [],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "MnPI7V"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "error-userError-Response"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "upJCK2"
+                  }
+                }
+              ]
             },
             {
               "$kind": "Microsoft.IfCondition",

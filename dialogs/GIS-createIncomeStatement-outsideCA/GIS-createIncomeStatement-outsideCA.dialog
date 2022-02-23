@@ -23,8 +23,8 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_COcmjQ()}",
           "unrecognizedPrompt": "",
@@ -43,8 +43,33 @@
           "property": "dialog.GIS.newIncomeStatement.inCAChoice",
           "style": "heroCard",
           "recognizerOptions": {
-            "recognizeOrdinals": true
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
           }
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "Jx8Rs7"
+          },
+          "condition": "=dialog.GIS.newIncomeStatement.inCAChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "psm9kV"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "jLkCtD"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -60,8 +85,8 @@
               },
               "defaultLocale": "en-us",
               "disabled": false,
-              "maxTurnCount": 3,
-              "alwaysPrompt": false,
+              "maxTurnCount": 2,
+              "alwaysPrompt": true,
               "allowInterruptions": false,
               "prompt": "${ChoiceInput_Prompt_nnkiVa()}",
               "unrecognizedPrompt": "",
@@ -81,6 +106,30 @@
               "recognizerOptions": {
                 "recognizeOrdinals": true
               }
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "2P3dJf"
+              },
+              "condition": "=dialog.GIS.newIncomeStatement.liveAbroad",
+              "actions": [],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "IjmlaC"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "error-userError-Response"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "pcv8Ta"
+                  }
+                }
+              ]
             },
             {
               "$kind": "Microsoft.IfCondition",
