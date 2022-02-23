@@ -43,7 +43,8 @@
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
-          }
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_KsCK9C()}"
         },
         {
           "$kind": "Microsoft.IfCondition",

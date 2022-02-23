@@ -108,3 +108,10 @@ Because you have declared $0, you can expect to receive the maximum GIS payment,
 
 # SendActivity_SrFvlw_text()
 - <Show user "Ray" Sub flow - receive by email statement of income>
+# ChoiceInput_InvalidPrompt_KsCK9C()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_KsCK9C_text()}
+]
+
+# ChoiceInput_InvalidPrompt_KsCK9C_text()
+- Hmm. I'm not sure what you meant. Do you want me to hep with Guaranteed Income Supplement payments?
