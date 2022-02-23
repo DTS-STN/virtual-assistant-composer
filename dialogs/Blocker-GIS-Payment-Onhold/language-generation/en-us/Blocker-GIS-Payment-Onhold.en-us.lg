@@ -115,3 +115,17 @@ Because you have declared $0, you can expect to receive the maximum GIS payment,
 
 # ChoiceInput_InvalidPrompt_KsCK9C_text()
 - Hmm. I'm not sure what you meant. Do you want me to hep with Guaranteed Income Supplement payments?
+# ChoiceInput_InvalidPrompt_hPpLlR()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_hPpLlR_text()}
+]
+
+# ChoiceInput_InvalidPrompt_hPpLlR_text()
+- Hmm, I'm not sure what you meant. Do you agree with this declaration? 
+# ChoiceInput_InvalidPrompt_Q8yLjp()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_Q8yLjp_text()}
+]
+
+# ChoiceInput_InvalidPrompt_Q8yLjp_text()
+- Hmm, I'm not sure what you meant. Do you want to continue and create a statement of income for you?

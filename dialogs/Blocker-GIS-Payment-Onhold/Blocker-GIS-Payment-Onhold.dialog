@@ -104,7 +104,6 @@
               "allowInterruptions": false,
               "prompt": "${ChoiceInput_Prompt_Q8yLjp()}",
               "unrecognizedPrompt": "",
-              "invalidPrompt": "",
               "choiceOptions": {
                 "includeNumbers": true,
                 "inlineOrMore": ", or ",
@@ -121,7 +120,8 @@
               "recognizerOptions": {
                 "recognizeOrdinals": true,
                 "recognizeNumbers": true
-              }
+              },
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_Q8yLjp()}"
             },
             {
               "$kind": "Microsoft.IfCondition",
@@ -272,8 +272,7 @@
                                   "maxTurnCount": 2,
                                   "alwaysPrompt": true,
                                   "allowInterruptions": false,
-                                  "unrecognizedPrompt": "",
-                                  "invalidPrompt": "",
+                                  "invalidPrompt": "${ChoiceInput_InvalidPrompt_hPpLlR()}",
                                   "prompt": "${ChoiceInput_Prompt_hPpLlR()}",
                                   "choiceOptions": {
                                     "includeNumbers": true,
@@ -289,7 +288,8 @@
                                   "recognizerOptions": {
                                     "recognizeOrdinals": true,
                                     "recognizeNumbers": true
-                                  }
+                                  },
+                                  "validations": []
                                 },
                                 {
                                   "$kind": "Microsoft.IfCondition",

@@ -45,14 +45,15 @@
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
-          }
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_A4GRgh()}"
         },
         {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
             "id": "0H2yEI"
           },
-          "condition": "=dialog.subMenu.UpdateContactInfoChoice",
+          "condition": "=dialog.subMenu.UpdateContactInfoChoice || dialog.subMenu.UpdateContactInfoChoice ==0",
           "actions": [],
           "elseActions": [
             {

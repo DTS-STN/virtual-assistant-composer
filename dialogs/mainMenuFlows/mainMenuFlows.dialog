@@ -23,12 +23,9 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -43,7 +40,37 @@
           ],
           "outputFormat": "index",
           "property": "dialog.mainMenuChoice",
-          "style": "heroCard"
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_LdcDJr()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_LdcDJr()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "eaLBW7"
+          },
+          "condition": "=dialog.mainMenuChoice || dialog.mainMenuChoice==0",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "bxTXAr"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "7D9G7C"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.SwitchCondition",
@@ -62,12 +89,10 @@
                   },
                   "defaultLocale": "en-us",
                   "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
+                  "maxTurnCount": 2,
+                  "alwaysPrompt": true,
                   "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "defaultValueResponse": "",
+                  "invalidPrompt": "${ChoiceInput_InvalidPrompt_ZIZ7ry()}",
                   "choiceOptions": {
                     "includeNumbers": true,
                     "inlineOrMore": ", or ",
@@ -83,7 +108,35 @@
                   ],
                   "outputFormat": "index",
                   "property": "dialog.mainMenuChoice",
-                  "style": "heroCard"
+                  "style": "heroCard",
+                  "recognizerOptions": {
+                    "recognizeOrdinals": true,
+                    "recognizeNumbers": true
+                  }
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "dGsK5G"
+                  },
+                  "condition": "=dialog.mainMenuChoice || dialog.mainMenuChoice ==0",
+                  "actions": [],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "gNQCcO"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "error-userError-Response"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "bnTC3M"
+                      }
+                    }
+                  ]
                 }
               ]
             },

@@ -7,3 +7,10 @@
 
 # ChoiceInput_Prompt_A4GRgh_text()
 - Alright, I can help you with that. Which would you like to do?
+# ChoiceInput_InvalidPrompt_A4GRgh()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_A4GRgh_text()}
+]
+
+# ChoiceInput_InvalidPrompt_A4GRgh_text()
+- Hmm, I'm no sure what you meant. What do you want to update today?
