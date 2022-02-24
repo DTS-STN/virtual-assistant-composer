@@ -27,8 +27,6 @@
           "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_qTyq0n()}",
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -45,7 +43,8 @@
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
-          }
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_qTyq0n()}"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -102,7 +101,12 @@
                 "No"
               ],
               "property": "dialog.GIS.newIncomeStatement.martialConfirm",
-              "style": "heroCard"
+              "style": "heroCard",
+              "recognizerOptions": {
+                "recognizeOrdinals": true,
+                "recognizeNumbers": true
+              },
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_3JRbEn()}"
             },
             {
               "$kind": "Microsoft.IfCondition",

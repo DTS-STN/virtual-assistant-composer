@@ -31,3 +31,18 @@ Would you like me to set up a call for you?```
 [Activity
     Text = ${SendActivity_OdCcP4_text()}
 ]
+
+# ChoiceInput_InvalidPrompt_qTyq0n()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_qTyq0n_text()}
+]
+
+# ChoiceInput_InvalidPrompt_qTyq0n_text()
+- Hmm, I'm not sure what you meant. Has your marital status changed in 2020?
+# ChoiceInput_InvalidPrompt_3JRbEn()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_3JRbEn_text()}
+]
+
+# ChoiceInput_InvalidPrompt_3JRbEn_text()
+- Hmm, I'm not sure what you meant. Would you like me to set up a call for you?

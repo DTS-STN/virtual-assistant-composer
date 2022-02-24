@@ -103,7 +103,6 @@
               "alwaysPrompt": true,
               "allowInterruptions": false,
               "prompt": "${ChoiceInput_Prompt_Q8yLjp()}",
-              "unrecognizedPrompt": "",
               "choiceOptions": {
                 "includeNumbers": true,
                 "inlineOrMore": ", or ",
