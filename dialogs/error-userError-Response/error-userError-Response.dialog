@@ -17,6 +17,25 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "7ePujk",
+            "comment": "If the user has started the GIS statement flow the createStatement condition should be set to false."
+          },
+          "condition": "=user.GIS.createStatementIsValid",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "d91QDo",
+                "comment": ""
+              },
+              "property": "user.GIS.createStatementIsValid",
+              "value": false
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "aaWSMM"
