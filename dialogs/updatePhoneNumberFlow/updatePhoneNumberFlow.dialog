@@ -37,7 +37,6 @@
           "prompt": "${ChoiceInput_Prompt_S5owCt()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -50,7 +49,10 @@
             "No"
           ],
           "property": "dialog.updatePhoneNumberChoice",
-          "outputFormat": "value"
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          }
         },
         {
           "$kind": "Microsoft.IfCondition",

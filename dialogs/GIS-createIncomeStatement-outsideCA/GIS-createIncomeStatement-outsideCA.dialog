@@ -28,7 +28,6 @@
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_COcmjQ()}",
           "unrecognizedPrompt": "",
-          "invalidPrompt": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -45,7 +44,8 @@
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
-          }
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_COcmjQ()}"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -89,7 +89,6 @@
               "alwaysPrompt": true,
               "allowInterruptions": false,
               "prompt": "${ChoiceInput_Prompt_nnkiVa()}",
-              "unrecognizedPrompt": "",
               "choiceOptions": {
                 "includeNumbers": true,
                 "inlineOrMore": ", or ",
@@ -104,8 +103,10 @@
               "property": "dialog.GIS.newIncomeStatement.liveAbroad",
               "style": "heroCard",
               "recognizerOptions": {
-                "recognizeOrdinals": true
-              }
+                "recognizeOrdinals": true,
+                "recognizeNumbers": true
+              },
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_nnkiVa()}"
             },
             {
               "$kind": "Microsoft.IfCondition",

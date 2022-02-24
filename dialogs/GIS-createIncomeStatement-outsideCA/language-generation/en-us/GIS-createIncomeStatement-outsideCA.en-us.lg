@@ -24,3 +24,18 @@ Would you like me to set up a call for you?```
 [Activity
     Text = ${SendActivity_nUpexy_text()}
 ]
+
+# ChoiceInput_InvalidPrompt_COcmjQ()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_COcmjQ_text()}
+]
+
+# ChoiceInput_InvalidPrompt_COcmjQ_text()
+- Hmm, I'm not sure what you meant. Did you live outside of Canada for more than 6 motnhs in the last year and a half?
+# ChoiceInput_InvalidPrompt_nnkiVa()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_nnkiVa_text()}
+]
+
+# ChoiceInput_InvalidPrompt_nnkiVa_text()
+- Hmm, I'm not sure what you meant. Would you like me to set up a call for you?

@@ -44,7 +44,6 @@
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_mRYyQq()}",
           "invalidPrompt": "${ChoiceInput_InvalidPrompt_mRYyQq()}"
         },
         {

@@ -8,18 +8,10 @@
 ]
 
 # ChoiceInput_InvalidPrompt_mRYyQq_text()
-- Test text for GIS blocker rorr invalid prompt
+- Hmm, I'm not sure what you meant. Did your income change in 2020?
 # ChoiceInput_InvalidPrompt_mRYyQq()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_mRYyQq_text()}
-]
-
-# ChoiceInput_DefaultValueResponse_mRYyQq_text()
-- Error handling in progress
-- Test text for errors 
-# ChoiceInput_DefaultValueResponse_mRYyQq()
-[Activity
-    Text = ${ChoiceInput_DefaultValueResponse_mRYyQq_text()}
 ]
 
 # ChoiceInput_Prompt_oV9zx0_text()
@@ -30,7 +22,7 @@
 ]
 
 # ChoiceInput_InvalidPrompt_oV9zx0_text()
-- Test text for GIS blocker rorr invalid prompt
+- Hmm, I'm not sure what you meant. Did you work in 2020?
 # ChoiceInput_InvalidPrompt_oV9zx0()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_oV9zx0_text()}
