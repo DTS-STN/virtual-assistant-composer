@@ -34,9 +34,9 @@
           },
           "prompt": "${ChoiceInput_Prompt_LdcDJr()}",
           "choices": [
-            "I have a question about my Old Age Security pension.",
-            "I want to update my personal information.",
-            "I have a question about my suspended Gaurenteed Income Supplement (GIS)"
+            "I have a question about my Gaurenteed Income Supplement (GIS)",
+            "I have a question about my Old Age Security pension",
+            "I want to update my personal information"
           ],
           "outputFormat": "index",
           "property": "dialog.mainMenuChoice",
@@ -81,6 +81,19 @@
           "cases": [
             {
               "value": "0",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "xmq7Bv"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "GIS-StatusUpdateFlow"
+                }
+              ]
+            },
+            {
+              "value": "1",
               "actions": [
                 {
                   "$kind": "Microsoft.ChoiceInput",
@@ -141,7 +154,7 @@
               ]
             },
             {
-              "value": "1",
+              "value": "2",
               "actions": [
                 {
                   "$kind": "Microsoft.BeginDialog",
@@ -150,19 +163,6 @@
                   },
                   "activityProcessed": true,
                   "dialog": "submenu-updatePersonalInfo"
-                }
-              ]
-            },
-            {
-              "value": "2",
-              "actions": [
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "xmq7Bv"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "GIS-StatusUpdateFlow"
                 }
               ]
             }
