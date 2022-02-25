@@ -1,9 +1,17 @@
 [import](common.lg)
 
-# SendActivity_rOKWgu()
+# SendActivity_vtZIvE()
 [Activity
-    Text = ${SendActivity_rOKWgu_text()}
+    Text = ${SendActivity_vtZIvE_text()}
 ]
 
-# SendActivity_rOKWgu_text()
-- <TODO Rate us dialog>
+# SendActivity_vtZIvE_text()
+- Thank you for your time!
+# TextInput_Prompt_dm42Zg()
+[Activity
+    Text = ${TextInput_Prompt_dm42Zg_text()}
+]
+
+# TextInput_Prompt_dm42Zg_text()
+- ```Before you go, could I ask you to rate the service you received today?
+1=😡, 2=🙁, 3=😐, 4=🙂, 5=😄```
