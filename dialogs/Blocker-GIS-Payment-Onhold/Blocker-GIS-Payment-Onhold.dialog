@@ -471,7 +471,6 @@
                                           "maxTurnCount": 2,
                                           "alwaysPrompt": true,
                                           "allowInterruptions": false,
-                                          "unrecognizedPrompt": "",
                                           "prompt": "${ChoiceInput_Prompt_hb8N5J()}",
                                           "choiceOptions": {
                                             "includeNumbers": true,
