@@ -129,3 +129,22 @@ Because you have declared $0, you can expect to receive the maximum GIS payment,
 
 # ChoiceInput_InvalidPrompt_Q8yLjp_text()
 - Hmm, I'm not sure what you meant. Do you want to continue and create a statement of income for you?
+# ChoiceInput_InvalidPrompt_VUiSqC()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_VUiSqC_text()}
+]
+
+# ChoiceInput_InvalidPrompt_VUiSqC_text()
+- Hmm, I'm not sure what you meant. Do you want to receive a copy of your statement of income by email?
+# ChoiceInput_InvalidPrompt_hb8N5J()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_hb8N5J_text()}
+]
+
+# ChoiceInput_InvalidPrompt_hb8N5J_text()
+- ```Hmm, I'm not sure what you meant. Is this the correct email address?
+```
+- ```test
+testy
+```
+- tset

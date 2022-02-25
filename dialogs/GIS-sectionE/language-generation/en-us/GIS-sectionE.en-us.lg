@@ -141,17 +141,10 @@
 # SendActivity_A79RBx_text()
 - Great! I have added this information to your statement.
 # ChoiceInput_Prompt_susoQp_text()
-- Now, did you earn income from your investments in 2020?
+- Did you earn income from your investments in 2020?
 # ChoiceInput_Prompt_susoQp()
 [Activity
     Text = ${ChoiceInput_Prompt_susoQp_text()}
-]
-
-# ChoiceInput_InvalidPrompt_susoQp_text()
-- Test text for GIS blocker rorr invalid prompt
-# ChoiceInput_InvalidPrompt_susoQp()
-[Activity
-    Text = ${ChoiceInput_InvalidPrompt_susoQp_text()}
 ]
 
 # ChoiceInput_DefaultValueResponse_susoQp_text()
@@ -384,3 +377,10 @@
 
 # SendActivity_BhMFzS_text()
 - Ok, I have added this information to your statement.
+# ChoiceInput_InvalidPrompt_susoQp()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_susoQp_text()}
+]
+
+# ChoiceInput_InvalidPrompt_susoQp_text()
+- Hmm, I'm not sure what you meant. Did you make income on investments in 2020?

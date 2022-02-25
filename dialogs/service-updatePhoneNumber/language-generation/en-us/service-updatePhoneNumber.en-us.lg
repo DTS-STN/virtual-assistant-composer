@@ -6,3 +6,11 @@
 [Activity
     Text = ${TextInput_Prompt_SDugR7_text()}
 ]
+
+# TextInput_InvalidPrompt_SDugR7()
+[Activity
+    Text = ${TextInput_InvalidPrompt_SDugR7_text()}
+]
+
+# TextInput_InvalidPrompt_SDugR7_text()
+- Oops, looks like the phone number you entered isn't formatted correctly (here's an example: 123-456-7890). Let's try again.

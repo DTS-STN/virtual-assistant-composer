@@ -27,7 +27,6 @@
           "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_COcmjQ()}",
-          "unrecognizedPrompt": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",

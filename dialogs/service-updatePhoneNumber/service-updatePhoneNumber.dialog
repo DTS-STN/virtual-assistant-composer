@@ -34,9 +34,12 @@
           "alwaysPrompt": true,
           "allowInterruptions": false,
           "unrecognizedPrompt": "",
-          "invalidPrompt": "",
+          "invalidPrompt": "${TextInput_InvalidPrompt_SDugR7()}",
           "property": "user.userPhoneNumber",
-          "prompt": "${TextInput_Prompt_SDugR7()}"
+          "prompt": "${TextInput_Prompt_SDugR7()}",
+          "validations": [
+            "isMatch(this.value, '^[(]?[0-9]{3}[)]?[ ,-]?[0-9]{3}[ ,-]?[0-9]{4}$')"
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",

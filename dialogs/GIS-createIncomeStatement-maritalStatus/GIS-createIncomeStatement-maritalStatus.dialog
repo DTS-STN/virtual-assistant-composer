@@ -88,7 +88,6 @@
               "alwaysPrompt": true,
               "allowInterruptions": false,
               "prompt": "${ChoiceInput_Prompt_3JRbEn()}",
-              "unrecognizedPrompt": "",
               "choiceOptions": {
                 "includeNumbers": true,
                 "inlineOrMore": ", or ",

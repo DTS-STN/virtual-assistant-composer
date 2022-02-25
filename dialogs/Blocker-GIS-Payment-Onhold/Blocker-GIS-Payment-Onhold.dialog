@@ -411,7 +411,6 @@
                                       "maxTurnCount": 2,
                                       "alwaysPrompt": true,
                                       "allowInterruptions": false,
-                                      "unrecognizedPrompt": "",
                                       "prompt": "${ChoiceInput_Prompt_VUiSqC()}",
                                       "choiceOptions": {
                                         "includeNumbers": true,
@@ -426,8 +425,10 @@
                                       "property": "dialog.requestEmailCopyIncomeStatementChoice",
                                       "style": "heroCard",
                                       "recognizerOptions": {
-                                        "recognizeOrdinals": true
-                                      }
+                                        "recognizeOrdinals": true,
+                                        "recognizeNumbers": true
+                                      },
+                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_VUiSqC()}"
                                     },
                                     {
                                       "$kind": "Microsoft.IfCondition",
@@ -483,7 +484,12 @@
                                             "No"
                                           ],
                                           "property": "dialog.isYourEmailChoice",
-                                          "style": "heroCard"
+                                          "style": "heroCard",
+                                          "recognizerOptions": {
+                                            "recognizeOrdinals": true,
+                                            "recognizeNumbers": true
+                                          },
+                                          "invalidPrompt": "${ChoiceInput_InvalidPrompt_hb8N5J()}"
                                         },
                                         {
                                           "$kind": "Microsoft.IfCondition",

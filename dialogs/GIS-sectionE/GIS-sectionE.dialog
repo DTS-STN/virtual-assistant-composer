@@ -155,9 +155,11 @@
                 {
                   "$kind": "Microsoft.Ask",
                   "$designer": {
-                    "id": "8CQK0v"
+                    "id": "8CQK0v",
+                    "comment": "TODO: needs error handling"
                   },
-                  "activity": "${Ask_Activity_8CQK0v()}"
+                  "activity": "${Ask_Activity_8CQK0v()}",
+                  "expectedProperties": []
                 }
               ],
               "condition": "=dialog.GISDidWorkChoice==\"Yes\""
@@ -211,8 +213,8 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 1,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_susoQp()}",
           "choiceOptions": {
@@ -234,6 +236,30 @@
           },
           "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_susoQp()}",
           "invalidPrompt": "${ChoiceInput_InvalidPrompt_susoQp()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "CWmGhK"
+          },
+          "condition": "=dialog.GISDidEarnInvestmentsChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "IlxolQ"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "urBMtm"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",
