@@ -159,10 +159,10 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "cNBTSy"
+                    "id": "oK7Xkf"
                   },
                   "activityProcessed": true,
-                  "dialog": "submenu-updatePersonalInfo"
+                  "dialog": "submenu-updateContactDetails"
                 }
               ]
             }
