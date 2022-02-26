@@ -19,7 +19,7 @@
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "KZvFrZ"
+            "id": "4Dqkxg"
           },
           "activityProcessed": true,
           "dialog": "service-getData"
@@ -27,16 +27,14 @@
         {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "S5owCt"
+            "id": "JqLYeL"
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
-          "prompt": "${ChoiceInput_Prompt_S5owCt()}",
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
+          "prompt": "${ChoiceInput_Prompt_JqLYeL()}",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -51,8 +49,34 @@
           "property": "dialog.updatePhoneNumberChoice",
           "outputFormat": "value",
           "recognizerOptions": {
-            "recognizeOrdinals": true
-          }
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_JqLYeL()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "21QfsV"
+          },
+          "condition": "=dialog.updatePhoneNumberChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "kqoFxC"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "Vfanod"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -68,6 +92,13 @@
               },
               "activityProcessed": true,
               "dialog": "service-updatePhoneNumber"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "YzTd1M"
+              },
+              "activity": "${SendActivity_YzTd1M()}"
             }
           ],
           "elseActions": [
@@ -81,71 +112,12 @@
           ]
         },
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "GWPiWT"
+            "id": "TiroRo"
           },
-          "activity": "${SendActivity_GWPiWT()}"
-        },
-        {
-          "$kind": "Microsoft.ChoiceInput",
-          "$designer": {
-            "id": "DC5CMd"
-          },
-          "defaultLocale": "en-us",
-          "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
-          "allowInterruptions": false,
-          "prompt": "${ChoiceInput_Prompt_DC5CMd()}",
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
-          "defaultValueResponse": "",
-          "choiceOptions": {
-            "includeNumbers": true,
-            "inlineOrMore": ", or ",
-            "inlineOr": " or ",
-            "inlineSeparator": ", "
-          },
-          "style": "heroCard",
-          "choices": [
-            "Yes",
-            "No"
-          ],
-          "property": "dialog.continueBot",
-          "outputFormat": "value"
-        },
-        {
-          "$kind": "Microsoft.IfCondition",
-          "$designer": {
-            "id": "Kcy5yx"
-          },
-          "condition": "=dialog.continueBot==\"Yes\"",
-          "elseActions": [
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "6fIqeg"
-              },
-              "activity": "${SendActivity_6fIqeg()}"
-            },
-            {
-              "$kind": "Microsoft.EndTurn",
-              "$designer": {
-                "id": "McvknB"
-              }
-            }
-          ],
-          "actions": [
-            {
-              "$kind": "Microsoft.BeginDialog",
-              "$designer": {
-                "id": "T4tfCe"
-              },
-              "activityProcessed": true,
-              "dialog": "mainMenuFlows"
-            }
-          ]
+          "activityProcessed": true,
+          "dialog": "moreHelpDialogFlow"
         }
       ]
     }
