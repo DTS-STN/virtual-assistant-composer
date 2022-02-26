@@ -1,0 +1,107 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "BtnXld",
+    "name": "submenu-OASquestions",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "ofsGB4"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "4ExkmF"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_4ExkmF()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "prompt": "${ChoiceInput_Prompt_4ExkmF()}",
+          "choices": [
+            "What's my pension status?"
+          ],
+          "outputFormat": "index",
+          "property": "dialog.OASMenuChoice",
+          "style": "heroCard",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          }
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "OWKOx6"
+          },
+          "condition": "=dialog.OASMenuChoice || dialog.OASMenuChoice==0",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "j40a37"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "I1O5Rt"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SwitchCondition",
+          "$designer": {
+            "id": "hqXgpG"
+          },
+          "condition": "=dialog.OASMenuChoice",
+          "cases": [
+            {
+              "value": "0",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "9xKNhE"
+                  },
+                  "activity": "${SendActivity_9xKNhE()}"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "nNnCmB"
+          },
+          "activityProcessed": true,
+          "dialog": "moreHelpDialogFlow"
+        }
+      ]
+    }
+  ],
+  "generator": "submenu-OASquestions.lg",
+  "recognizer": "submenu-OASquestions.lu.qna",
+  "id": "submenu-OASquestions"
+}

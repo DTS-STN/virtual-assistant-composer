@@ -96,60 +96,12 @@
               "value": "1",
               "actions": [
                 {
-                  "$kind": "Microsoft.ChoiceInput",
+                  "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "ZIZ7ry"
+                    "id": "M53YGJ"
                   },
-                  "defaultLocale": "en-us",
-                  "disabled": false,
-                  "maxTurnCount": 2,
-                  "alwaysPrompt": true,
-                  "allowInterruptions": false,
-                  "invalidPrompt": "${ChoiceInput_InvalidPrompt_ZIZ7ry()}",
-                  "choiceOptions": {
-                    "includeNumbers": true,
-                    "inlineOrMore": ", or ",
-                    "inlineOr": " or ",
-                    "inlineSeparator": ", "
-                  },
-                  "prompt": "${ChoiceInput_Prompt_ZIZ7ry()}",
-                  "choices": [
-                    "Why has my payment amount changed?",
-                    "What will the amount of my next payment be?",
-                    "What is the date of my next payment?",
-                    "See more questions"
-                  ],
-                  "outputFormat": "index",
-                  "property": "dialog.mainMenuChoice",
-                  "style": "heroCard",
-                  "recognizerOptions": {
-                    "recognizeOrdinals": true,
-                    "recognizeNumbers": true
-                  }
-                },
-                {
-                  "$kind": "Microsoft.IfCondition",
-                  "$designer": {
-                    "id": "dGsK5G"
-                  },
-                  "condition": "=dialog.mainMenuChoice || dialog.mainMenuChoice ==0",
-                  "actions": [],
-                  "elseActions": [
-                    {
-                      "$kind": "Microsoft.BeginDialog",
-                      "$designer": {
-                        "id": "gNQCcO"
-                      },
-                      "activityProcessed": true,
-                      "dialog": "error-userError-Response"
-                    },
-                    {
-                      "$kind": "Microsoft.EndDialog",
-                      "$designer": {
-                        "id": "bnTC3M"
-                      }
-                    }
-                  ]
+                  "activityProcessed": true,
+                  "dialog": "submenu-OASquestions"
                 }
               ]
             },

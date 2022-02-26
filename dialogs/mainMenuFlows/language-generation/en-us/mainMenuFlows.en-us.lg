@@ -7,20 +7,6 @@
 
 # ChoiceInput_Prompt_LdcDJr_text()
 - How can I help you?
-# ChoiceInput_Prompt_ZIZ7ry_text()
-- What question do you have about your Old Age Security pension?
-# ChoiceInput_Prompt_ZIZ7ry()
-[Activity
-    Text = ${ChoiceInput_Prompt_ZIZ7ry_text()}
-]
-
-# ChoiceInput_InvalidPrompt_ZIZ7ry()
-[Activity
-    Text = ${ChoiceInput_InvalidPrompt_ZIZ7ry_text()}
-]
-
-# ChoiceInput_InvalidPrompt_ZIZ7ry_text()
-- Hmm, I'm not sure what you meant. Here's what I can answer:
 # ChoiceInput_DefaultValueResponse_LdcDJr()
 [Activity
     Text = ${ChoiceInput_DefaultValueResponse_LdcDJr_text()}
