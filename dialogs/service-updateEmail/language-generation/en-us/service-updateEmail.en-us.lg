@@ -14,5 +14,10 @@
 
 # TextInput_InvalidPrompt_UKCgwj_text()
 - Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
-# TextInput_UnrecognizedPrompt_UKCgwj()
--
+# SendActivity_MieHpA()
+[Activity
+    Text = ${SendActivity_MieHpA_text()}
+]
+
+# SendActivity_MieHpA_text()
+- Perfect! I've updated your email address to ${user.userEmail}.

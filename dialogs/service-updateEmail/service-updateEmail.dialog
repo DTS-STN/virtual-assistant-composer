@@ -71,6 +71,13 @@
               },
               "responseType": "json",
               "contentType": "application/json"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "MieHpA"
+              },
+              "activity": "${SendActivity_MieHpA()}"
             }
           ],
           "elseActions": [

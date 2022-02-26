@@ -37,9 +37,9 @@
           "outputFormat": "index",
           "style": "heroCard",
           "choices": [
-            "Update my email",
             "Update my address",
-            "Update my phone number"
+            "Update my phone number",
+            "Update my email"
           ],
           "property": "dialog.subMenu.UpdateContactInfoChoice",
           "recognizerOptions": {
@@ -81,23 +81,10 @@
           "cases": [
             {
               "value": "0",
-              "actions": [
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "umz6M6"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "updateEmailFlow"
-                }
-              ]
-            },
-            {
-              "value": "1",
               "actions": []
             },
             {
-              "value": "2",
+              "value": "1",
               "actions": [
                 {
                   "$kind": "Microsoft.BeginDialog",
@@ -106,6 +93,19 @@
                   },
                   "activityProcessed": true,
                   "dialog": "updatePhoneNumberFlow"
+                }
+              ]
+            },
+            {
+              "value": "2",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "umz6M6"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "updateEmailFlow"
                 }
               ]
             }

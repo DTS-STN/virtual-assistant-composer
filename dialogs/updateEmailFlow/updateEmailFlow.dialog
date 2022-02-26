@@ -31,13 +31,10 @@
           },
           "defaultLocale": "en-us",
           "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
           "allowInterruptions": false,
           "prompt": "${ChoiceInput_Prompt_QT3xWJ()}",
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
-          "defaultValueResponse": "",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -50,7 +47,36 @@
             "No"
           ],
           "property": "dialog.updateEmailChoice",
-          "outputFormat": "value"
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_QT3xWJ()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "8LmHjy"
+          },
+          "condition": "=dialog.updateEmailChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "unNkCe"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "XC1nra"
+              }
+            }
+          ]
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -60,113 +86,38 @@
           "condition": "=dialog.updateEmailChoice==\"Yes\"",
           "actions": [
             {
-              "$kind": "Microsoft.ChoiceInput",
+              "$kind": "Microsoft.BeginDialog",
               "$designer": {
-                "id": "VE1jOR"
+                "id": "qzMeGd"
               },
-              "defaultLocale": "en-us",
-              "disabled": false,
-              "maxTurnCount": 3,
-              "alwaysPrompt": false,
-              "allowInterruptions": false,
-              "prompt": "${ChoiceInput_Prompt_VE1jOR()}",
-              "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": "",
-              "choiceOptions": {
-                "includeNumbers": true,
-                "inlineOrMore": ", or ",
-                "inlineOr": " or ",
-                "inlineSeparator": ", "
-              },
-              "style": "heroCard",
-              "choices": [
-                "Yes",
-                "No"
-              ],
-              "property": "dialog.changeEmailResponse",
-              "outputFormat": "value"
+              "activityProcessed": true,
+              "dialog": "service-updateEmail"
             },
             {
-              "$kind": "Microsoft.IfCondition",
+              "$kind": "Microsoft.SendActivity",
               "$designer": {
-                "id": "Zv7MJq"
+                "id": "BbU3yV"
               },
-              "condition": "=dialog.changeEmailResponse==\"Yes\"",
-              "actions": [
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "MZGyUX"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "service-updateEmail"
-                }
-              ]
+              "activity": "${SendActivity_BbU3yV()}"
             }
           ],
-          "elseActions": []
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "N6nhFX"
-          },
-          "activity": "${SendActivity_N6nhFX()}"
-        },
-        {
-          "$kind": "Microsoft.ChoiceInput",
-          "$designer": {
-            "id": "emzBVz"
-          },
-          "defaultLocale": "en-us",
-          "disabled": false,
-          "maxTurnCount": 3,
-          "alwaysPrompt": false,
-          "allowInterruptions": false,
-          "prompt": "${ChoiceInput_Prompt_emzBVz()}",
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "",
-          "defaultValueResponse": "",
-          "choiceOptions": {
-            "includeNumbers": true,
-            "inlineOrMore": ", or ",
-            "inlineOr": " or ",
-            "inlineSeparator": ", "
-          },
-          "style": "heroCard",
-          "choices": [
-            "Yes",
-            "No"
-          ],
-          "property": "dialog.continueBot",
-          "outputFormat": "value"
-        },
-        {
-          "$kind": "Microsoft.IfCondition",
-          "$designer": {
-            "id": "ztXClL"
-          },
-          "condition": "=dialog.continueBot==\"Yes\"",
           "elseActions": [
             {
               "$kind": "Microsoft.SendActivity",
               "$designer": {
-                "id": "mtqP7i"
+                "id": "3gEHiU"
               },
-              "activity": "${SendActivity_mtqP7i()}"
-            }
-          ],
-          "actions": [
-            {
-              "$kind": "Microsoft.BeginDialog",
-              "$designer": {
-                "id": "kl1USp"
-              },
-              "activityProcessed": true,
-              "dialog": "mainMenuFlows"
+              "activity": "${SendActivity_3gEHiU()}"
             }
           ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "bwSt8a"
+          },
+          "activityProcessed": true,
+          "dialog": "moreHelpDialogFlow"
         }
       ]
     }
