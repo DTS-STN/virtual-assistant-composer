@@ -1,39 +1,36 @@
 [import](common.lg)
 
-# SendActivity_VEf2jS()
+# ChoiceInput_Prompt_2fjviM_text()
+- Here's what I can answer:
+# ChoiceInput_Prompt_2fjviM()
 [Activity
-    Text = ${SendActivity_VEf2jS_text()}
+    Text = ${ChoiceInput_Prompt_2fjviM_text()}
 ]
 
-# SendActivity_VEf2jS_text()
-- We've received your 2020 income statement, and it's being processed.
-# SendActivity_bfU7zs()
+# ChoiceInput_InvalidPrompt_2fjviM_text()
+- Hmm, I'm not sure what you meant. Here's what I can answer:
+# ChoiceInput_InvalidPrompt_2fjviM()
 [Activity
-    Text = ${SendActivity_bfU7zs_text()}
+    Text = ${ChoiceInput_InvalidPrompt_2fjviM_text()}
 ]
 
-# SendActivity_bfU7zs_text()
+# SendActivity_c1D2h2_text()
+- We've received your 2020 statement of income, and it's being processed.
+# SendActivity_c1D2h2()
+[Activity
+    Text = ${SendActivity_c1D2h2_text()}
+]
+
+# SendActivity_GbvBa6_text()
+- If you are eligible, you can expect your Guaranteed Income Supplement payments to start again by [XYZ], including the ones you may have missed. Because you have declared $0, you can expect to receive the maximum payment, $935.72.
+# SendActivity_GbvBa6()
+[Activity
+    Text = ${SendActivity_GbvBa6_text()}
+]
+
+# SendActivity_un2GzK_text()
 - If you are facing an emergency such as eviction or not having enough money for food or transport, please call [XXX-XXX-XXXX] for urgent support.
-# ChoiceInput_Prompt_RnqwAC()
+# SendActivity_un2GzK()
 [Activity
-    Text = ${ChoiceInput_Prompt_RnqwAC_text()}
+    Text = ${SendActivity_un2GzK_text()}
 ]
-
-# ChoiceInput_Prompt_RnqwAC_text()
-- Do you want to get notified via SMS or email when your statement has been processed?
-# SendActivity_jndWtW_text()
-- You can expect your GIS payments to start again by XYZ, including missed payments. Because you have declared $0, you can expect to receive the maximum GIS allowance, so XYZ$.
-# SendActivity_jndWtW()
-[Activity
-    Text = ${SendActivity_jndWtW_text()}
-]
-
-# SendActivity_M0YHS5()
-[Activity
-    Text = ${SendActivity_M0YHS5_text()}
-]
-
-# SendActivity_M0YHS5_text()
-- <Show user Ray Sub flow - Receive notification / updates>
-# ChoiceInput_InvalidPrompt_RnqwAC()
--

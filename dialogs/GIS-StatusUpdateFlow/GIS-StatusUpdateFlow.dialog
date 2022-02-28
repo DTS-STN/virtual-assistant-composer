@@ -17,51 +17,29 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "VEf2jS"
-          },
-          "activity": "${SendActivity_VEf2jS()}"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "jndWtW"
-          },
-          "activity": "${SendActivity_jndWtW()}"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "bfU7zs"
-          },
-          "activity": "${SendActivity_bfU7zs()}"
-        },
-        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "RnqwAC"
+            "id": "2fjviM"
           },
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 2,
           "alwaysPrompt": true,
           "allowInterruptions": false,
-          "unrecognizedPrompt": "",
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_RnqwAC()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_2fjviM()}",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
             "inlineOr": " or ",
             "inlineSeparator": ", "
           },
-          "property": "dialog.notifiedviaSMSEmailChoice",
-          "prompt": "${ChoiceInput_Prompt_RnqwAC()}",
-          "outputFormat": "value",
+          "prompt": "${ChoiceInput_Prompt_2fjviM()}",
           "choices": [
-            "Yes",
-            "No"
+            "What is the status of my Guaranteed Income Supplement application?",
+            "Can I receive my 2020 statement of income by email?"
           ],
+          "outputFormat": "index",
+          "property": "dialog.GISMenuChoice",
           "style": "heroCard",
           "recognizerOptions": {
             "recognizeOrdinals": true,
@@ -71,15 +49,15 @@
         {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "Ele0Q1"
+            "id": "yrIjIQ"
           },
-          "condition": "=dialog.notifiedviaSMSEmailChoice || dialog.notifiedviaSMSEmailChoice ==0",
+          "condition": "=dialog.GISMenuChoice ||  dialog.GISMenuChoice==0",
           "actions": [],
           "elseActions": [
             {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
-                "id": "gdIVyn"
+                "id": "5IAw2i"
               },
               "activityProcessed": true,
               "dialog": "error-userError-Response"
@@ -87,36 +65,66 @@
             {
               "$kind": "Microsoft.EndDialog",
               "$designer": {
-                "id": "JyNGyj"
+                "id": "IxrgAy"
               }
             }
           ]
         },
         {
-          "$kind": "Microsoft.IfCondition",
+          "$kind": "Microsoft.SwitchCondition",
           "$designer": {
-            "id": "jv75Yy"
+            "id": "H28AvB"
           },
-          "condition": "=dialog.notifiedviaSMSEmailChoice==\"Yes\"",
-          "elseActions": [
+          "condition": "=dialog.GISMenuChoice",
+          "cases": [
             {
-              "$kind": "Microsoft.BeginDialog",
-              "$designer": {
-                "id": "pVaVP8"
-              },
-              "activityProcessed": true,
-              "dialog": "moreHelpDialogFlow"
-            }
-          ],
-          "actions": [
+              "value": "0",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "c1D2h2"
+                  },
+                  "activity": "${SendActivity_c1D2h2()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "GbvBa6"
+                  },
+                  "activity": "${SendActivity_GbvBa6()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "un2GzK"
+                  },
+                  "activity": "${SendActivity_un2GzK()}"
+                }
+              ]
+            },
             {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "M0YHS5"
-              },
-              "activity": "${SendActivity_M0YHS5()}"
+              "value": "1",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "7sJcMh"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "notification-emailFlow"
+                }
+              ]
             }
           ]
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "5MeJ9Y"
+          },
+          "activityProcessed": true,
+          "dialog": "moreHelpDialogFlow"
         }
       ]
     }
