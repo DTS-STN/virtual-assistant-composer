@@ -1,0 +1,58 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_7zqrKu_text()
+- The email address I have for you is ${user.userData.fields["Employer Contact Email"]}. Is this the correct email address?
+# ChoiceInput_Prompt_7zqrKu()
+[Activity
+    Text = ${ChoiceInput_Prompt_7zqrKu_text()}
+]
+
+# ChoiceInput_InvalidPrompt_7zqrKu_text()
+- Hmm, I'm not sure what you meant. Do you want to update this email address?
+# ChoiceInput_InvalidPrompt_7zqrKu()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_7zqrKu_text()}
+]
+
+# TextInput_Prompt_sSa34v_text()
+- What's your new email address?
+# TextInput_Prompt_sSa34v()
+[Activity
+    Text = ${TextInput_Prompt_sSa34v_text()}
+]
+
+# TextInput_InvalidPrompt_sSa34v_text()
+- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+# TextInput_InvalidPrompt_sSa34v()
+[Activity
+    Text = ${TextInput_InvalidPrompt_sSa34v_text()}
+]
+
+# SendActivity_xIB0UF_text()
+- Perfect! I've updated your email address to ${user.userEmail}.
+# SendActivity_xIB0UF()
+[Activity
+    Text = ${SendActivity_xIB0UF_text()}
+]
+
+# TextInput_Prompt_Ld1BMM_text()
+- No problem, let's update your profile. What's your new email address?
+# TextInput_Prompt_Ld1BMM()
+[Activity
+    Text = ${TextInput_Prompt_Ld1BMM_text()}
+]
+
+# TextInput_InvalidPrompt_Ld1BMM_text()
+- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+# TextInput_InvalidPrompt_Ld1BMM()
+[Activity
+    Text = ${TextInput_InvalidPrompt_Ld1BMM_text()}
+]
+
+# SendActivity_7mA3Mn()
+[Activity
+    Text = ${SendActivity_7mA3Mn_text()}
+]
+
+# SendActivity_7mA3Mn_text()
+- Ok, I'll email your statment to ${user.userData.fields["Employer Contact Email"]}.

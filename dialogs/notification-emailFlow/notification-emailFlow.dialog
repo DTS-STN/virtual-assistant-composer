@@ -1,0 +1,164 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "UGm4wV",
+    "name": "notification-emailFlow",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "D8cti8"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "ZYxhAD"
+          },
+          "activityProcessed": true,
+          "dialog": "service-getData"
+        },
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "7zqrKu"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_7zqrKu()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "heroCard",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "property": "dialog.updateEmailChoice",
+          "outputFormat": "value",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_7zqrKu()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "fbSYMM"
+          },
+          "condition": "=dialog.updateEmailChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "Kd1OlG"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "Ux9fQm"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "AnZQm3"
+          },
+          "condition": "=dialog.updateEmailChoice==\"Yes\"",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "Ld1BMM"
+              },
+              "disabled": false,
+              "maxTurnCount": 2,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "property": "user.userEmail",
+              "prompt": "${TextInput_Prompt_Ld1BMM()}",
+              "validations": [
+                "isMatch(this.value, '^(([^<>()[\\]\\\\.,;:\\s@\"]+(\\.[^<>()[\\]\\\\.,;:\\s@\"]+)*)|(\".+\"))@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$')"
+              ],
+              "invalidPrompt": "${TextInput_InvalidPrompt_Ld1BMM()}",
+              "unrecognizedPrompt": ""
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "tWv1vw"
+              },
+              "condition": "=user.userEmail",
+              "actions": [
+                {
+                  "$kind": "Microsoft.HttpRequest",
+                  "$designer": {
+                    "id": "whPiJr"
+                  },
+                  "resultProperty": "turn.results",
+                  "body": {
+                    "records": [
+                      {
+                        "id": "recrzEemVpbkeFE5C",
+                        "fields": {
+                          "Employer Contact Email": "${user.userEmail}"
+                        }
+                      }
+                    ]
+                  },
+                  "method": "PATCH",
+                  "url": "https://api.airtable.com/v0/apprmDv9NMLgnZBuV/EI%20Data",
+                  "headers": {
+                    "Authorization": "Bearer key5vC3ALZrd3PHPG"
+                  },
+                  "responseType": "json",
+                  "contentType": "application/json"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "dDzXHe"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "error-userError-Response"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "7mA3Mn"
+          },
+          "activity": "${SendActivity_7mA3Mn()}"
+        }
+      ]
+    }
+  ],
+  "generator": "notification-emailFlow.lg",
+  "recognizer": "notification-emailFlow.lu.qna",
+  "id": "notification-emailFlow"
+}
