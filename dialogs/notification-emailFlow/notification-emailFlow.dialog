@@ -84,7 +84,16 @@
             "id": "AnZQm3"
           },
           "condition": "=dialog.updateEmailChoice==\"Yes\"",
-          "actions": [],
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "wTO7ry"
+              },
+              "property": "user.userEmail",
+              "value": "=user.userData.fields[\"Employer Contact Email\"]"
+            }
+          ],
           "elseActions": [
             {
               "$kind": "Microsoft.TextInput",
