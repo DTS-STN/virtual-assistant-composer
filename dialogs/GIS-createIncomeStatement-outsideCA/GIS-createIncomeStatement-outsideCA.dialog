@@ -78,6 +78,15 @@
           "condition": "=dialog.GIS.newIncomeStatement.inCAChoice==\"Yes\"",
           "actions": [
             {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "NDNXD1",
+                "comment": ""
+              },
+              "property": "user.GIS.createStatementIsValid",
+              "value": false
+            },
+            {
               "$kind": "Microsoft.ChoiceInput",
               "$designer": {
                 "id": "nnkiVa"
