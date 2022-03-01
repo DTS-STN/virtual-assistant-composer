@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_LdcDJr()
+[Activity
+    Text = ${ChoiceInput_Prompt_LdcDJr_text()}
+]
+
+# ChoiceInput_Prompt_LdcDJr_text()
+- How can I help you?
+# ChoiceInput_DefaultValueResponse_LdcDJr()
+[Activity
+    Text = ${ChoiceInput_DefaultValueResponse_LdcDJr_text()}
+]
+
+# ChoiceInput_DefaultValueResponse_LdcDJr_text()
+- Hmm, I'm not sure what you meant. How can I help?
+# ChoiceInput_InvalidPrompt_LdcDJr()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_LdcDJr_text()}
+]
+
+# ChoiceInput_InvalidPrompt_LdcDJr_text()
+- Hmm, I'm not sure what you meant. How can I help?

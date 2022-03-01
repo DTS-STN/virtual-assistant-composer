@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_error-userError-Response",
+  "applicationId": "=settings.luis.error_userError_Response_fr_ca_lu.appId",
+  "version": "=settings.luis.error_userError_Response_fr_ca_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}
