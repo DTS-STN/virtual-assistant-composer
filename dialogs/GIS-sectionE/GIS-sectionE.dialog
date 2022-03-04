@@ -156,7 +156,7 @@
                   "$kind": "Microsoft.Ask",
                   "$designer": {
                     "id": "8CQK0v",
-                    "comment": "TODO: needs error handling"
+                    "comment": ""
                   },
                   "activity": "${Ask_Activity_8CQK0v()}",
                   "expectedProperties": []
@@ -181,7 +181,7 @@
         "id": "gSQ2T6",
         "name": "Message received (Message received activity)"
       },
-      "condition": "=turn.activity.value.employeeIncomeAmount",
+      "condition": "=turn.activity.value.adaptiveCardID==\"IncomeCard\"",
       "actions": [
         {
           "$kind": "Microsoft.SetProperties",
@@ -293,7 +293,7 @@
         "id": "YaGmFn",
         "name": "Message received (Message received activity)"
       },
-      "condition": "=turn.activity.value.interestsMade",
+      "condition": "=turn.activity.value.adaptiveCardID==\"InvestmentsCard\"",
       "actions": [
         {
           "$kind": "Microsoft.SendActivity",

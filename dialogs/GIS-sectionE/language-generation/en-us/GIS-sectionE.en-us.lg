@@ -50,6 +50,12 @@
     "version": "1.2",
     "body": [
         {
+            "type": "Input.Text",
+            "id": "adaptiveCardID",
+            "value": "IncomeCard",
+            "isVisible": false
+        },
+        {
             "type": "TextBlock",
             "text": "In 2020, how much income did you make:",
             "wrap": true
@@ -73,9 +79,10 @@
                     "width": "stretch",
                     "items": [
                         {
-                            "type": "Input.Text",
+                            "type": "Input.Number",
                             "placeholder": "$0",
-                            "id": "employeeIncomeAmount"
+                            "id": "employeeIncomeAmount",
+                            "min": 0
                         }
                     ]
                 }
@@ -100,9 +107,10 @@
                     "width": "stretch",
                     "items": [
                         {
-                            "type": "Input.Text",
+                            "type": "Input.Number",
                             "placeholder": "$0",
-                            "id": "selfemploymentAmount"
+                            "id": "selfemploymentAmount",
+                            "min": 0
                         }
                     ]
                 }
@@ -117,11 +125,6 @@
                     "id": "incomeMadeCard"
                 }
             ]
-        },
-        {
-            "type": "Input.Text",
-            "isVisible": false,
-            "id": "investmentsCardId"
         }
     ]
 }
@@ -270,6 +273,12 @@
     "version": "1.2",
     "body": [
         {
+            "type": "Input.Text",
+            "id": "adaptiveCardID",
+            "isVisible": false,
+            "value": "InvestmentsCard"
+        },
+        {
             "type": "TextBlock",
             "text": "Tell me about the performance of your investments:",
             "wrap": true
@@ -293,9 +302,10 @@
                     "width": "stretch",
                     "items": [
                         {
-                            "type": "Input.Text",
+                            "type": "Input.Number",
                             "placeholder": "$0",
-                            "id": "interestsMade"
+                            "id": "interestsMade",
+                            "min": 0
                         }
                     ]
                 }
@@ -320,9 +330,10 @@
                     "width": "stretch",
                     "items": [
                         {
-                            "type": "Input.Text",
+                            "type": "Input.Number",
                             "placeholder": "$0",
-                            "id": "capitalGainsMade"
+                            "id": "capitalGainsMade",
+                            "min": 0
                         }
                     ]
                 }
@@ -349,7 +360,8 @@
                         {
                             "type": "Input.Number",
                             "placeholder": "$0",
-                            "id": "dividendsMade"
+                            "id": "dividendsMade",
+                            "min": 0
                         }
                     ]
                 }
@@ -367,8 +379,6 @@
         }
     ]
 }
-
-
 ```
 # SendActivity_BhMFzS()
 [Activity
