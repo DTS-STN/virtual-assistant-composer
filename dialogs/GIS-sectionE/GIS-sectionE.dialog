@@ -190,7 +190,7 @@
           },
           "assignments": [
             {
-              "property": "user.gis.new.employeeIncomeAmount",
+              "property": "user.gis.new.employmentIncomeAmount",
               "value": "=turn.activity.value.employeeIncomeAmount"
             },
             {
@@ -295,6 +295,34 @@
       },
       "condition": "=turn.activity.value.adaptiveCardID==\"InvestmentsCard\"",
       "actions": [
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "gtHYdE"
+          },
+          "assignments": [
+            {
+              "property": "user.gis.new.interestsMade",
+              "value": "=turn.activity.value.interestsMade"
+            },
+            {
+              "property": "user.gis.new.capitalGainsMade",
+              "value": "=turn.activity.value.capitalGainsMade"
+            },
+            {
+              "property": "user.gis.new.dividendsMade",
+              "value": "=turn.activity.value.dividendsMade"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "ZrIQMZ"
+          },
+          "property": "user.gis.new.incomeTotal",
+          "value": "= add(int(user.gis.new.interestsMade), int(user.gis.new.capitalGainsMade),int(user.gis.new.dividendsMade))"
+        },
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {

@@ -155,6 +155,38 @@
               "elseActions": [],
               "actions": [
                 {
+                  "$kind": "Microsoft.SetProperties",
+                  "$designer": {
+                    "id": "B64oRe"
+                  },
+                  "assignments": [
+                    {
+                      "property": "user.gis.new.employmentIncomeAmount",
+                      "value": 0
+                    },
+                    {
+                      "property": "user.gis.new.selfemploymentAmount",
+                      "value": 0
+                    },
+                    {
+                      "property": "user.gis.new.interestsMade",
+                      "value": 0
+                    },
+                    {
+                      "property": "user.gis.new.capitalGainsMade",
+                      "value": 0
+                    },
+                    {
+                      "property": "user.gis.new.dividendsMade",
+                      "value": 0
+                    },
+                    {
+                      "property": "user.gis.new.incomeTotal",
+                      "value": 0
+                    }
+                  ]
+                },
+                {
                   "$kind": "Microsoft.SetProperty",
                   "$designer": {
                     "id": "PcXUU4"
@@ -254,12 +286,19 @@
                               "value": "GIS-accurateInfoPrompt",
                               "actions": [
                                 {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "1v2LqC"
+                                  },
+                                  "activity": "${SendActivity_1v2LqC()}"
+                                },
+                                {
                                   "$kind": "Microsoft.BeginDialog",
                                   "$designer": {
-                                    "id": "WoR0JA"
+                                    "id": "K39F92"
                                   },
                                   "activityProcessed": true,
-                                  "dialog": "GIS-currentYearIncomeStatementReview"
+                                  "dialog": "GIS-currentYearIncomeStatement"
                                 },
                                 {
                                   "$kind": "Microsoft.ChoiceInput",

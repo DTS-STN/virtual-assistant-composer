@@ -144,3 +144,10 @@ Because you have declared $0, you can expect to receive the maximum GIS payment,
 # ChoiceInput_InvalidPrompt_hb8N5J_text()
 
 - Hmm, I'm not sure what you meant. Is this the correct email address?
+# SendActivity_1v2LqC()
+[Activity
+    Text = ${SendActivity_1v2LqC_text()}
+]
+
+# SendActivity_1v2LqC_text()
+- Here is your statement of income for 2020.

@@ -31,15 +31,7 @@
         "id": "EfTcEz",
         "name": "Message received (Message received activity)"
       },
-      "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "n0J8Ep"
-          },
-          "activity": "${SendActivity_n0J8Ep()}"
-        }
-      ],
+      "actions": [],
       "condition": "=turn.activity.value",
       "runOnce": true
     }
