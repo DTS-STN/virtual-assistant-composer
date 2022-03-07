@@ -25,6 +25,46 @@
           "dialog": "getGISData"
         },
         {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "0OiFir"
+          },
+          "assignments": [
+            {
+              "property": "user.gis.past.canadianPensionPlan",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.employmentIncomeAmount",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.selfemploymentAmount",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.interestsMade",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.capitalGainsMade",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.dividendsMade",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.incomeTotal",
+              "value": 0
+            },
+            {
+              "property": "user.gis.past.statementTotal",
+              "value": "0"
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "mclu10"

@@ -161,6 +161,10 @@
                   },
                   "assignments": [
                     {
+                      "property": "user.gis.new.canadianPensionPlan",
+                      "value": 0
+                    },
+                    {
                       "property": "user.gis.new.employmentIncomeAmount",
                       "value": 0
                     },
@@ -182,6 +186,10 @@
                     },
                     {
                       "property": "user.gis.new.incomeTotal",
+                      "value": 0
+                    },
+                    {
+                      "property": "user.gis.new.statementTotal",
                       "value": 0
                     }
                   ]

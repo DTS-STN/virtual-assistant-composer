@@ -41,7 +41,7 @@
                         {
                             "type": "TextBlock",
                             "wrap": true,
-                            "text": "[pension-plan]"
+                            "text": "$${user.gis.new.canadianPensionPlan}"
                         }
                     ]
                 }
@@ -70,7 +70,7 @@
                         {
                             "type": "TextBlock",
                             "wrap": true,
-                            "text": "${user.gis.new.employmentIncomeAmount}"
+                            "text": "$${user.gis.new.employmentIncomeAmount}"
                         }
                     ]
                 }
@@ -98,7 +98,7 @@
                     "items": [
                         {
                             "type": "TextBlock",
-                            "text": "${user.gis.new.selfemploymentAmount}",
+                            "text": "$${user.gis.new.selfemploymentAmount}",
                             "wrap": true
                         }
                     ]
@@ -133,12 +133,40 @@
                                     "items": [
                                         {
                                             "type": "TextBlock",
-                                            "text": "${user.gis.new.incomeTotal}",
+                                            "text": "$${user.gis.new.incomeTotal}",
                                             "wrap": true
                                         }
                                     ]
                                 }
                             ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "ColumnSet",
+            "columns": [
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "Total",
+                            "wrap": true,
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "$${user.gis.new.statementTotal}",
+                            "wrap": true
                         }
                     ]
                 }

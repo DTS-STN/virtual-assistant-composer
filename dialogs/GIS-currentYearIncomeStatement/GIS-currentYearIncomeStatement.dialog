@@ -17,6 +17,14 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "RsIzZz"
+          },
+          "property": "user.gis.new.statementTotal",
+          "value": "= add(int(user.gis.new.canadianPensionPlan), int(user.gis.new.employmentIncomeAmount), int(user.gis.new.selfemploymentAmount), int(user.gis.new.incomeTotal))"
+        },
+        {
           "$kind": "Microsoft.Ask",
           "$designer": {
             "id": "HwPjZ2"
