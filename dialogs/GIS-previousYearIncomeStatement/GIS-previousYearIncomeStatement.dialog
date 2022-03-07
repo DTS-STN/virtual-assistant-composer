@@ -25,14 +25,6 @@
           "dialog": "getGISData"
         },
         {
-          "$kind": "Microsoft.SetProperty",
-          "$designer": {
-            "id": "C3D3ro"
-          },
-          "property": "dialog.titletest",
-          "value": "=\"Previous year ISP 3026 \""
-        },
-        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "mclu10"

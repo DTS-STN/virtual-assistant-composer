@@ -162,7 +162,89 @@
                   "expectedProperties": []
                 }
               ],
-              "condition": "=dialog.GISDidWorkChoice==\"Yes\""
+              "condition": "=dialog.GISDidWorkChoice==\"Yes\"",
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.ChoiceInput",
+                  "$designer": {
+                    "id": "oeOIgh",
+                    "comment": "This section has been taken from another section (message receieved). "
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 2,
+                  "alwaysPrompt": true,
+                  "allowInterruptions": false,
+                  "prompt": "${ChoiceInput_Prompt_oeOIgh()}",
+                  "choiceOptions": {
+                    "includeNumbers": true,
+                    "inlineOrMore": ", or ",
+                    "inlineOr": " or ",
+                    "inlineSeparator": ", "
+                  },
+                  "outputFormat": "value",
+                  "choices": [
+                    "Yes",
+                    "No"
+                  ],
+                  "property": "dialog.GISDidEarnInvestmentsChoice",
+                  "style": "heroCard",
+                  "recognizerOptions": {
+                    "recognizeOrdinals": true,
+                    "recognizeNumbers": true
+                  },
+                  "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_oeOIgh()}",
+                  "invalidPrompt": "${ChoiceInput_InvalidPrompt_oeOIgh()}"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "uMmUgy"
+                  },
+                  "condition": "=dialog.GISDidEarnInvestmentsChoice",
+                  "actions": [],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "sU3mQh"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "error-userError-Response"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "GelWbe"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "zNPyuL"
+                  },
+                  "condition": "=dialog.GISDidEarnInvestmentsChoice==\"Yes\"",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "wXjAUS"
+                      },
+                      "activity": "${SendActivity_wXjAUS()}"
+                    },
+                    {
+                      "$kind": "Microsoft.Ask",
+                      "$designer": {
+                        "id": "ivkmxW"
+                      },
+                      "activity": "${Ask_Activity_rFQB10()}"
+                    }
+                  ],
+                  "elseActions": []
+                }
+              ]
             }
           ]
         },
@@ -198,13 +280,6 @@
               "value": "=turn.activity.value.selfemploymentAmount"
             }
           ]
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "A79RBx"
-          },
-          "activity": "${SendActivity_A79RBx()}"
         },
         {
           "$kind": "Microsoft.ChoiceInput",

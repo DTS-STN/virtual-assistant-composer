@@ -136,15 +136,8 @@
 
 # LogAction_Text_RlNgso_text()
 - Make database call to save the data.
-# SendActivity_A79RBx()
-[Activity
-    Text = ${SendActivity_A79RBx_text()}
-]
-
-# SendActivity_A79RBx_text()
-- Great! I have added this information to your statement.
 # ChoiceInput_Prompt_susoQp_text()
-- Did you earn income from your investments in 2020?
+- Great! I have added this information to your statement. Did you earn income from your investments in 2020?
 # ChoiceInput_Prompt_susoQp()
 [Activity
     Text = ${ChoiceInput_Prompt_susoQp_text()}
@@ -394,3 +387,31 @@
 
 # ChoiceInput_InvalidPrompt_susoQp_text()
 - Hmm, I'm not sure what you meant. Did you make income on investments in 2020?
+# ChoiceInput_Prompt_oeOIgh_text()
+- Great! I have added this information to your statement. Did you earn income from your investments in 2020?
+# ChoiceInput_Prompt_oeOIgh()
+[Activity
+    Text = ${ChoiceInput_Prompt_oeOIgh_text()}
+]
+
+# ChoiceInput_InvalidPrompt_oeOIgh_text()
+- Hmm, I'm not sure what you meant. Did you make income on investments in 2020?
+# ChoiceInput_InvalidPrompt_oeOIgh()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_oeOIgh_text()}
+]
+
+# ChoiceInput_DefaultValueResponse_oeOIgh_text()
+- Error handling in progress
+- Test text for errors 
+# ChoiceInput_DefaultValueResponse_oeOIgh()
+[Activity
+    Text = ${ChoiceInput_DefaultValueResponse_oeOIgh_text()}
+]
+
+# SendActivity_wXjAUS_text()
+- Please give us some details about your investments.
+# SendActivity_wXjAUS()
+[Activity
+    Text = ${SendActivity_wXjAUS_text()}
+]
