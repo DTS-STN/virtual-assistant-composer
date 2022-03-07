@@ -47,8 +47,7 @@ I realize that my personal information is governed by the Privacy Act and may be
 ]
 
 # SendActivity_bseUqk_text()
-- ```Ok, let's see. Every year, we review your income tax filing to see what your Guaranteed Income Supplement should be. We don't have a tax filing for you from 2020\-2021. That's why your payments have been suspended.
-```
+- Ok, let's see. Every year, we review your income tax filing to see what your Guaranteed Income Supplement should be. We don't have a tax filing for you from 2020. That's why your payments have been suspended.
 # SendActivity_bseUqk()
 [Activity
     Text = ${SendActivity_bseUqk_text()}
@@ -62,7 +61,6 @@ Would you like me to create a statement of income?```
 [Activity
     Text = ${ChoiceInput_Prompt_Q8yLjp_text()}
 ]
-
 
 # ChoiceInput_Prompt_VUiSqC_text()
 - Would you like to receive a copy of your 2020 statement of income by email?
