@@ -25,23 +25,13 @@
           "value": "= add(int(user.gis.new.canadianPensionPlan), int(user.gis.new.employmentIncomeAmount), int(user.gis.new.selfemploymentAmount), int(user.gis.new.incomeTotal))"
         },
         {
-          "$kind": "Microsoft.Ask",
+          "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "HwPjZ2"
+            "id": "kybldb"
           },
-          "activity": "${Ask_Activity_HwPjZ2()}"
+          "activity": "${SendActivity_kybldb()}"
         }
       ]
-    },
-    {
-      "$kind": "Microsoft.OnMessageActivity",
-      "$designer": {
-        "id": "EfTcEz",
-        "name": "Message received (Message received activity)"
-      },
-      "actions": [],
-      "condition": "=turn.activity.value",
-      "runOnce": true
     }
   ],
   "generator": "GIS-currentYearIncomeStatement.lg",
