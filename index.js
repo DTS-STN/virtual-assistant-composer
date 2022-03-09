@@ -1,6 +1,6 @@
 // Copyright (c) Microsoft Corporation.
 // Licensed under the MIT License.
-
+require('dotenv').config();
 const { start } = require('botbuilder-dialogs-adaptive-runtime-integration-express');
 
 (async function () {

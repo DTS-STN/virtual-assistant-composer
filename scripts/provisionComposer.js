@@ -13,6 +13,7 @@ const { AzureBotService } = require('@azure/arm-botservice');
 const { ResourceManagementClient } = require('@azure/arm-resources');
 const readFile = promisify(fs.readFile);
 const ora = require('ora');
+require('dotenv').config();
 
 const logger = (msg) => {
   if (msg.status === BotProjectDeployLoggerType.PROVISION_ERROR) {
@@ -82,12 +83,11 @@ if (!argv.name || !argv.subscriptionId || !argv.appPassword) {
 // Get required fields from the arguments
 const subId = argv.subscriptionId;
 const name = argv.name.toString();
-const appPassword = argv.appPassword;
-
+const appPassword = process.env.MicrosoftAppPassword;
 // Get optional fields from the arguments
 const environment = argv.environment || 'dev';
 const location = argv.location || 'westus';
-const appId = argv.appId; // MicrosoftAppId - generated if left blank
+const appId = process.env.MicrosoftAppId; // MicrosoftAppId - generated if left blank
 
 // Get option flags
 const createLuisResource = argv.createLuisResource == 'false' ? false : true;
