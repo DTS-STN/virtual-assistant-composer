@@ -16,7 +16,7 @@ releases:
       - overrides/va-ray-bot-bdm-dev-api.yaml.gotmpl
     labels:
         category: prototype
-        app: va-av-ray-mvp
+        app: ray-mvp
         tier: api
     wait: false
     installed: true
