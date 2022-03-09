@@ -1,0 +1,23 @@
+environments:
+  benrd:
+  bingrd:
+  dev:
+  prod-blue:
+  prod-green:
+  prototype:
+
+
+releases:
+
+  - name: varayapi-{{ requiredEnv "BRANCH" }}
+    chart: ../helm/charts/va-ray-bot-bdm-dev
+    namespace: va-ray-{{ requiredEnv "BRANCH" }}
+    values:
+      - overrides/va-ray-bot-bdm-dev-api.yaml.gotmpl
+    labels:
+        category: prototype
+        app: va-av-ray-mvp
+        tier: api
+    wait: false
+    installed: true
+    force: false
