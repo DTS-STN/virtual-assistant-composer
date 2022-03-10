@@ -1,0 +1,49 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "cxrYi4",
+    "name": "GIS-calc",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "Hn0uRP"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "nakGb3"
+          },
+          "property": "user.gis.new.incomeTotal",
+          "value": "=user.gis.new.statementTotal"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "IZHIo9"
+          },
+          "property": "dialog.GISTemp",
+          "value": "=round(max(0,min(mul(959.26,(sub(1,div(float(user.gis.new.incomeTotal),19464.01)))),959.26)),2)"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "Qy7AqL"
+          },
+          "property": "user.gis.GISPayment",
+          "value": "=mul(ceiling(div(dialog.GISTemp,10)),10)"
+        }
+      ]
+    }
+  ],
+  "generator": "GIS-calc.lg",
+  "recognizer": "GIS-calc.lu.qna",
+  "id": "GIS-calc"
+}
