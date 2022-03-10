@@ -7,7 +7,9 @@
   "dependencies": {
     "botbuilder-ai-luis": "4.15.0-preview",
     "botbuilder-ai-qna": "4.15.0-preview",
+    "botbuilder-dialogs-adaptive-runtime": "~4.15.0-preview",
     "botbuilder-dialogs-adaptive-runtime-integration-express": "4.15.0-preview",
+    "botbuilder-dialogs-adaptive-runtime-integration-restify": "~4.15.0-preview",
     "cross-env": "latest",
     "dotenv": "~16.0.0"
   }
