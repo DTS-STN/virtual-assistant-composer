@@ -442,6 +442,14 @@
                                   ],
                                   "actions": [
                                     {
+                                      "$kind": "Microsoft.BeginDialog",
+                                      "$designer": {
+                                        "id": "bX7zh6"
+                                      },
+                                      "activityProcessed": true,
+                                      "dialog": "GIS-calc"
+                                    },
+                                    {
                                       "$kind": "Microsoft.SendActivity",
                                       "$designer": {
                                         "id": "f7VHE0"

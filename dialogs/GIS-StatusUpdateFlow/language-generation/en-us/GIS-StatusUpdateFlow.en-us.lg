@@ -22,7 +22,7 @@
 ]
 
 # SendActivity_GbvBa6_text()
-- If you are eligible, you can expect your Guaranteed Income Supplement payments to start again by [XYZ], including the ones you may have missed. Because you have declared $0, you can expect to receive the maximum payment, $935.72.
+- If you are eligible, you can expect your Guaranteed Income Supplement payments to start again by [XYZ], including the ones you may have missed. Because you have declared $${user.gis.new.statementTotal} you can expect to receive the maximum payment, $${user.gis.GISPayment}
 # SendActivity_GbvBa6()
 [Activity
     Text = ${SendActivity_GbvBa6_text()}
