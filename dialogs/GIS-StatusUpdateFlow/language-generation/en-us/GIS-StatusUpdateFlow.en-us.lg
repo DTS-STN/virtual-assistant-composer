@@ -14,23 +14,23 @@
     Text = ${ChoiceInput_InvalidPrompt_2fjviM_text()}
 ]
 
-# SendActivity_c1D2h2_text()
+# SendActivity_hytfFh_text()
 - We've received your 2020 statement of income, and it's being processed.
-# SendActivity_c1D2h2()
+# SendActivity_hytfFh()
 [Activity
-    Text = ${SendActivity_c1D2h2_text()}
+    Text = ${SendActivity_hytfFh_text()}
 ]
 
-# SendActivity_GbvBa6_text()
+# SendActivity_DGjroI_text()
 - If you are eligible, you can expect your Guaranteed Income Supplement payments to start again by [XYZ], including the ones you may have missed. Because you have declared $${user.gis.new.statementTotal} you can expect to receive the maximum payment, $${user.gis.GISPayment}
-# SendActivity_GbvBa6()
+# SendActivity_DGjroI()
 [Activity
-    Text = ${SendActivity_GbvBa6_text()}
+    Text = ${SendActivity_DGjroI_text()}
 ]
 
-# SendActivity_un2GzK_text()
+# SendActivity_J4sIll_text()
 - If you are facing an emergency such as eviction or not having enough money for food or transport, please call [XXX-XXX-XXXX] for urgent support.
-# SendActivity_un2GzK()
+# SendActivity_J4sIll()
 [Activity
-    Text = ${SendActivity_un2GzK_text()}
+    Text = ${SendActivity_J4sIll_text()}
 ]

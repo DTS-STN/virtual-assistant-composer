@@ -17,6 +17,14 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "77f6zP"
+          },
+          "property": "user.gis.blockCompleted",
+          "value": false
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "KsCK9C"
@@ -586,11 +594,19 @@
                                           ],
                                           "elseActions": [
                                             {
+                                              "$kind": "Microsoft.BeginDialog",
+                                              "$designer": {
+                                                "id": "3liTgt"
+                                              },
+                                              "activityProcessed": true,
+                                              "dialog": "service-updateEmail"
+                                            },
+                                            {
                                               "$kind": "Microsoft.SendActivity",
                                               "$designer": {
-                                                "id": "SrFvlw"
+                                                "id": "4FkBE2"
                                               },
-                                              "activity": "${SendActivity_SrFvlw()}"
+                                              "activity": "${SendActivity_4FkBE2()}"
                                             }
                                           ]
                                         }
@@ -609,6 +625,14 @@
                                         "id": "XrRzjY"
                                       },
                                       "activity": "${SendActivity_XrRzjY()}"
+                                    },
+                                    {
+                                      "$kind": "Microsoft.SetProperty",
+                                      "$designer": {
+                                        "id": "bdInrv"
+                                      },
+                                      "property": "user.gis.blockCompleted",
+                                      "value": true
                                     }
                                   ]
                                 }
