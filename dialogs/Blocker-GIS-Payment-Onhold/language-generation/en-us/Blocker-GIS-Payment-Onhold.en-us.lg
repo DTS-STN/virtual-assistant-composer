@@ -20,7 +20,9 @@
 ]
 
 # ChoiceInput_Prompt_hPpLlR_text()
-- ```I want to submit my statement of income for the purpose of the Guaranteed Income Supplement.
+- ```Do you agree with this declaration?
+
+I want to submit my statement of income for the purpose of the Guaranteed Income Supplement.
 
 I declare that, to the best of my knowledge the information on this statement is true and complete.
 
@@ -99,13 +101,6 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 
 # SendActivity_NEsU8a_text()
 - Ok, I'll email your statement to [EMAIL].
-# SendActivity_SrFvlw()
-[Activity
-    Text = ${SendActivity_SrFvlw_text()}
-]
-
-# SendActivity_SrFvlw_text()
-- <Show user "Ray" Sub flow - receive by email statement of income>
 # ChoiceInput_InvalidPrompt_KsCK9C()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_KsCK9C_text()}
@@ -149,3 +144,9 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 
 # SendActivity_1v2LqC_text()
 - Here is your statement of income for 2020.
+# SendActivity_4FkBE2_text()
+- Ok, I'll email your statement to [EMAIL].
+# SendActivity_4FkBE2()
+[Activity
+    Text = ${SendActivity_4FkBE2_text()}
+]

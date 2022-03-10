@@ -81,25 +81,44 @@
               "value": "0",
               "actions": [
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.IfCondition",
                   "$designer": {
-                    "id": "c1D2h2"
+                    "id": "mo916b"
                   },
-                  "activity": "${SendActivity_c1D2h2()}"
-                },
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "GbvBa6"
-                  },
-                  "activity": "${SendActivity_GbvBa6()}"
-                },
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "un2GzK"
-                  },
-                  "activity": "${SendActivity_un2GzK()}"
+                  "condition": "=user.gis.blockCompleted",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "hytfFh"
+                      },
+                      "activity": "${SendActivity_hytfFh()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "DGjroI"
+                      },
+                      "activity": "${SendActivity_DGjroI()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "J4sIll"
+                      },
+                      "activity": "${SendActivity_J4sIll()}"
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "KdSo8i"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "Blocker-GIS-Payment-Onhold"
+                    }
+                  ]
                 }
               ]
             },
