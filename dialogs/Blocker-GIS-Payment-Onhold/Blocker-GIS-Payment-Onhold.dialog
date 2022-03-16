@@ -331,7 +331,8 @@
                                   "choiceOptions": {
                                     "includeNumbers": true,
                                     "inlineOrMore": ", or ",
-                                    "inlineOr": " or "
+                                    "inlineOr": " or ",
+                                    "inlineSeparator": ", "
                                   },
                                   "choices": [
                                     "Yes",
@@ -450,31 +451,17 @@
                                   ],
                                   "actions": [
                                     {
-                                      "$kind": "Microsoft.BeginDialog",
-                                      "$designer": {
-                                        "id": "bX7zh6"
-                                      },
-                                      "activityProcessed": true,
-                                      "dialog": "GIS-calc"
-                                    },
-                                    {
-                                      "$kind": "Microsoft.SendActivity",
-                                      "$designer": {
-                                        "id": "f7VHE0"
-                                      },
-                                      "activity": "${SendActivity_f7VHE0()}"
-                                    },
-                                    {
                                       "$kind": "Microsoft.ChoiceInput",
                                       "$designer": {
-                                        "id": "VUiSqC"
+                                        "id": "MjYK79"
                                       },
                                       "defaultLocale": "en-us",
                                       "disabled": false,
                                       "maxTurnCount": 2,
                                       "alwaysPrompt": true,
                                       "allowInterruptions": false,
-                                      "prompt": "${ChoiceInput_Prompt_VUiSqC()}",
+                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_MjYK79()}",
+                                      "prompt": "${ChoiceInput_Prompt_MjYK79()}",
                                       "choiceOptions": {
                                         "includeNumbers": true,
                                         "inlineOrMore": ", or ",
@@ -485,26 +472,26 @@
                                         "Yes",
                                         "No"
                                       ],
-                                      "property": "dialog.requestEmailCopyIncomeStatementChoice",
+                                      "property": "dialog.agreedDeclarationPromptChoice",
                                       "style": "heroCard",
                                       "recognizerOptions": {
                                         "recognizeOrdinals": true,
                                         "recognizeNumbers": true
                                       },
-                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_VUiSqC()}"
+                                      "validations": []
                                     },
                                     {
                                       "$kind": "Microsoft.IfCondition",
                                       "$designer": {
-                                        "id": "GvZIXV"
+                                        "id": "85Lhbe"
                                       },
-                                      "condition": "=dialog.requestEmailCopyIncomeStatementChoice",
+                                      "condition": "=dialog.agreedDeclarationPromptChoice",
                                       "actions": [],
                                       "elseActions": [
                                         {
                                           "$kind": "Microsoft.BeginDialog",
                                           "$designer": {
-                                            "id": "Qw6UIn"
+                                            "id": "RAtYYL"
                                           },
                                           "activityProcessed": true,
                                           "dialog": "error-userError-Response"
@@ -512,7 +499,7 @@
                                         {
                                           "$kind": "Microsoft.EndDialog",
                                           "$designer": {
-                                            "id": "kunnSm"
+                                            "id": "wQJ7jg"
                                           }
                                         }
                                       ]
@@ -520,21 +507,36 @@
                                     {
                                       "$kind": "Microsoft.IfCondition",
                                       "$designer": {
-                                        "id": "PKAjlE"
+                                        "id": "3ngIo6"
                                       },
-                                      "condition": "=dialog.requestEmailCopyIncomeStatementChoice==\"Yes\"",
+                                      "condition": "=dialog.agreedDeclarationPromptChoice==\"Yes\"",
                                       "actions": [
+                                        {
+                                          "$kind": "Microsoft.BeginDialog",
+                                          "$designer": {
+                                            "id": "lv13kI"
+                                          },
+                                          "activityProcessed": true,
+                                          "dialog": "GIS-calc"
+                                        },
+                                        {
+                                          "$kind": "Microsoft.SendActivity",
+                                          "$designer": {
+                                            "id": "380OWy"
+                                          },
+                                          "activity": "${SendActivity_380OWy()}"
+                                        },
                                         {
                                           "$kind": "Microsoft.ChoiceInput",
                                           "$designer": {
-                                            "id": "hb8N5J"
+                                            "id": "ZDDcKR"
                                           },
                                           "defaultLocale": "en-us",
                                           "disabled": false,
                                           "maxTurnCount": 2,
                                           "alwaysPrompt": true,
                                           "allowInterruptions": false,
-                                          "prompt": "${ChoiceInput_Prompt_hb8N5J()}",
+                                          "prompt": "${ChoiceInput_Prompt_ZDDcKR()}",
                                           "choiceOptions": {
                                             "includeNumbers": true,
                                             "inlineOrMore": ", or ",
@@ -545,26 +547,26 @@
                                             "Yes",
                                             "No"
                                           ],
-                                          "property": "dialog.isYourEmailChoice",
+                                          "property": "dialog.requestEmailCopyIncomeStatementChoice",
                                           "style": "heroCard",
                                           "recognizerOptions": {
                                             "recognizeOrdinals": true,
                                             "recognizeNumbers": true
                                           },
-                                          "invalidPrompt": "${ChoiceInput_InvalidPrompt_hb8N5J()}"
+                                          "invalidPrompt": "${ChoiceInput_InvalidPrompt_ZDDcKR()}"
                                         },
                                         {
                                           "$kind": "Microsoft.IfCondition",
                                           "$designer": {
-                                            "id": "E4vbYr"
+                                            "id": "19uHvW"
                                           },
-                                          "condition": "=dialog.isYourEmailChoice",
+                                          "condition": "=dialog.requestEmailCopyIncomeStatementChoice",
                                           "actions": [],
                                           "elseActions": [
                                             {
                                               "$kind": "Microsoft.BeginDialog",
                                               "$designer": {
-                                                "id": "8lV1pw"
+                                                "id": "cH0JoC"
                                               },
                                               "activityProcessed": true,
                                               "dialog": "error-userError-Response"
@@ -572,7 +574,7 @@
                                             {
                                               "$kind": "Microsoft.EndDialog",
                                               "$designer": {
-                                                "id": "CAxWiD"
+                                                "id": "Iezu9Y"
                                               }
                                             }
                                           ]
@@ -580,59 +582,130 @@
                                         {
                                           "$kind": "Microsoft.IfCondition",
                                           "$designer": {
-                                            "id": "SrA6dy"
+                                            "id": "6LjEf5"
                                           },
-                                          "condition": "=dialog.isYourEmailChoice==\"Yes\"",
+                                          "condition": "=dialog.requestEmailCopyIncomeStatementChoice==\"Yes\"",
                                           "actions": [
                                             {
-                                              "$kind": "Microsoft.SendActivity",
+                                              "$kind": "Microsoft.ChoiceInput",
                                               "$designer": {
-                                                "id": "NEsU8a"
+                                                "id": "zTVjrE"
                                               },
-                                              "activity": "${SendActivity_NEsU8a()}"
-                                            }
-                                          ],
-                                          "elseActions": [
-                                            {
-                                              "$kind": "Microsoft.BeginDialog",
-                                              "$designer": {
-                                                "id": "3liTgt"
+                                              "defaultLocale": "en-us",
+                                              "disabled": false,
+                                              "maxTurnCount": 2,
+                                              "alwaysPrompt": true,
+                                              "allowInterruptions": false,
+                                              "prompt": "${ChoiceInput_Prompt_zTVjrE()}",
+                                              "choiceOptions": {
+                                                "includeNumbers": true,
+                                                "inlineOrMore": ", or ",
+                                                "inlineOr": " or ",
+                                                "inlineSeparator": ", "
                                               },
-                                              "activityProcessed": true,
-                                              "dialog": "service-updateEmail"
+                                              "choices": [
+                                                "Yes",
+                                                "No"
+                                              ],
+                                              "property": "dialog.isYourEmailChoice",
+                                              "style": "heroCard",
+                                              "recognizerOptions": {
+                                                "recognizeOrdinals": true,
+                                                "recognizeNumbers": true
+                                              },
+                                              "invalidPrompt": "${ChoiceInput_InvalidPrompt_zTVjrE()}"
                                             },
                                             {
-                                              "$kind": "Microsoft.SendActivity",
+                                              "$kind": "Microsoft.IfCondition",
                                               "$designer": {
-                                                "id": "4FkBE2"
+                                                "id": "Crq9Gt"
                                               },
-                                              "activity": "${SendActivity_4FkBE2()}"
+                                              "condition": "=dialog.isYourEmailChoice",
+                                              "actions": [],
+                                              "elseActions": [
+                                                {
+                                                  "$kind": "Microsoft.BeginDialog",
+                                                  "$designer": {
+                                                    "id": "taZ2bb"
+                                                  },
+                                                  "activityProcessed": true,
+                                                  "dialog": "error-userError-Response"
+                                                },
+                                                {
+                                                  "$kind": "Microsoft.EndDialog",
+                                                  "$designer": {
+                                                    "id": "B9ImQA"
+                                                  }
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "$kind": "Microsoft.IfCondition",
+                                              "$designer": {
+                                                "id": "m2wtFx"
+                                              },
+                                              "condition": "=dialog.isYourEmailChoice==\"Yes\"",
+                                              "actions": [
+                                                {
+                                                  "$kind": "Microsoft.SendActivity",
+                                                  "$designer": {
+                                                    "id": "bReOq5"
+                                                  },
+                                                  "activity": "${SendActivity_bReOq5()}"
+                                                }
+                                              ],
+                                              "elseActions": [
+                                                {
+                                                  "$kind": "Microsoft.BeginDialog",
+                                                  "$designer": {
+                                                    "id": "SN6LMl"
+                                                  },
+                                                  "activityProcessed": true,
+                                                  "dialog": "service-updateEmail"
+                                                },
+                                                {
+                                                  "$kind": "Microsoft.SendActivity",
+                                                  "$designer": {
+                                                    "id": "sirgtx"
+                                                  },
+                                                  "activity": "${SendActivity_sirgtx()}"
+                                                }
+                                              ]
                                             }
                                           ]
+                                        },
+                                        {
+                                          "$kind": "Microsoft.SendActivity",
+                                          "$designer": {
+                                            "id": "KqcDoB"
+                                          },
+                                          "activity": "${SendActivity_KqcDoB()}"
+                                        },
+                                        {
+                                          "$kind": "Microsoft.SendActivity",
+                                          "$designer": {
+                                            "id": "eURum9"
+                                          },
+                                          "activity": "${SendActivity_eURum9()}"
+                                        },
+                                        {
+                                          "$kind": "Microsoft.SetProperty",
+                                          "$designer": {
+                                            "id": "PJi1cb"
+                                          },
+                                          "property": "user.gis.blockCompleted",
+                                          "value": true
+                                        }
+                                      ],
+                                      "elseActions": [
+                                        {
+                                          "$kind": "Microsoft.SendActivity",
+                                          "$designer": {
+                                            "id": "MrnGnw"
+                                          },
+                                          "activity": "${SendActivity_MrnGnw()}"
                                         }
                                       ]
-                                    },
-                                    {
-                                      "$kind": "Microsoft.SendActivity",
-                                      "$designer": {
-                                        "id": "zOvnkT"
-                                      },
-                                      "activity": "${SendActivity_zOvnkT()}"
-                                    },
-                                    {
-                                      "$kind": "Microsoft.SendActivity",
-                                      "$designer": {
-                                        "id": "XrRzjY"
-                                      },
-                                      "activity": "${SendActivity_XrRzjY()}"
-                                    },
-                                    {
-                                      "$kind": "Microsoft.SetProperty",
-                                      "$designer": {
-                                        "id": "bdInrv"
-                                      },
-                                      "property": "user.gis.blockCompleted",
-                                      "value": true
                                     }
                                   ]
                                 }
