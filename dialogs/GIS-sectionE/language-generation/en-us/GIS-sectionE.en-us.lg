@@ -1,14 +1,14 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_mRYyQq_text()
-- Did your income (excluding Old Age Security and Guaranteed Income Supplement) change in 2020?
+- In 2020, did you have other source of income other than the ones listed here?
 # ChoiceInput_Prompt_mRYyQq()
 [Activity
     Text = ${ChoiceInput_Prompt_mRYyQq_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_mRYyQq_text()
-- Hmm, I'm not sure what you meant. Did your income change in 2020?
+- Hmm, I'm not sure what you meant. In 2020, did you have other source of income other than the ones listed here?
 # ChoiceInput_InvalidPrompt_mRYyQq()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_mRYyQq_text()}
