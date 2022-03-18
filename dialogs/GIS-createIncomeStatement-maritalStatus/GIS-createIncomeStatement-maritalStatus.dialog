@@ -39,7 +39,7 @@
             "No"
           ],
           "property": "dialog.GIS.newIncomeStatement.martialStatus",
-          "style": "heroCard",
+          "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
@@ -100,7 +100,7 @@
                 "No"
               ],
               "property": "dialog.GIS.newIncomeStatement.martialConfirm",
-              "style": "heroCard",
+              "style": "suggestedAction",
               "recognizerOptions": {
                 "recognizeOrdinals": true,
                 "recognizeNumbers": true
