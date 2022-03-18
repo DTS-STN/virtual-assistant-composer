@@ -39,7 +39,7 @@
             "No"
           ],
           "property": "dialog.GISIncomeChangeChoice",
-          "style": "heroCard",
+          "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
@@ -108,7 +108,7 @@
                 "No"
               ],
               "property": "dialog.GISDidWorkChoice",
-              "style": "heroCard",
+              "style": "suggestedAction",
               "recognizerOptions": {
                 "recognizeOrdinals": true,
                 "recognizeNumbers": true
@@ -188,7 +188,7 @@
                     "No"
                   ],
                   "property": "dialog.GISDidEarnInvestmentsChoice",
-                  "style": "heroCard",
+                  "style": "suggestedAction",
                   "recognizerOptions": {
                     "recognizeOrdinals": true,
                     "recognizeNumbers": true
@@ -304,7 +304,7 @@
             "No"
           ],
           "property": "dialog.GISDidEarnInvestmentsChoice",
-          "style": "heroCard",
+          "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
