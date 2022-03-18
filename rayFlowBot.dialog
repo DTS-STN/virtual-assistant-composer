@@ -16,50 +16,28 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.Foreach",
+          "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "518944",
-            "name": "Loop: for each item",
-            "comment": "For each member added to the conversation."
+            "id": "Dhsjxy",
+            "name": "Send a response"
           },
-          "itemsProperty": "turn.Activity.membersAdded",
-          "actions": [
-            {
-              "$kind": "Microsoft.IfCondition",
-              "$designer": {
-                "id": "641773",
-                "name": "Branch: if/else",
-                "comment": "Checks that that member added ID does not match the bot ID. This prevents the greeting message from being sent when the bot is added to a conversation."
-              },
-              "condition": "=string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
-              "actions": [
-                {
-                  "$kind": "Microsoft.SendActivity",
-                  "$designer": {
-                    "id": "859266",
-                    "name": "Send a response"
-                  },
-                  "activity": "${SendActivity_Greeting()}"
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "kxdpWm"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "checkForBlocker-Handler"
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "jbvCqY"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "mainMenuFlows"
-                }
-              ]
-            }
-          ]
+          "activity": "${SendActivity_Dhsjxy()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "l0wNJP"
+          },
+          "activityProcessed": true,
+          "dialog": "checkForBlocker-Handler"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "tCHM7U"
+          },
+          "activityProcessed": true,
+          "dialog": "mainMenuFlows"
         }
       ]
     },
