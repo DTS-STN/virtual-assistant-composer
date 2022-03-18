@@ -9,7 +9,7 @@ const { getRuntimeServices} = require('botbuilder-dialogs-adaptive-runtime');
       logErrors: true,
       messagingEndpointPath: '/api/messages',
       skillsEndpointPrefix: '/api/skills',
-      port: 3980,
+      port: 3978,
       staticDirectory: 'wwwroot',
   };
 //  await start(process.cwd(), "settings", defaultOptions);
