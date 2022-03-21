@@ -35,7 +35,7 @@
             "inlineSeparator": ", "
           },
           "outputFormat": "index",
-          "style": "heroCard",
+          "style": "suggestedAction",
           "choices": [
             "Update my address",
             "Update my phone number",

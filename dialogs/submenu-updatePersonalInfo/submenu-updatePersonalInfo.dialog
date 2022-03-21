@@ -42,7 +42,7 @@
           ],
           "outputFormat": "index",
           "property": "dialog.subMenu.UpdatePersonalInfoChoice",
-          "style": "heroCard",
+          "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true
           }

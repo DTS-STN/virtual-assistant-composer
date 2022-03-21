@@ -41,7 +41,7 @@
             "inlineOr": " or ",
             "inlineSeparator": ", "
           },
-          "style": "heroCard",
+          "style": "suggestedAction",
           "choices": [
             "Yes",
             "No"

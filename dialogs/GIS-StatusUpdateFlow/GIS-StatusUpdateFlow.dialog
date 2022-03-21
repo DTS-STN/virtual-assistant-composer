@@ -40,7 +40,7 @@
           ],
           "outputFormat": "index",
           "property": "dialog.GISMenuChoice",
-          "style": "heroCard",
+          "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true

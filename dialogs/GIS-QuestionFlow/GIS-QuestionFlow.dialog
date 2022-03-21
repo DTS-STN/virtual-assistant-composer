@@ -33,9 +33,10 @@
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
-            "inlineOr": " or "
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
           },
-          "style": "heroCard",
+          "style": "suggestedAction",
           "choices": [
             "I want to check on my GIS benefit status",
             "I want to download a copy of my 2020 statement"
