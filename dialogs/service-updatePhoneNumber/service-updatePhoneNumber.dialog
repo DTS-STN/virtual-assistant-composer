@@ -54,7 +54,7 @@
                 "id": "VCFNuN"
               },
               "property": "conversation.user.phoneNumber",
-              "value": "user.userPhoneNumber"
+              "value": "=user.userPhoneNumber"
             },
             {
               "$kind": "Microsoft.SendActivity",
