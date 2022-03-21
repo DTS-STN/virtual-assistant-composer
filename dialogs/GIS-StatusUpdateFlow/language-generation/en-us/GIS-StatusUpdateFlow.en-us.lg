@@ -29,8 +29,9 @@
 ]
 
 # SendActivity_J4sIll_text()
-- If you are facing an emergency such as eviction or not having enough money for food or transport, please call [XXX-XXX-XXXX] for urgent support.
+- If you are facing an emergency such as eviction or not having enough money for food or transport, please call ${conversation.urgentSupportNumber} for urgent support.
 # SendActivity_J4sIll()
 [Activity
     Text = ${SendActivity_J4sIll_text()}
 ]
+

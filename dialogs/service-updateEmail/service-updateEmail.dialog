@@ -49,28 +49,12 @@
           "condition": "=user.userEmail",
           "actions": [
             {
-              "$kind": "Microsoft.HttpRequest",
+              "$kind": "Microsoft.SetProperty",
               "$designer": {
-                "id": "DYyEqb"
+                "id": "xpmnWU"
               },
-              "resultProperty": "turn.results",
-              "body": {
-                "records": [
-                  {
-                    "id": "recrzEemVpbkeFE5C",
-                    "fields": {
-                      "Employer Contact Email": "${user.userEmail}"
-                    }
-                  }
-                ]
-              },
-              "method": "PATCH",
-              "url": "https://api.airtable.com/v0/apprmDv9NMLgnZBuV/EI%20Data",
-              "headers": {
-                "Authorization": "Bearer key5vC3ALZrd3PHPG"
-              },
-              "responseType": "json",
-              "contentType": "application/json"
+              "value": "=user.userEmail",
+              "property": "conversation.user.email"
             },
             {
               "$kind": "Microsoft.SendActivity",

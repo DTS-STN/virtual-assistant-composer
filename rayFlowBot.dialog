@@ -16,6 +16,14 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "fSzEaB"
+          },
+          "activityProcessed": true,
+          "dialog": "setDataVariables"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "Dhsjxy",
