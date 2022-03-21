@@ -41,6 +41,10 @@
             {
               "property": "conversation.user.address",
               "value": "North Pole, H0H 0H0"
+            },
+            {
+              "property": "conversation.user.oasPayment",
+              "value": 642.25
             }
           ]
         },
@@ -59,7 +63,7 @@
               "value": "https://www.canada.ca/en/employment-social-development/corporate/contact/oas.html"
             },
             {
-              "property": "conversation.urgentSupport",
+              "property": "conversation.urgentSupportNumber",
               "value": "111-222-3333"
             }
           ]

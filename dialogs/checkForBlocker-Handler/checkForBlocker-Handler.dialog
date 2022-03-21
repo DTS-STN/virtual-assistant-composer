@@ -55,22 +55,6 @@
                       "options": {}
                     }
                   ]
-                },
-                {
-                  "value": "Test"
-                },
-                {
-                  "value": "Update-Email",
-                  "actions": [
-                    {
-                      "$kind": "Microsoft.BeginDialog",
-                      "$designer": {
-                        "id": "ap1lTu"
-                      },
-                      "activityProcessed": true,
-                      "dialog": "updateEmailFlow"
-                    }
-                  ]
                 }
               ]
             }

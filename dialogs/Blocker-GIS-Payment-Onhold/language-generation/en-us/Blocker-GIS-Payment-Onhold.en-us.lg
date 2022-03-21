@@ -121,7 +121,7 @@ I realize that my personal information is governed by the Privacy Act and may be
 ]
 
 # ChoiceInput_Prompt_zTVjrE_text()
-- The email address I have for you is [EMAIL]. Is this the correct email address?
+- The email address I have for you is ${conversation.user.email}. Is this the correct email address?
 # ChoiceInput_Prompt_zTVjrE()
 [Activity
     Text = ${ChoiceInput_Prompt_zTVjrE_text()}
@@ -136,14 +136,14 @@ I realize that my personal information is governed by the Privacy Act and may be
 ]
 
 # SendActivity_bReOq5_text()
-- Ok, I'll email your statement to [EMAIL].
+- Ok, I'll email your statement to ${conversation.user.email}.
 # SendActivity_bReOq5()
 [Activity
     Text = ${SendActivity_bReOq5_text()}
 ]
 
 # SendActivity_sirgtx_text()
-- Ok, I'll email your statement to [EMAIL].
+- Ok, I'll email your statement to ${conversation.user.email}.
 # SendActivity_sirgtx()
 [Activity
     Text = ${SendActivity_sirgtx_text()}
@@ -159,7 +159,7 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 ]
 
 # SendActivity_eURum9_text()
-- If you are facing an emergency such as eviction or not having enough money for food or transport, please call [XXX-XXX-XXXX] for urgent support.
+- If you are facing an emergency such as eviction or not having enough money for food or transport, please call ${conversation.urgentSupportNumber} for urgent support.
 # SendActivity_eURum9()
 [Activity
     Text = ${SendActivity_eURum9_text()}

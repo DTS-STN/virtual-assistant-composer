@@ -20,4 +20,4 @@
 ]
 
 # SendActivity_9xKNhE_text()
-- Right now, you're enrolled in Old Age Security and you receive $642.25 every month.
+- Right now, you're enrolled in Old Age Security and you receive $${conversation.user.oasPayment} every month.

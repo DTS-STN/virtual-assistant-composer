@@ -1,7 +1,7 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_QT3xWJ_text()
-- Ok, great! I can help with that. The email address I have for you is ${user.userData.fields["Employer Contact Email"]}. Do you want to update to a new email address?
+- Ok, great! I can help with that. The email address I have for you is ${conversation.user.email}. Do you want to update to a new email address?
 # ChoiceInput_Prompt_QT3xWJ()
 [Activity
     Text = ${ChoiceInput_Prompt_QT3xWJ_text()}

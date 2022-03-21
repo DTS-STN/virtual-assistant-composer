@@ -20,4 +20,4 @@
 ]
 
 # SendActivity_h2kzWz_text()
-- Perfect! I have updated your phone number to ${user.userPhoneNumber}.
+- Perfect! I have updated your phone number to ${conversation.user.phoneNumber}.
