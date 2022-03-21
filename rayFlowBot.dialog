@@ -34,10 +34,11 @@
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "l0wNJP"
+            "id": "sSsJIS"
           },
           "activityProcessed": true,
-          "dialog": "checkForBlocker-Handler"
+          "dialog": "Blocker-GIS-Payment-Onhold",
+          "options": {}
         },
         {
           "$kind": "Microsoft.BeginDialog",

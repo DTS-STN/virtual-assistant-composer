@@ -9,6 +9,11 @@
     "callbackSkill": {
       "manifest": "",
       "remote": true
+    },
+    "addressSkill-1": {
+      "manifest": "https://va-address-skill-develop.bdm-dev.dts-stn.com/manifest/manifest-1.1.json",
+      "remote": true,
+      "endpointName": "production"
     }
   }
 }
