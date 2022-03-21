@@ -1,0 +1,73 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "zTqixP",
+    "name": "setDataVariables",
+    "comment": "We've removed saving the data externally and this dialog will set up the new global variables that'll be used."
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "XaPSdr"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "HiidEz"
+          },
+          "assignments": [
+            {
+              "property": "conversation.user.firstName",
+              "value": "Ray"
+            },
+            {
+              "property": "conversation.user.lastName",
+              "value": "LastName"
+            },
+            {
+              "property": "conversation.user.email",
+              "value": "test@test.com"
+            },
+            {
+              "property": "conversation.user.phoneNumber",
+              "value": "123-456-7890"
+            },
+            {
+              "property": "conversation.user.address",
+              "value": "North Pole, H0H 0H0"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "1xDCVC"
+          },
+          "assignments": [
+            {
+              "property": "conversation.helpDeskNumber",
+              "value": "123-456-7890"
+            },
+            {
+              "property": "conversation.helpDeskUrl",
+              "value": "https://www.canada.ca/en/employment-social-development/corporate/contact/oas.html"
+            },
+            {
+              "property": "conversation.urgentSupport",
+              "value": "111-222-3333"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "setDataVariables.lg",
+  "recognizer": "setDataVariables.lu.qna",
+  "id": "setDataVariables"
+}
