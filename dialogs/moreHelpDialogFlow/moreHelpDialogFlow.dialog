@@ -43,7 +43,8 @@
           "outputFormat": "index",
           "recognizerOptions": {
             "recognizeOrdinals": true
-          }
+          },
+          "style": "suggestedAction"
         },
         {
           "$kind": "Microsoft.SwitchCondition",
