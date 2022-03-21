@@ -81,7 +81,21 @@
           "cases": [
             {
               "value": "0",
-              "actions": []
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginSkill",
+                  "$designer": {
+                    "id": "tdLTMU"
+                  },
+                  "activityProcessed": true,
+                  "botId": "=settings.MicrosoftAppId",
+                  "skillHostEndpoint": "=settings.skillHostEndpoint",
+                  "connectionName": "=settings.connectionName",
+                  "allowInterruptions": true,
+                  "skillEndpoint": "=settings.skill['addressSkill-1'].endpointUrl",
+                  "skillAppId": "=settings.skill['addressSkill-1'].msAppId"
+                }
+              ]
             },
             {
               "value": "1",

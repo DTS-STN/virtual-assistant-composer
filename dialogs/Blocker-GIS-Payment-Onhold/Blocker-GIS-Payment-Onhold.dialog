@@ -400,7 +400,7 @@
                                         "No"
                                       ],
                                       "property": "dialog.GISBlockerRepeatChoice",
-                                      "style": "heroCard",
+                                      "style": "suggestedAction",
                                       "recognizerOptions": {
                                         "recognizeOrdinals": true,
                                         "recognizeNumbers": true
@@ -548,7 +548,7 @@
                                             "No"
                                           ],
                                           "property": "dialog.requestEmailCopyIncomeStatementChoice",
-                                          "style": "heroCard",
+                                          "style": "suggestedAction",
                                           "recognizerOptions": {
                                             "recognizeOrdinals": true,
                                             "recognizeNumbers": true
@@ -608,7 +608,7 @@
                                                 "No"
                                               ],
                                               "property": "dialog.isYourEmailChoice",
-                                              "style": "heroCard",
+                                              "style": "suggestedAction",
                                               "recognizerOptions": {
                                                 "recognizeOrdinals": true,
                                                 "recognizeNumbers": true
