@@ -164,11 +164,3 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 [Activity
     Text = ${SendActivity_eURum9_text()}
 ]
-
-# SendActivity_MrnGnw()
-[Activity
-    Text = ${SendActivity_MrnGnw_text()}
-]
-
-# SendActivity_MrnGnw_text()
-- [Callback skill goes here]

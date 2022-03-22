@@ -148,11 +148,17 @@
               "condition": "=dialog.GIS.newIncomeStatement.liveAbroad==\"Yes\"",
               "actions": [
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.BeginSkill",
                   "$designer": {
-                    "id": "nUpexy"
+                    "id": "zNOUcK"
                   },
-                  "activity": "${SendActivity_nUpexy()}"
+                  "activityProcessed": true,
+                  "botId": "=settings.MicrosoftAppId",
+                  "skillHostEndpoint": "=settings.skillHostEndpoint",
+                  "connectionName": "=settings.connectionName",
+                  "allowInterruptions": true,
+                  "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
+                  "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
                 }
               ],
               "elseActions": []

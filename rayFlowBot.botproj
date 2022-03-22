@@ -14,6 +14,11 @@
       "manifest": "https://va-address-skill-develop.bdm-dev.dts-stn.com/manifest/manifest-1.1.json",
       "remote": true,
       "endpointName": "production"
+    },
+    "callbackSkill-1": {
+      "manifest": "https://va-callback-skill-develop.bdm-dev.dts-stn.com/manifest/manifest-1.1.json",
+      "remote": true,
+      "endpointName": "production"
     }
   }
 }

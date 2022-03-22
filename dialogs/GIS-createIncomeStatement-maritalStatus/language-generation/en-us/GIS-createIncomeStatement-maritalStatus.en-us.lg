@@ -25,13 +25,6 @@ Would you like me to set up a call for you?```
     Text = ${ChoiceInput_Prompt_3JRbEn_text()}
 ]
 
-# SendActivity_OdCcP4_text()
-- <Take user to Callback flow>
-# SendActivity_OdCcP4()
-[Activity
-    Text = ${SendActivity_OdCcP4_text()}
-]
-
 # ChoiceInput_InvalidPrompt_qTyq0n()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_qTyq0n_text()}
