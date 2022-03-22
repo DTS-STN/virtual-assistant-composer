@@ -148,11 +148,17 @@
                   "value": false
                 },
                 {
-                  "$kind": "Microsoft.SendActivity",
+                  "$kind": "Microsoft.BeginSkill",
                   "$designer": {
-                    "id": "OdCcP4"
+                    "id": "tbsZN9"
                   },
-                  "activity": "${SendActivity_OdCcP4()}"
+                  "activityProcessed": true,
+                  "botId": "=settings.MicrosoftAppId",
+                  "skillHostEndpoint": "=settings.skillHostEndpoint",
+                  "connectionName": "=settings.connectionName",
+                  "allowInterruptions": true,
+                  "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
+                  "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
                 }
               ],
               "elseActions": [

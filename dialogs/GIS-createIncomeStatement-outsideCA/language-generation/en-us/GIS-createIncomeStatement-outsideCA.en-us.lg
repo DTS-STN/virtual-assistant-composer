@@ -18,13 +18,6 @@ Would you like me to set up a call for you?```
     Text = ${ChoiceInput_Prompt_nnkiVa_text()}
 ]
 
-# SendActivity_nUpexy_text()
-- <Take user to Callback flow>
-# SendActivity_nUpexy()
-[Activity
-    Text = ${SendActivity_nUpexy_text()}
-]
-
 # ChoiceInput_InvalidPrompt_COcmjQ()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_COcmjQ_text()}

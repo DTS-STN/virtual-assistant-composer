@@ -699,11 +699,17 @@
                                       ],
                                       "elseActions": [
                                         {
-                                          "$kind": "Microsoft.SendActivity",
+                                          "$kind": "Microsoft.BeginSkill",
                                           "$designer": {
-                                            "id": "MrnGnw"
+                                            "id": "gA8Gwk"
                                           },
-                                          "activity": "${SendActivity_MrnGnw()}"
+                                          "activityProcessed": true,
+                                          "botId": "=settings.MicrosoftAppId",
+                                          "skillHostEndpoint": "=settings.skillHostEndpoint",
+                                          "connectionName": "=settings.connectionName",
+                                          "allowInterruptions": true,
+                                          "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
+                                          "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
                                         }
                                       ]
                                     }
