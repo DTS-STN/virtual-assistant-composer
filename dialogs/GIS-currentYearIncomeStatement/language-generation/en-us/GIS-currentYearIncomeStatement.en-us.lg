@@ -213,7 +213,8 @@
 ]
 
 # SendActivity_kybldb_attachment_XI5Xxy()
-> To learn more Adaptive Cards format, read the documentation at
+> To learn more about the LG file format, read the documentation at
+> https://aka.ms/lg-file-format> To learn more Adaptive Cards format, read the documentation at
 > https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
 - ```
 {
@@ -312,7 +313,7 @@
                 }
             ]
         },
-        {
+        {      
             "type": "ColumnSet",
             "columns": [
                 {
@@ -320,32 +321,21 @@
                     "width": "stretch",
                     "items": [
                         {
-                            "type": "ColumnSet",
-                            "columns": [
-                                {
-                                    "type": "Column",
-                                    "width": "stretch",
-                                    "items": [
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "Investment income:",
-                                            "wrap": true,
-                                            "weight": "Bolder"
-                                        }
-                                    ]
-                                },
-                                {
-                                    "type": "Column",
-                                    "width": "stretch",
-                                    "items": [
-                                        {
-                                            "type": "TextBlock",
-                                            "text": "$${user.gis.new.incomeTotal}",
-                                            "wrap": true
-                                        }
-                                    ]
-                                }
-                            ]
+                            "type": "TextBlock",
+                            "text": "Investment income:",
+                            "wrap": true,
+                            "weight": "Bolder"
+                        }
+                    ]
+                },
+                {
+                    "type": "Column",
+                    "width": "stretch",
+                    "items": [
+                        {
+                            "type": "TextBlock",
+                            "text": "$${user.gis.new.incomeTotal}",
+                            "wrap": true
                         }
                     ]
                 }
