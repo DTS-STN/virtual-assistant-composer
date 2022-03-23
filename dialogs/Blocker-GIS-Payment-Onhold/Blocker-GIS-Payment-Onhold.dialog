@@ -291,10 +291,10 @@
                                 {
                                   "$kind": "Microsoft.BeginDialog",
                                   "$designer": {
-                                    "id": "F9Auhc"
+                                    "id": "5BGEPw"
                                   },
                                   "activityProcessed": true,
-                                  "dialog": "GIS-sectionE"
+                                  "dialog": "GIS-sectionE-revised"
                                 }
                               ]
                             },

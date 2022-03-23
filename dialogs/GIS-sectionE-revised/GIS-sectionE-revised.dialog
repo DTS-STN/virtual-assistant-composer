@@ -1,0 +1,320 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "isuIsC",
+    "name": "GIS-sectionE-revised",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "JPwhII"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "lo1yRa"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 2,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_lo1yRa()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "outputFormat": "value",
+          "choices": [
+            "Yes",
+            "No"
+          ],
+          "property": "dialog.GISIncomeChangeChoice",
+          "style": "suggestedAction",
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_lo1yRa()}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "EZh4v2"
+          },
+          "condition": "=dialog.GISIncomeChangeChoice",
+          "actions": [],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "kM3bJ7"
+              },
+              "activityProcessed": true,
+              "dialog": "error-userError-Response"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "CkWzdo"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "yDL6js"
+          },
+          "condition": "=dialog.GISIncomeChangeChoice==\"Yes\"",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "aclPkL"
+              }
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "mZxpce"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 2,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "prompt": "${ChoiceInput_Prompt_mZxpce()}",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or ",
+                "inlineSeparator": ", "
+              },
+              "outputFormat": "value",
+              "choices": [
+                "Yes",
+                "No"
+              ],
+              "property": "dialog.GISDidWorkChoice",
+              "style": "suggestedAction",
+              "recognizerOptions": {
+                "recognizeOrdinals": true,
+                "recognizeNumbers": true
+              },
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_mZxpce()}"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "qYJtNQ"
+              },
+              "condition": "=dialog.GISDidWorkChoice",
+              "actions": [],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "FLrp6G"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "error-userError-Response"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "k9Fnqg"
+                  }
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "ETkfPM"
+              },
+              "actions": [
+                {
+                  "$kind": "Microsoft.NumberInput",
+                  "$designer": {
+                    "id": "XvuJWV"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 2,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "${NumberInput_InvalidPrompt_XvuJWV()}",
+                  "property": "user.incomeEmployedAndSelf",
+                  "prompt": "${NumberInput_Prompt_XvuJWV()}"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "0gvMpT"
+                  },
+                  "condition": "=user.incomeEmployedAndSelf",
+                  "actions": [],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "a5jBYn"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "error-userError-Response"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "pSNVdc"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.SetProperties",
+                  "$designer": {
+                    "id": "v0ybPn"
+                  },
+                  "assignments": [
+                    {
+                      "property": "user.gis.new.employmentIncomeAmount",
+                      "value": "=user.incomeEmployedAndSelf"
+                    },
+                    {
+                      "property": "user.gis.new.selfemploymentAmount",
+                      "value": 0
+                    }
+                  ]
+                }
+              ],
+              "condition": "=dialog.GISDidWorkChoice==\"Yes\"",
+              "elseActions": []
+            },
+            {
+              "$kind": "Microsoft.ChoiceInput",
+              "$designer": {
+                "id": "IiEkXK",
+                "comment": "This section has been taken from another section (message receieved). "
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 2,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "prompt": "${ChoiceInput_Prompt_IiEkXK()}",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or ",
+                "inlineSeparator": ", "
+              },
+              "outputFormat": "value",
+              "choices": [
+                "Yes",
+                "No"
+              ],
+              "property": "dialog.GISDidEarnInvestmentsChoice",
+              "style": "suggestedAction",
+              "recognizerOptions": {
+                "recognizeOrdinals": true,
+                "recognizeNumbers": true
+              },
+              "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_IiEkXK()}",
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_IiEkXK()}"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "HDJQLt"
+              },
+              "condition": "=dialog.GISDidEarnInvestmentsChoice",
+              "actions": [],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "DzUuIH"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "error-userError-Response"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "3d1t0D"
+                  }
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "Mqbvl8"
+              },
+              "condition": "=dialog.GISDidEarnInvestmentsChoice==\"Yes\"",
+              "actions": [
+                {
+                  "$kind": "Microsoft.NumberInput",
+                  "$designer": {
+                    "id": "U1uZzy"
+                  },
+                  "defaultLocale": "en-us",
+                  "disabled": false,
+                  "maxTurnCount": 2,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "prompt": "${NumberInput_Prompt_U1uZzy()}",
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "${NumberInput_InvalidPrompt_U1uZzy()}",
+                  "property": "user.gis.new.incomeTotal"
+                },
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "Eko7Za"
+                  },
+                  "condition": "=user.gis.new.incomeTotal",
+                  "actions": [],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.BeginDialog",
+                      "$designer": {
+                        "id": "DIM4cu"
+                      },
+                      "activityProcessed": true,
+                      "dialog": "error-userError-Response"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "3hiTF2"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "elseActions": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "GIS-sectionE-revised.lg",
+  "recognizer": "GIS-sectionE-revised.lu.qna",
+  "id": "GIS-sectionE-revised"
+}
