@@ -156,7 +156,7 @@
                   "alwaysPrompt": true,
                   "allowInterruptions": false,
                   "invalidPrompt": "${NumberInput_InvalidPrompt_XvuJWV()}",
-                  "property": "dialog.incomeEmployedAndSelf",
+                  "property": "user.gis.new.employmentIncomeAmount",
                   "prompt": "${NumberInput_Prompt_XvuJWV()}"
                 },
                 {
@@ -164,7 +164,7 @@
                   "$designer": {
                     "id": "0gvMpT"
                   },
-                  "condition": "=dialog.incomeEmployedAndSelf",
+                  "condition": "=user.gis.new.employmentIncomeAmount",
                   "actions": [],
                   "elseActions": [
                     {
@@ -189,10 +189,6 @@
                     "id": "v0ybPn"
                   },
                   "assignments": [
-                    {
-                      "property": "user.gis.new.employmentIncomeAmount",
-                      "value": "=dialog.incomeEmployedAndSelf"
-                    },
                     {
                       "property": "user.gis.new.selfemploymentAmount",
                       "value": 0
