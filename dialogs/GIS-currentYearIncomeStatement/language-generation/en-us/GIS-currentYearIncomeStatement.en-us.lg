@@ -284,35 +284,6 @@
                 }
             ]
         },
-        {
-            "type": "ColumnSet",
-            "columns": [
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "Self-employment income:",
-                            "wrap": true,
-                            "weight": "Bolder",
-                            "separator": true
-                        }
-                    ]
-                },
-                {
-                    "type": "Column",
-                    "width": "stretch",
-                    "items": [
-                        {
-                            "type": "TextBlock",
-                            "text": "$${user.gis.new.selfemploymentAmount}",
-                            "wrap": true
-                        }
-                    ]
-                }
-            ]
-        },
         {      
             "type": "ColumnSet",
             "columns": [
