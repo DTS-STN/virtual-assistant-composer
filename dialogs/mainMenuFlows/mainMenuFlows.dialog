@@ -34,8 +34,8 @@
           },
           "prompt": "${ChoiceInput_Prompt_LdcDJr()}",
           "choices": [
-            "I have a question about my Guarenteed Income Supplement (GIS)",
-            "I have a question about my Old Age Security pension",
+            "Question about my Guarenteed Income Supplement (GIS)",
+            "Question about my Old Age Security pension",
             "I want to update my personal information"
           ],
           "outputFormat": "index",
