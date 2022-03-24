@@ -25,13 +25,6 @@
           "itemsProperty": "turn.Activity.membersAdded",
           "actions": [
             {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "v0wkKQ"
-              },
-              "activity": "${SendActivity_v0wkKQ()}"
-            },
-            {
               "$kind": "Microsoft.TextInput",
               "$designer": {
                 "id": "Jn2XD6"
