@@ -1,8 +1,0 @@
-{
-  "$kind": "Microsoft.LuisRecognizer",
-  "id": "LUIS_getGISData",
-  "applicationId": "=settings.luis.getGISData_fr_ca_lu.appId",
-  "version": "=settings.luis.getGISData_fr_ca_lu.version",
-  "endpoint": "=settings.luis.endpoint",
-  "endpointKey": "=settings.luis.endpointKey"
-}
