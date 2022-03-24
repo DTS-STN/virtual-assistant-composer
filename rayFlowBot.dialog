@@ -32,6 +32,21 @@
               "activity": "${SendActivity_v0wkKQ()}"
             },
             {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "Jn2XD6"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "dialog.handShake",
+              "prompt": "${TextInput_Prompt_Jn2XD6()}"
+            },
+            {
               "$kind": "Microsoft.IfCondition",
               "$designer": {
                 "name": "Branch: If/else",
