@@ -94,6 +94,14 @@
                   "allowInterruptions": true,
                   "skillEndpoint": "=settings.skill['addressSkill-1'].endpointUrl",
                   "skillAppId": "=settings.skill['addressSkill-1'].msAppId"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "uCAYNO"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "moreHelpDialogFlow"
                 }
               ]
             },
