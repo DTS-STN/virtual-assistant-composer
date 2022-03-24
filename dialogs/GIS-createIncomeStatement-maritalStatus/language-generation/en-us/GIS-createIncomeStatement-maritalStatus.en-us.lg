@@ -39,7 +39,3 @@ Would you like me to set up a call for you?```
 
 # ChoiceInput_InvalidPrompt_3JRbEn_text()
 - Hmm, I'm not sure what you meant. Would you like me to set up a call for you?
-# SendActivity_uPfBf5()
-[Activity
-    Text = hi
-]
