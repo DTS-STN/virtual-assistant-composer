@@ -165,3 +165,6 @@ Comme vous avez déclaré $${user.gis.new.incomeTotal}, vous recevrez probableme
 [Activity
     Text = ${SendActivity_eURum9_text()}
 ]
+
+# SendActivity_BmCWXX()
+-
