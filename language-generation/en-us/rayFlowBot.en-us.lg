@@ -8,7 +8,7 @@
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
 # SendActivity_Greeting_text()
-- Frontend test Hi ${conversation.user.firstName}, I'm your virtual assistant.
+- invisible handshake prompt test Hi ${conversation.user.firstName}, I'm your virtual assistant.
 # SendActivity_Xb6tpb()
 [Activity
     Text = ${SendActivity_Greeting_text()}
@@ -20,4 +20,11 @@
 ]
 
 # SendActivity_v0wkKQ_text()
-- for each value: ${string(dialog.foreach.value.id)}
+- initial message
+# TextInput_Prompt_Jn2XD6()
+[Activity
+    Text = ${TextInput_Prompt_Jn2XD6_text()}
+]
+
+# TextInput_Prompt_Jn2XD6_text()
+-  
