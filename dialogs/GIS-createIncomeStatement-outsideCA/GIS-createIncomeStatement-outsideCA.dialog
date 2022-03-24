@@ -163,7 +163,7 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "ftf60k"
+                    "id": "HQpaY7"
                   },
                   "activityProcessed": true,
                   "dialog": "moreHelpDialogFlow"

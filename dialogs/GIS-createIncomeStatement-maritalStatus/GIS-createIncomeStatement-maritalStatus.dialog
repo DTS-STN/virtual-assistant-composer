@@ -163,7 +163,7 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "4vy5Se"
+                    "id": "k4ZqyW"
                   },
                   "activityProcessed": true,
                   "dialog": "moreHelpDialogFlow"
