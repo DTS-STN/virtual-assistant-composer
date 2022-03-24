@@ -164,3 +164,11 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 [Activity
     Text = ${SendActivity_eURum9_text()}
 ]
+
+# SendActivity_BmCWXX()
+[Activity
+    Text = ${SendActivity_BmCWXX_text()}
+]
+
+# SendActivity_BmCWXX_text()
+- In 2019, you declared the following income:
