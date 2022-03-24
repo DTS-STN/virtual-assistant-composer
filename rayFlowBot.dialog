@@ -25,19 +25,27 @@
           "itemsProperty": "turn.Activity.membersAdded",
           "actions": [
             {
-              "$kind": "Microsoft.TextInput",
+              "$kind": "Microsoft.IfCondition",
               "$designer": {
-                "id": "Jn2XD6"
+                "id": "LiyxBY"
               },
-              "disabled": false,
-              "maxTurnCount": 3,
-              "alwaysPrompt": false,
-              "allowInterruptions": false,
-              "unrecognizedPrompt": "",
-              "invalidPrompt": "",
-              "defaultValueResponse": "",
-              "property": "dialog.handShake",
-              "prompt": "${TextInput_Prompt_Jn2XD6()}"
+              "condition": "string(dialog.foreach.value.id) == string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.TextInput",
+                  "$designer": {
+                    "id": "1Oopce"
+                  },
+                  "disabled": false,
+                  "maxTurnCount": 3,
+                  "alwaysPrompt": false,
+                  "allowInterruptions": false,
+                  "unrecognizedPrompt": "",
+                  "invalidPrompt": "",
+                  "property": "dialog.handShake",
+                  "prompt": "${TextInput_Prompt_1Oopce()}"
+                }
+              ]
             },
             {
               "$kind": "Microsoft.IfCondition",
