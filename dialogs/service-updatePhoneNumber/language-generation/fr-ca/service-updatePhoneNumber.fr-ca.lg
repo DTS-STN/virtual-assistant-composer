@@ -1,7 +1,7 @@
 [import](common.lg)
 
 # TextInput_Prompt_SDugR7_text()
-- What's your new phone number?
+- Quel est votre nouveau numéro de téléphone?
 # TextInput_Prompt_SDugR7()
 [Activity
     Text = ${TextInput_Prompt_SDugR7_text()}
@@ -13,11 +13,11 @@
 ]
 
 # TextInput_InvalidPrompt_SDugR7_text()
-- Oops, looks like the phone number you entered isn't formatted correctly (here's an example: 123-456-7890). Let's try again.
+- Oups, il semble que le numéro de téléphone que vous avez entré n'utilise pas le bon format (voici un exemple: 123-456-7890). Essayez à nouveau.
 # SendActivity_h2kzWz()
 [Activity
     Text = ${SendActivity_h2kzWz_text()}
 ]
 
 # SendActivity_h2kzWz_text()
-- Perfect! I have updated your phone number to ${conversation.user.phoneNumber}.
+- Parfait! J'ai mis à jour votre numéro de téléphone ${conversation.user.phoneNumber}.

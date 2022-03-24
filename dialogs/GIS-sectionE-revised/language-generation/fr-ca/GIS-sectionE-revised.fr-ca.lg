@@ -50,7 +50,7 @@
 ]
 
 # ChoiceInput_InvalidPrompt_IiEkXK_text()
-- Hmm, I'm not sure what you meant. Did you make income on investments in 2020?
+- Hum, je ne comprends pas. Avez-vous tirer des revenus de vos investissements en 2020?
 # ChoiceInput_InvalidPrompt_IiEkXK()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_IiEkXK_text()}
@@ -77,4 +77,4 @@
 ]
 
 # NumberInput_InvalidPrompt_U1uZzy_text()
-- Hmm, I'm not sure what you meant. How much investment income did you earn in 2020 (including interest, capital gains, and dividends)?
+- Hum, je ne comprends pas. Combien avez-vous tirer des revenus de vos investissements en 2020 (incluant les intérêts, les gains en capital et les dividendes)?

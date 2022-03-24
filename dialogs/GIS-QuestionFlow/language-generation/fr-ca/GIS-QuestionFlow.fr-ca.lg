@@ -1,7 +1,7 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_6af2SG_text()
-- Voici les questions auxquelles je peux répondre :
+- Voici les questions auxquelles je peux répondre:
 # ChoiceInput_Prompt_6af2SG()
 [Activity
     Text = ${ChoiceInput_Prompt_6af2SG_text()}
