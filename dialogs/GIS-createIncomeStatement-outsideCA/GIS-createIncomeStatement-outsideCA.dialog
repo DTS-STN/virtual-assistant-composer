@@ -159,17 +159,17 @@
                   "allowInterruptions": true,
                   "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
                   "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "HQpaY7"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "moreHelpDialogFlow"
                 }
               ],
               "elseActions": []
-            },
-            {
-              "$kind": "Microsoft.BeginDialog",
-              "$designer": {
-                "id": "6JVQXP"
-              },
-              "activityProcessed": true,
-              "dialog": "moreHelpDialogFlow"
             }
           ]
         }
