@@ -9,22 +9,6 @@
 - Sorry, I didn't get that.
 # SendActivity_Greeting_text()
 - Hi ${conversation.user.firstName}, I'm your virtual assistant.
-# SendActivity_Xb6tpb()
-[Activity
-    Text = ${SendActivity_Greeting_text()}
-]
-
-
-# SendActivity_mm2BZB()
-[Activity
-    Text = ${SendActivity_mm2BZB_text()}
-    SuggestedActions = Yes|No
-
-
-]
-
-# SendActivity_mm2BZB_text()
-- I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
 # SendActivity_xvLvAi()
 [Activity
     Text = ${SendActivity_xvLvAi_text()}
@@ -32,3 +16,18 @@
 
 # SendActivity_xvLvAi_text()
 - Test yes
+# SendActivity_x18Lqj()
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+
+
+# SendActivity_qqyfUI_text()
+- I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
+# SendActivity_qqyfUI()
+[Activity
+    Text = ${SendActivity_qqyfUI_text()}
+    SuggestedActions = Yes|No
+
+
+]
