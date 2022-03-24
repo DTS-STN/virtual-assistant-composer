@@ -25,58 +25,12 @@
           "value": false
         },
         {
-          "$kind": "Microsoft.ChoiceInput",
+          "$kind": "Microsoft.SetProperty",
           "$designer": {
-            "id": "KsCK9C"
+            "id": "YXrXWB"
           },
-          "defaultLocale": "en-us",
-          "disabled": false,
-          "maxTurnCount": 2,
-          "alwaysPrompt": true,
-          "allowInterruptions": false,
-          "prompt": "${ChoiceInput_Prompt_KsCK9C()}",
-          "choiceOptions": {
-            "includeNumbers": true,
-            "inlineOrMore": ", or ",
-            "inlineOr": " or ",
-            "inlineSeparator": ", "
-          },
-          "outputFormat": "value",
-          "choices": [
-            "Yes",
-            "No"
-          ],
           "property": "dialog.GISFlowChoice",
-          "style": "suggestedAction",
-          "recognizerOptions": {
-            "recognizeOrdinals": true,
-            "recognizeNumbers": true
-          },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_KsCK9C()}"
-        },
-        {
-          "$kind": "Microsoft.IfCondition",
-          "$designer": {
-            "id": "d650ZA"
-          },
-          "condition": "=dialog.GISFlowChoice",
-          "actions": [],
-          "elseActions": [
-            {
-              "$kind": "Microsoft.BeginDialog",
-              "$designer": {
-                "id": "tuI8Po"
-              },
-              "activityProcessed": true,
-              "dialog": "error-userError-Response"
-            },
-            {
-              "$kind": "Microsoft.EndDialog",
-              "$designer": {
-                "id": "RezJMQ"
-              }
-            }
-          ]
+          "value": "Yes"
         },
         {
           "$kind": "Microsoft.IfCondition",

@@ -16,27 +16,51 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.BeginDialog",
+          "$kind": "Microsoft.Foreach",
           "$designer": {
-            "id": "bOVL5C"
+            "name": "Loop: For each item",
+            "description": "",
+            "id": "t7hldX"
           },
-          "activityProcessed": true,
-          "dialog": "setDataVariables"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "x18Lqj",
-            "name": "Send a response"
-          },
-          "activity": "${SendActivity_x18Lqj()}"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "qqyfUI"
-          },
-          "activity": "${SendActivity_qqyfUI()}"
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "name": "Branch: If/else",
+                "description": "",
+                "id": "olFDml"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "mcTabQ"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "setDataVariables"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "XwK9ld",
+                    "name": "Send a response"
+                  },
+                  "activity": "${SendActivity_XwK9ld()}"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "CE626B"
+                  },
+                  "activity": "${SendActivity_CE626B()}"
+                }
+              ]
+            }
+          ],
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
         }
       ]
     },
@@ -65,13 +89,6 @@
       },
       "intent": "Yes",
       "actions": [
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "xvLvAi"
-          },
-          "activity": "${SendActivity_xvLvAi()}"
-        },
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
