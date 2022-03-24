@@ -28,13 +28,6 @@
     Text = ${ChoiceInput_Prompt_DeQH6L_text()}
 ]
 
-# ChoiceInput_Prompt_KsCK9C_text()
-- I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
-# ChoiceInput_Prompt_KsCK9C()
-[Activity
-    Text = ${ChoiceInput_Prompt_KsCK9C_text()}
-]
-
 # SendActivity_bseUqk_text()
 - Ok, let's see. Every year, we review your income tax filing to see what your Guaranteed Income Supplement should be. We don't have a tax filing for you from 2020. That's why your payments have been suspended.
 # SendActivity_bseUqk()
@@ -51,13 +44,6 @@ Would you like me to create a statement of income?```
     Text = ${ChoiceInput_Prompt_Q8yLjp_text()}
 ]
 
-# ChoiceInput_InvalidPrompt_KsCK9C()
-[Activity
-    Text = ${ChoiceInput_InvalidPrompt_KsCK9C_text()}
-]
-
-# ChoiceInput_InvalidPrompt_KsCK9C_text()
-- Hmm. I'm not sure what you meant. Do you want me to hep with Guaranteed Income Supplement payments?
 # ChoiceInput_InvalidPrompt_hPpLlR()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_hPpLlR_text()}
