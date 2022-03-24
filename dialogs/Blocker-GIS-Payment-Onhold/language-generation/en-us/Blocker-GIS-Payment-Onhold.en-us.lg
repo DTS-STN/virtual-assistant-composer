@@ -152,7 +152,7 @@ I realize that my personal information is governed by the Privacy Act and may be
 # SendActivity_KqcDoB_text()
 - ```A statement of income can take up to 14 days for processing. If you are eligible, you can expect your payments to start again in about 2 weeks, including the ones you may have missed.
 
-Because you have declared $${user.gis.new.incomeTotal}, you can expect to receive the maximum GIS payment, $${user.gis.GISPayment}```
+Because you have declared $${user.gis.new.incomeTotal}, you can expect to receive $${user.gis.GISPayment} per month if you are eligible.```
 # SendActivity_KqcDoB()
 [Activity
     Text = ${SendActivity_KqcDoB_text()}
