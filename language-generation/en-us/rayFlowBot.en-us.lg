@@ -14,9 +14,21 @@
     Text = ${SendActivity_Greeting_text()}
 ]
 
-# TextInput_Prompt_1Oopce_text()
-- Are you there?
-# TextInput_Prompt_1Oopce()
+
+# SendActivity_mm2BZB()
 [Activity
-    Text = ${TextInput_Prompt_1Oopce_text()}
+    Text = ${SendActivity_mm2BZB_text()}
+    SuggestedActions = Yes|No
+
+
 ]
+
+# SendActivity_mm2BZB_text()
+- I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
+# SendActivity_xvLvAi()
+[Activity
+    Text = ${SendActivity_xvLvAi_text()}
+]
+
+# SendActivity_xvLvAi_text()
+- Test yes

@@ -27,29 +27,6 @@
             {
               "$kind": "Microsoft.IfCondition",
               "$designer": {
-                "id": "LiyxBY"
-              },
-              "condition": "string(dialog.foreach.value.id) == string(turn.Activity.Recipient.id)",
-              "actions": [
-                {
-                  "$kind": "Microsoft.TextInput",
-                  "$designer": {
-                    "id": "1Oopce"
-                  },
-                  "disabled": false,
-                  "maxTurnCount": 3,
-                  "alwaysPrompt": false,
-                  "allowInterruptions": false,
-                  "unrecognizedPrompt": "",
-                  "invalidPrompt": "",
-                  "property": "dialog.handShake",
-                  "prompt": "${TextInput_Prompt_1Oopce()}"
-                }
-              ]
-            },
-            {
-              "$kind": "Microsoft.IfCondition",
-              "$designer": {
                 "name": "Branch: If/else",
                 "description": "",
                 "id": "DaDGc0"
@@ -73,21 +50,11 @@
                   "activity": "${SendActivity_Xb6tpb()}"
                 },
                 {
-                  "$kind": "Microsoft.BeginDialog",
+                  "$kind": "Microsoft.SendActivity",
                   "$designer": {
-                    "id": "p7jT2x"
+                    "id": "mm2BZB"
                   },
-                  "activityProcessed": true,
-                  "dialog": "Blocker-GIS-Payment-Onhold",
-                  "options": {}
-                },
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "k4mcB1"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "mainMenuFlows"
+                  "activity": "${SendActivity_mm2BZB()}"
                 }
               ]
             }
@@ -113,9 +80,65 @@
           "activity": "${SendActivity_DidNotUnderstand()}"
         }
       ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "jlcCGW",
+        "name": "Yes"
+      },
+      "intent": "Yes",
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xvLvAi"
+          },
+          "activity": "${SendActivity_xvLvAi()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "yx50eW"
+          },
+          "activityProcessed": true,
+          "dialog": "Blocker-GIS-Payment-Onhold",
+          "options": {}
+        }
+      ]
+    },
+    {
+      "$kind": "Microsoft.OnIntent",
+      "$designer": {
+        "id": "3xIGKz",
+        "name": "No"
+      },
+      "intent": "No",
+      "actions": [
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "HryoBB"
+          },
+          "activityProcessed": true,
+          "dialog": "mainMenuFlows"
+        }
+      ]
     }
   ],
   "generator": "rayFlowBot.lg",
   "id": "rayFlowBot",
-  "recognizer": "rayFlowBot.lu.qna"
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": [
+      {
+        "intent": "Yes",
+        "pattern": "Yes"
+      },
+      {
+        "intent": "No",
+        "pattern": "No"
+      }
+    ]
+  }
 }
