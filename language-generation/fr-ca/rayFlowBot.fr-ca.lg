@@ -1,12 +1,5 @@
 [import](common.lg)
 
-# SendActivity_Greeting()
-[Activity
-    Text = ${SendActivity_Greeting_text()}
-]
-
-# SendActivity_Greeting_text()
-- Hi Ray, I'm your virtual assistant.
 # SendActivity_DidNotUnderstand()
 [Activity
     Text = ${SendActivity_DidNotUnderstand_text()}
@@ -14,5 +7,10 @@
 
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
+# SendActivity_Greeting_text()
+- Hi ${conversation.user.firstName}, I'm your virtual assistant.
 # SendActivity_Dhsjxy()
--
+[Activity
+    Text = ${SendActivity_Greeting_text()}
+]
+

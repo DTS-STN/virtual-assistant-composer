@@ -1,0 +1,166 @@
+[import](common.lg)
+
+# SendActivity_hQSfbz_text()
+- Your guaranteed supplement income (GIS) payments are on hold. Every year, we calculate GIS payments based on your net income, and we do not have your 2020 income information.
+# SendActivity_hQSfbz()
+[Activity
+    Text = ${SendActivity_hQSfbz_text()}
+]
+
+# ChoiceInput_Prompt_69Dedt_text()
+- If you'd like, I can create another statement of income for you. That way, we can put you back in payment faster without having the need to file your taxes for 2020. Do you want to continue?
+# ChoiceInput_Prompt_69Dedt()
+[Activity
+    Text = ${ChoiceInput_Prompt_69Dedt_text()}
+]
+
+# ChoiceInput_Prompt_hPpLlR()
+[Activity
+    Text = ${ChoiceInput_Prompt_hPpLlR_text()}
+]
+
+# ChoiceInput_Prompt_hPpLlR_text()
+- Is this information correct?
+# ChoiceInput_Prompt_DeQH6L_text()
+- No problem, do you want to try again?
+# ChoiceInput_Prompt_DeQH6L()
+[Activity
+    Text = ${ChoiceInput_Prompt_DeQH6L_text()}
+]
+
+# ChoiceInput_Prompt_KsCK9C_text()
+- I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
+# ChoiceInput_Prompt_KsCK9C()
+[Activity
+    Text = ${ChoiceInput_Prompt_KsCK9C_text()}
+]
+
+# SendActivity_bseUqk_text()
+- Ok, let's see. Every year, we review your income tax filing to see what your Guaranteed Income Supplement should be. We don't have a tax filing for you from 2020. That's why your payments have been suspended.
+# SendActivity_bseUqk()
+[Activity
+    Text = ${SendActivity_bseUqk_text()}
+]
+
+# ChoiceInput_Prompt_Q8yLjp_text()
+- ```If you like, I can create a statement of income for you. That would allow us to give you your payments faster, without you needing to file your taxes first.
+
+Would you like me to create a statement of income?```
+# ChoiceInput_Prompt_Q8yLjp()
+[Activity
+    Text = ${ChoiceInput_Prompt_Q8yLjp_text()}
+]
+
+# ChoiceInput_InvalidPrompt_KsCK9C()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_KsCK9C_text()}
+]
+
+# ChoiceInput_InvalidPrompt_KsCK9C_text()
+- Hmm. I'm not sure what you meant. Do you want me to hep with Guaranteed Income Supplement payments?
+# ChoiceInput_InvalidPrompt_hPpLlR()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_hPpLlR_text()}
+]
+
+# ChoiceInput_InvalidPrompt_hPpLlR_text()
+- Hmm, I'm not sure what you meant. Is the information correct?
+# ChoiceInput_InvalidPrompt_Q8yLjp()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_Q8yLjp_text()}
+]
+
+# ChoiceInput_InvalidPrompt_Q8yLjp_text()
+- Hmm, I'm not sure what you meant. Do you want to continue and create a statement of income for you?
+# SendActivity_1v2LqC()
+[Activity
+    Text = ${SendActivity_1v2LqC_text()}
+]
+
+# SendActivity_1v2LqC_text()
+- Here is your statement of income for 2020.
+# ChoiceInput_Prompt_MjYK79_text()
+- ```Do you agree with this declaration?
+
+I want to submit my statement of income for the purpose of the Guaranteed Income Supplement.
+
+I declare that, to the best of my knowledge the information on this statement is true and complete.
+
+I realize that my personal information is governed by the Privacy Act and may be disclosed, where authorized, under the Old Age Security Act.```
+# ChoiceInput_Prompt_MjYK79()
+[Activity
+    Text = ${ChoiceInput_Prompt_MjYK79_text()}
+]
+
+# ChoiceInput_InvalidPrompt_MjYK79_text()
+- Hmm, I'm not sure what you meant. Do you agree with this declaration? 
+# ChoiceInput_InvalidPrompt_MjYK79()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_MjYK79_text()}
+]
+
+# SendActivity_380OWy_text()
+- Great! I've completed your statement of income.
+# SendActivity_380OWy()
+[Activity
+    Text = ${SendActivity_380OWy_text()}
+]
+
+# ChoiceInput_Prompt_ZDDcKR_text()
+- Would you like to receive a copy of your 2020 statement of income by email?
+# ChoiceInput_Prompt_ZDDcKR()
+[Activity
+    Text = ${ChoiceInput_Prompt_ZDDcKR_text()}
+]
+
+# ChoiceInput_InvalidPrompt_ZDDcKR_text()
+- Hmm, I'm not sure what you meant. Do you want to receive a copy of your statement of income by email?
+# ChoiceInput_InvalidPrompt_ZDDcKR()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_ZDDcKR_text()}
+]
+
+# ChoiceInput_Prompt_zTVjrE_text()
+- The email address I have for you is ${conversation.user.email}. Is this the correct email address?
+# ChoiceInput_Prompt_zTVjrE()
+[Activity
+    Text = ${ChoiceInput_Prompt_zTVjrE_text()}
+]
+
+# ChoiceInput_InvalidPrompt_zTVjrE_text()
+
+- Hmm, I'm not sure what you meant. Is this the correct email address?
+# ChoiceInput_InvalidPrompt_zTVjrE()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_zTVjrE_text()}
+]
+
+# SendActivity_bReOq5_text()
+- Ok, I'll email your statement to ${conversation.user.email}.
+# SendActivity_bReOq5()
+[Activity
+    Text = ${SendActivity_bReOq5_text()}
+]
+
+# SendActivity_sirgtx_text()
+- Ok, I'll email your statement to ${conversation.user.email}.
+# SendActivity_sirgtx()
+[Activity
+    Text = ${SendActivity_sirgtx_text()}
+]
+
+# SendActivity_KqcDoB_text()
+- ```A statement of income can take up to 14 days for processing. If you are eligible, you can expect your payments to start again in about 2 weeks, including the ones you may have missed.
+
+Because you have declared $${user.gis.new.incomeTotal}, you can expect to receive the maximum GIS payment, $${user.gis.GISPayment}```
+# SendActivity_KqcDoB()
+[Activity
+    Text = ${SendActivity_KqcDoB_text()}
+]
+
+# SendActivity_eURum9_text()
+- If you are facing an emergency such as eviction or not having enough money for food or transport, please call ${conversation.urgentSupportNumber} for urgent support.
+# SendActivity_eURum9()
+[Activity
+    Text = ${SendActivity_eURum9_text()}
+]

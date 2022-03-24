@@ -1,0 +1,41 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_4BGeFB_text()
+- Has your marital status changed in 2020?
+# ChoiceInput_Prompt_4BGeFB()
+[Activity
+    Text = ${ChoiceInput_Prompt_4BGeFB_text()}
+]
+
+# ChoiceInput_Prompt_qTyq0n_text()
+- Has your marital status changed in 2020?
+# ChoiceInput_Prompt_qTyq0n()
+[Activity
+    Text = ${ChoiceInput_Prompt_qTyq0n_text()}
+]
+
+# ChoiceInput_Prompt_3JRbEn_text()
+- ```Life events such as a marriage, a new common\-law partnership or even a separation can impact the amount you receive from the Guaranteed Income Supplement.
+
+While I can help you resolve a lot of common issues, I believe you would be better served by a Service Canada representative.
+
+Would you like me to set up a call for you?```
+# ChoiceInput_Prompt_3JRbEn()
+[Activity
+    Text = ${ChoiceInput_Prompt_3JRbEn_text()}
+]
+
+# ChoiceInput_InvalidPrompt_qTyq0n()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_qTyq0n_text()}
+]
+
+# ChoiceInput_InvalidPrompt_qTyq0n_text()
+- Hmm, I'm not sure what you meant. Has your marital status changed in 2020?
+# ChoiceInput_InvalidPrompt_3JRbEn()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_3JRbEn_text()}
+]
+
+# ChoiceInput_InvalidPrompt_3JRbEn_text()
+- Hmm, I'm not sure what you meant. Would you like me to set up a call for you?

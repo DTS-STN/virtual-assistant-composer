@@ -15,7 +15,7 @@
 ]
 
 # ChoiceInput_Prompt_JqLYeL_text()
-- Ok, great! I can help with that. The phone number I have for you is ${user.userData.fields["Callback Phone Number"]}. Would you like to update to a new phone number?
+- Ok, great! I can help with that. The phone number I have for you is ${conversation.user.phoneNumber}. Would you like to update to a new phone number?
 # ChoiceInput_Prompt_JqLYeL()
 [Activity
     Text = ${ChoiceInput_Prompt_JqLYeL_text()}
