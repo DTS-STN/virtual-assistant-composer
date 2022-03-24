@@ -710,6 +710,14 @@
                                           "allowInterruptions": true,
                                           "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
                                           "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
+                                        },
+                                        {
+                                          "$kind": "Microsoft.BeginDialog",
+                                          "$designer": {
+                                            "id": "9YwH8b"
+                                          },
+                                          "activityProcessed": true,
+                                          "dialog": "moreHelpDialogFlow"
                                         }
                                       ]
                                     }
