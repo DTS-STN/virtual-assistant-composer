@@ -6,20 +6,20 @@
 ]
 
 # TextInput_Prompt_UKCgwj_text()
-- What's your new email address?
+- Quelle est votre nouvelle adresse de courrier électronique?
 # TextInput_InvalidPrompt_UKCgwj()
 [Activity
     Text = ${TextInput_InvalidPrompt_UKCgwj_text()}
 ]
 
 # TextInput_InvalidPrompt_UKCgwj_text()
-- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+- Oups, il semble que l'adresse de courrier électronique que vous avez entrée n'utilise pas le bon format (voici un exemple: nom@courriel.com). Essayez à nouveau.
 # SendActivity_MieHpA()
 [Activity
     Text = ${SendActivity_MieHpA_text()}
 ]
 
 # SendActivity_MieHpA_text()
-- Perfect! I've updated your email address to ${user.userEmail}.
+- Parfait! J'ai mis à jour votre adresse de courrier électronique ${user.userEmail}.
 # TextInput_UnrecognizedPrompt_UKCgwj()
 -

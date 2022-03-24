@@ -1,28 +1,28 @@
 [import](common.lg)
 
 # SendActivity_LF2xj8_text()
-- Ok, no problem!
+- D'accord, pas de problème.
 # SendActivity_LF2xj8()
 [Activity
     Text = ${SendActivity_LF2xj8_text()}
 ]
 
 # SendActivity_YzTd1M_text()
-- You're all set for now!
+- Pour le moment, vous avez tout ce qu'il vous faut!
 # SendActivity_YzTd1M()
 [Activity
     Text = ${SendActivity_YzTd1M_text()}
 ]
 
 # ChoiceInput_Prompt_JqLYeL_text()
-- Ok, great! I can help with that. The phone number I have for you is ${user.userData.fields["Callback Phone Number"]}. Would you like to update to a new phone number?
+- D'accord, je peux vous aider. Le numéro de téléphone que j'ai est le ${conversation.user.phoneNumber}.  Voulez-vous mettre à jour ce numéro?
 # ChoiceInput_Prompt_JqLYeL()
 [Activity
     Text = ${ChoiceInput_Prompt_JqLYeL_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_JqLYeL_text()
-- Hmm, I'm not sure what you meant. Do you want to update this phone number?
+- Hum, je ne comprends pas. Voulez-vous mettre à jour ce numéro?
 # ChoiceInput_InvalidPrompt_JqLYeL()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_JqLYeL_text()}

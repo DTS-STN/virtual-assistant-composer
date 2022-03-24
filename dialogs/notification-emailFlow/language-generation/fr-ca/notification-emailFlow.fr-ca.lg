@@ -1,49 +1,49 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_7zqrKu_text()
-- The email address I have for you is ${user.userData.fields["Employer Contact Email"]}. Is this the correct email address?
+- L'adresse de courrier électronique que j'ai est ${conversation.user.email}. Est-ce que cette adresse est correcte?
 # ChoiceInput_Prompt_7zqrKu()
 [Activity
     Text = ${ChoiceInput_Prompt_7zqrKu_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_7zqrKu_text()
-- Hmm, I'm not sure what you meant. Do you want to update this email address?
+- Hum, je ne comprends pas. Voulez-vous mettre à jour cette adresse de courrier électronique?
 # ChoiceInput_InvalidPrompt_7zqrKu()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_7zqrKu_text()}
 ]
 
 # TextInput_Prompt_sSa34v_text()
-- What's your new email address?
+- Quelle est votre nouvelle adresse de courrier électronique?
 # TextInput_Prompt_sSa34v()
 [Activity
     Text = ${TextInput_Prompt_sSa34v_text()}
 ]
 
 # TextInput_InvalidPrompt_sSa34v_text()
-- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+- Oups, il semble que l'adresse de courrier électronique que vous avez entrée n'utilise pas le bon format (voici un exemple : nom@courriel.com). Essayez à nouveau.
 # TextInput_InvalidPrompt_sSa34v()
 [Activity
     Text = ${TextInput_InvalidPrompt_sSa34v_text()}
 ]
 
 # SendActivity_xIB0UF_text()
-- Perfect! I've updated your email address to ${user.userEmail}.
+- Parfait! J'ai mis à jour votre adresse de courrier électronique ${user.userEmail}.
 # SendActivity_xIB0UF()
 [Activity
     Text = ${SendActivity_xIB0UF_text()}
 ]
 
 # TextInput_Prompt_Ld1BMM_text()
-- No problem, let's update your profile. What's your new email address?
+- Aucun problème, je vais mettre votre profil à jour. Quelle est votre nouvelle adresse de courrier électronique?
 # TextInput_Prompt_Ld1BMM()
 [Activity
     Text = ${TextInput_Prompt_Ld1BMM_text()}
 ]
 
 # TextInput_InvalidPrompt_Ld1BMM_text()
-- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+- Oups, il semble que l'adresse de courrier électronique que vous avez entrée n'utilise pas le bon format (voici un exemple : nom@courriel.com). Essayez à nouveau.
 # TextInput_InvalidPrompt_Ld1BMM()
 [Activity
     Text = ${TextInput_InvalidPrompt_Ld1BMM_text()}
@@ -55,4 +55,4 @@
 ]
 
 # SendActivity_7mA3Mn_text()
-- Ok, I'll email your statment to ${user.userEmail}.
+- Ok, I'll email your statment to ${conversation.user.email}.
