@@ -8,9 +8,16 @@
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
 # SendActivity_Greeting_text()
-- Test. Hi ${conversation.user.firstName}, I'm your virtual assistant.
-# SendActivity_Dhsjxy()
+- Frontend test Hi ${conversation.user.firstName}, I'm your virtual assistant.
+# SendActivity_Xb6tpb()
 [Activity
     Text = ${SendActivity_Greeting_text()}
 ]
 
+# SendActivity_v0wkKQ()
+[Activity
+    Text = ${SendActivity_v0wkKQ_text()}
+]
+
+# SendActivity_v0wkKQ_text()
+- for each value: ${string(dialog.foreach.value.id)}

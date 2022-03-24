@@ -16,37 +16,68 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.BeginDialog",
+          "$kind": "Microsoft.Foreach",
           "$designer": {
-            "id": "fSzEaB"
+            "name": "Loop: For each item",
+            "description": "",
+            "id": "frw4hp"
           },
-          "activityProcessed": true,
-          "dialog": "setDataVariables"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "Dhsjxy",
-            "name": "Send a response"
-          },
-          "activity": "${SendActivity_Dhsjxy()}"
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "sSsJIS"
-          },
-          "activityProcessed": true,
-          "dialog": "Blocker-GIS-Payment-Onhold",
-          "options": {}
-        },
-        {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "tCHM7U"
-          },
-          "activityProcessed": true,
-          "dialog": "mainMenuFlows"
+          "itemsProperty": "turn.Activity.membersAdded",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "v0wkKQ"
+              },
+              "activity": "${SendActivity_v0wkKQ()}"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "name": "Branch: If/else",
+                "description": "",
+                "id": "DaDGc0"
+              },
+              "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "VveDQy"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "setDataVariables"
+                },
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "Xb6tpb",
+                    "name": "Send a response"
+                  },
+                  "activity": "${SendActivity_Xb6tpb()}"
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "p7jT2x"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "Blocker-GIS-Payment-Onhold",
+                  "options": {}
+                },
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "k4mcB1"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "mainMenuFlows"
+                }
+              ]
+            }
+          ],
+          "value": "dialog.foreach.value",
+          "index": "dialog.foreach.index"
         }
       ]
     },
