@@ -48,8 +48,7 @@
           "activityProcessed": true,
           "dialog": "mainMenuFlows"
         }
-      ],
-      "runOnce": true
+      ]
     },
     {
       "$kind": "Microsoft.OnUnknownIntent",
