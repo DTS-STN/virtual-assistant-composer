@@ -161,12 +161,11 @@
                   "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
                 },
                 {
-                  "$kind": "Microsoft.BeginDialog",
+                  "$kind": "Microsoft.SendActivity",
                   "$designer": {
-                    "id": "4vy5Se"
+                    "id": "uPfBf5"
                   },
-                  "activityProcessed": true,
-                  "dialog": "moreHelpDialogFlow"
+                  "activity": "${SendActivity_uPfBf5()}"
                 }
               ],
               "elseActions": [
@@ -188,6 +187,14 @@
                   "value": false
                 }
               ]
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "5UUrfH"
+              },
+              "activityProcessed": true,
+              "dialog": "moreHelpDialogFlow"
             }
           ]
         }
