@@ -250,6 +250,13 @@
                               "value": "GIS-previousYearIncomeStatement",
                               "actions": [
                                 {
+                                  "$kind": "Microsoft.SendActivity",
+                                  "$designer": {
+                                    "id": "BmCWXX"
+                                  },
+                                  "activity": "${SendActivity_BmCWXX()}"
+                                },
+                                {
                                   "$kind": "Microsoft.BeginDialog",
                                   "$designer": {
                                     "id": "kTJTb1"
