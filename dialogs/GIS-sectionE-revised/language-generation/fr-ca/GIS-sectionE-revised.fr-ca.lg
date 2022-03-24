@@ -8,21 +8,21 @@
 ]
 
 # ChoiceInput_InvalidPrompt_lo1yRa_text()
-- Hmm, I'm not sure what you meant. Did your income change in 2020?
+- Hum, je ne comprends pas. Est-ce que votre revenu a changé en 2020?
 # ChoiceInput_InvalidPrompt_lo1yRa()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_lo1yRa_text()}
 ]
 
 # ChoiceInput_Prompt_mZxpce_text()
-- Ok, I will ask you a few questions to determine what has changed. First, did you work in 2020?
+- D'accord, je vais vous poser quelques questions pour déterminer ce qui a changé. D'abord, avez-vous travaillé en 2020?
 # ChoiceInput_Prompt_mZxpce()
 [Activity
     Text = ${ChoiceInput_Prompt_mZxpce_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_mZxpce_text()
-- Hmm, I'm not sure what you meant. Did you work in 2020?
+- Hum, je ne comprends pas. Avez-vous travaillé en 2020?
 # ChoiceInput_InvalidPrompt_mZxpce()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_mZxpce_text()}
@@ -34,16 +34,16 @@
 ]
 
 # NumberInput_InvalidPrompt_XvuJWV_text()
-- Hmm, not sure what you meant. How much employment income did you earn in 2020 (as an employee or through self-employment)?
+- Quel a été votre revenu d'emploi en 2020 (comme employé ou provenant d'un travail indépendant)
 # NumberInput_Prompt_XvuJWV()
 [Activity
     Text = ${NumberInput_Prompt_XvuJWV_text()}
 ]
 
 # NumberInput_Prompt_XvuJWV_text()
-- How much employment income did you earn in 2020 (as an employee or through self-employment)?
+- Quel a été votre revenu d'emploi en 2020 (comme employé ou provenant d'un travail indépendant)
 # ChoiceInput_Prompt_IiEkXK_text()
-- Great! I have added this information to your statement. Did you earn income from your investments in 2020?
+- Parfait! C'est ajouté à votre état de revenu. Avez-vous tirer des revenus de vos investissements en 2020?
 # ChoiceInput_Prompt_IiEkXK()
 [Activity
     Text = ${ChoiceInput_Prompt_IiEkXK_text()}
