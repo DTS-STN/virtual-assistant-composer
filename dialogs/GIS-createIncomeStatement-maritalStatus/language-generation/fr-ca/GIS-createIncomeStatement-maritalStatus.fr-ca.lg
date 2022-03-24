@@ -1,25 +1,25 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_4BGeFB_text()
-- Has your marital status changed in 2020?
+- Votre état civil a-t-il changé en 2020?
 # ChoiceInput_Prompt_4BGeFB()
 [Activity
     Text = ${ChoiceInput_Prompt_4BGeFB_text()}
 ]
 
 # ChoiceInput_Prompt_qTyq0n_text()
-- Has your marital status changed in 2020?
+- Votre état civil a-t-il changé en 2020?
 # ChoiceInput_Prompt_qTyq0n()
 [Activity
     Text = ${ChoiceInput_Prompt_qTyq0n_text()}
 ]
 
 # ChoiceInput_Prompt_3JRbEn_text()
-- ```Life events such as a marriage, a new common\-law partnership or even a separation can impact the amount you receive from the Guaranteed Income Supplement.
+- ```Certains événements de la vie, comme un mariage, une nouvelle union de fait ou même une séparation, peuvent avoir une incidence sur le montant que vous recevez du Supplément de revenu garanti.
 
-While I can help you resolve a lot of common issues, I believe you would be better served by a Service Canada representative.
+Même si je peux vous aider à résoudre un grand nombre de problèmes courants, je crois que vous seriez mieux servi par un représentant de Service Canada.
 
-Would you like me to set up a call for you?```
+Voulez-vous que je planifie un appel pour vous?```
 # ChoiceInput_Prompt_3JRbEn()
 [Activity
     Text = ${ChoiceInput_Prompt_3JRbEn_text()}
@@ -31,11 +31,11 @@ Would you like me to set up a call for you?```
 ]
 
 # ChoiceInput_InvalidPrompt_qTyq0n_text()
-- Hmm, I'm not sure what you meant. Has your marital status changed in 2020?
+- Hum, je ne comprends pas. Votre état civil a-t-il changé en 2020?
 # ChoiceInput_InvalidPrompt_3JRbEn()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_3JRbEn_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_3JRbEn_text()
-- Hmm, I'm not sure what you meant. Would you like me to set up a call for you?
+- Hum, je ne comprends pas. Voulez-vous que je planifie un appel pour vous?

@@ -6,9 +6,9 @@
 ]
 
 # SendActivity_DidNotUnderstand_text()
-- Sorry, I didn't get that.
+- Hum, j'ai de la difficulté à vous comprendre. Excusez-moi!
 # SendActivity_Greeting_text()
-- Hi ${conversation.user.firstName}, I'm your virtual assistant.
+- Bonjour ${conversation.user.firstName}, Je suis votre assistant virtuel.
 # SendActivity_Dhsjxy()
 [Activity
     Text = ${SendActivity_Greeting_text()}

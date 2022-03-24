@@ -1,14 +1,16 @@
 [import](common.lg)
 
 # SendActivity_hQSfbz_text()
-- Your guaranteed supplement income (GIS) payments are on hold. Every year, we calculate GIS payments based on your net income, and we do not have your 2020 income information.
+- D'accord, voyons voir. Chaque année, nous examinons votre déclaration de revenus pour déterminer le montant de votre Supplément de revenu garanti. Nous n'avons pas votre déclaration de revenus pour 2020. C'est pourquoi vos paiements ont été suspendus.
 # SendActivity_hQSfbz()
 [Activity
     Text = ${SendActivity_hQSfbz_text()}
 ]
 
 # ChoiceInput_Prompt_69Dedt_text()
-- If you'd like, I can create another statement of income for you. That way, we can put you back in payment faster without having the need to file your taxes for 2020. Do you want to continue?
+- Si vous le voulez, je peux vous créer un état de revenu. Ça nous permettra de recommencer à vous verser vos paiements. Vous n'aurez pas besoin de d'abord faire votre déclaration d'impôts. Ce sera plus rapide.
+
+- Voulez-vous que je crée un état de revenu?
 # ChoiceInput_Prompt_69Dedt()
 [Activity
     Text = ${ChoiceInput_Prompt_69Dedt_text()}
@@ -20,32 +22,32 @@
 ]
 
 # ChoiceInput_Prompt_hPpLlR_text()
-- Is this information correct?
+- Est-ce que ces renseignements sont exacts?
 # ChoiceInput_Prompt_DeQH6L_text()
-- No problem, do you want to try again?
+- Pas de problème. Voulez-vous essayer à nouveau?
 # ChoiceInput_Prompt_DeQH6L()
 [Activity
     Text = ${ChoiceInput_Prompt_DeQH6L_text()}
 ]
 
 # ChoiceInput_Prompt_KsCK9C_text()
-- I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
+- Je vois que vos paiements de Supplément de revenu garanti sont arrêtés. Voulez-vous que j'en détermine la cause et vous propose des solutions?
 # ChoiceInput_Prompt_KsCK9C()
 [Activity
     Text = ${ChoiceInput_Prompt_KsCK9C_text()}
 ]
 
 # SendActivity_bseUqk_text()
-- Ok, let's see. Every year, we review your income tax filing to see what your Guaranteed Income Supplement should be. We don't have a tax filing for you from 2020. That's why your payments have been suspended.
+- D'accord, voyons voir. Chaque année, nous examinons votre déclaration de revenus pour déterminer le montant de votre Supplément de revenu garanti. Nous n'avons pas votre déclaration de revenus pour 2020. C'est pourquoi vos paiements ont été suspendus.
 # SendActivity_bseUqk()
 [Activity
     Text = ${SendActivity_bseUqk_text()}
 ]
 
 # ChoiceInput_Prompt_Q8yLjp_text()
-- ```If you like, I can create a statement of income for you. That would allow us to give you your payments faster, without you needing to file your taxes first.
+- ```Si vous le voulez, je peux vous créer un état de revenu. Ça nous permettra de recommencer à vous verser vos paiements. Vous n'aurez pas besoin de d'abord faire votre déclaration d'impôts. Ce sera plus rapide.
 
-Would you like me to create a statement of income?```
+Voulez-vous que je crée un état de revenu?```
 # ChoiceInput_Prompt_Q8yLjp()
 [Activity
     Text = ${ChoiceInput_Prompt_Q8yLjp_text()}
@@ -57,21 +59,21 @@ Would you like me to create a statement of income?```
 ]
 
 # ChoiceInput_InvalidPrompt_KsCK9C_text()
-- Hmm. I'm not sure what you meant. Do you want me to hep with Guaranteed Income Supplement payments?
+- Hum, je ne comprends pas. Voulez-vous que je vous aide à déterminer la cause de l'arrêt de vos paiements de Supplément de revenu?
 # ChoiceInput_InvalidPrompt_hPpLlR()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_hPpLlR_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_hPpLlR_text()
-- Hmm, I'm not sure what you meant. Is the information correct?
+- Hum, je ne comprends pas. Est-ce que ces renseignements sont exacts?
 # ChoiceInput_InvalidPrompt_Q8yLjp()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_Q8yLjp_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_Q8yLjp_text()
-- Hmm, I'm not sure what you meant. Do you want to continue and create a statement of income for you?
+- Hum, je ne comprends pas. Voulez-vous continuer et créer un état de revenu?
 # SendActivity_1v2LqC()
 [Activity
     Text = ${SendActivity_1v2LqC_text()}
@@ -80,86 +82,85 @@ Would you like me to create a statement of income?```
 # SendActivity_1v2LqC_text()
 - Here is your statement of income for 2020.
 # ChoiceInput_Prompt_MjYK79_text()
-- ```Do you agree with this declaration?
+- ```Êtes-vous d'accord avec cet énoncé?
 
-I want to submit my statement of income for the purpose of the Guaranteed Income Supplement.
+Je désire soumettre ma déclaration de revenus afin de recevoir le Supplément de revenu garanti.
 
-I declare that, to the best of my knowledge the information on this statement is true and complete.
+Je déclare que, au meilleur de ma connaissance, les renseignements fournis dans cette demande sont vrais et complets.
 
-I realize that my personal information is governed by the Privacy Act and may be disclosed, where authorized, under the Old Age Security Act.```
+Je comprends que mes renseignements personnels sont régis par la Loi sur la protection des renseignements personnels et qu'ils peuvent être divulgués dans les cas prévus dans la Loi de la sécurité des la vieillesse.```
 # ChoiceInput_Prompt_MjYK79()
 [Activity
     Text = ${ChoiceInput_Prompt_MjYK79_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_MjYK79_text()
-- Hmm, I'm not sure what you meant. Do you agree with this declaration? 
+- Hum, je ne comprends pas. Êtes-vous d'accord avec cet énoncé?
 # ChoiceInput_InvalidPrompt_MjYK79()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_MjYK79_text()}
 ]
 
 # SendActivity_380OWy_text()
-- Great! I've completed your statement of income.
+- Parfait! J'ai complété votre état de revenu.
 # SendActivity_380OWy()
 [Activity
     Text = ${SendActivity_380OWy_text()}
 ]
 
 # ChoiceInput_Prompt_ZDDcKR_text()
-- Would you like to receive a copy of your 2020 statement of income by email?
+- Aimeriez-vous recevoir votre état de revenu pour l'année 2020 par courriel?
 # ChoiceInput_Prompt_ZDDcKR()
 [Activity
     Text = ${ChoiceInput_Prompt_ZDDcKR_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_ZDDcKR_text()
-- Hmm, I'm not sure what you meant. Do you want to receive a copy of your statement of income by email?
+- Hum, je ne comprends pas. Voulez-vous recevoir votre état de revenu par courriel?
 # ChoiceInput_InvalidPrompt_ZDDcKR()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_ZDDcKR_text()}
 ]
 
 # ChoiceInput_Prompt_zTVjrE_text()
-- The email address I have for you is ${conversation.user.email}. Is this the correct email address?
+- L'adresse de courrier électronique que j'ai est ${conversation.user.email}. Est-ce que cette adresse est correcte?
 # ChoiceInput_Prompt_zTVjrE()
 [Activity
     Text = ${ChoiceInput_Prompt_zTVjrE_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_zTVjrE_text()
-
-- Hmm, I'm not sure what you meant. Is this the correct email address?
+- Hum, je ne comprends pas. Est-ce la bonne adresse de courrier électonique?
 # ChoiceInput_InvalidPrompt_zTVjrE()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_zTVjrE_text()}
 ]
 
 # SendActivity_bReOq5_text()
-- Ok, I'll email your statement to ${conversation.user.email}.
+- D'accord, je vous envoie votre état de revenu par courriel ào ${conversation.user.email}.
 # SendActivity_bReOq5()
 [Activity
     Text = ${SendActivity_bReOq5_text()}
 ]
 
 # SendActivity_sirgtx_text()
-- Ok, I'll email your statement to ${conversation.user.email}.
+- D'accord, je vous envoie votre état de revenu par courriel à ${conversation.user.email}.
 # SendActivity_sirgtx()
 [Activity
     Text = ${SendActivity_sirgtx_text()}
 ]
 
 # SendActivity_KqcDoB_text()
-- ```A statement of income can take up to 14 days for processing. If you are eligible, you can expect your payments to start again in about 2 weeks, including the ones you may have missed.
+- ```Le traitement d'un état de revenu prend environ 14 jours. Si vous êtes admissible, vos paiements de Supplément de revenu garanti devraient recommencer d'ici 2 semaines. Ils incluront les paiements que vous avez manqués, si tel est le cas.
 
-Because you have declared $${user.gis.new.incomeTotal}, you can expect to receive the maximum GIS payment, $${user.gis.GISPayment}```
+Comme vous avez déclaré $${user.gis.new.incomeTotal}, vous recevrez probablement le paiement maximal, soit $${user.gis.GISPayment}```
 # SendActivity_KqcDoB()
 [Activity
     Text = ${SendActivity_KqcDoB_text()}
 ]
 
 # SendActivity_eURum9_text()
-- If you are facing an emergency such as eviction or not having enough money for food or transport, please call ${conversation.urgentSupportNumber} for urgent support.
+- Si vous êtes en situation d'urgence, telle qu'une expulsion ou que vous n'avez pas assez d'argent pour vous nourrir ou vous déplacer, veuillez appeler le ${conversation.urgentSupportNumber} pour une aide immédiate.
 # SendActivity_eURum9()
 [Activity
     Text = ${SendActivity_eURum9_text()}
