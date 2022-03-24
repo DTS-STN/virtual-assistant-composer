@@ -34,12 +34,56 @@
               "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
               "actions": [
                 {
-                  "$kind": "Microsoft.BeginDialog",
+                  "$kind": "Microsoft.SetProperties",
                   "$designer": {
-                    "id": "VveDQy"
+                    "id": "BRK7RB"
                   },
-                  "activityProcessed": true,
-                  "dialog": "setDataVariables"
+                  "assignments": [
+                    {
+                      "property": "conversation.user.firstName",
+                      "value": "Ray"
+                    },
+                    {
+                      "property": "conversation.user.lastName",
+                      "value": "LastName"
+                    },
+                    {
+                      "property": "conversation.user.email",
+                      "value": "test@test.com"
+                    },
+                    {
+                      "property": "conversation.user.phoneNumber",
+                      "value": "123-456-7890"
+                    },
+                    {
+                      "property": "conversation.user.address",
+                      "value": "North Pole, H0H 0H0"
+                    },
+                    {
+                      "property": "conversation.user.oasPayment",
+                      "value": 642.25
+                    }
+                  ]
+                },
+                {
+                  "$kind": "Microsoft.SetProperties",
+                  "$designer": {
+                    "id": "IPMTp2"
+                  },
+                  "assignments": [
+                    {
+                      "property": "conversation.helpDeskNumber",
+                      "value": "123-456-7890"
+                    },
+                    {
+                      "property": "conversation.helpDeskUrl",
+                      "value": "https://www.canada.ca/en/employment-social-development/corporate/contact/oas.html"
+                    },
+                    {
+                      "property": "conversation.urgentSupportNumber",
+                      "value": "111-222-3333"
+                    }
+                  ]
                 },
                 {
                   "$kind": "Microsoft.SendActivity",
