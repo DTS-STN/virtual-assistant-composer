@@ -8,16 +8,15 @@
 # SendActivity_DidNotUnderstand_text()
 - Sorry, I didn't get that.
 # SendActivity_Greeting_text()
-- invisible handshake prompt test Hi ${conversation.user.firstName}, I'm your virtual assistant.
+- Hi ${conversation.user.firstName}, I'm your virtual assistant.
 # SendActivity_Xb6tpb()
 [Activity
     Text = ${SendActivity_Greeting_text()}
 ]
 
-# TextInput_Prompt_Jn2XD6()
+# TextInput_Prompt_1Oopce_text()
+- Are you there?
+# TextInput_Prompt_1Oopce()
 [Activity
-    Text = ${TextInput_Prompt_Jn2XD6_text()}
+    Text = ${TextInput_Prompt_1Oopce_text()}
 ]
-
-# TextInput_Prompt_Jn2XD6_text()
-- initial message
