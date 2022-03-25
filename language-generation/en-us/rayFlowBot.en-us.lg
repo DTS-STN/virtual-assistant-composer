@@ -24,18 +24,3 @@
 
 
 ]
-
-# SendActivity_9HeTe8()
-[Activity
-    Text = ${SendActivity_9HeTe8_text()}
-]
-
-# SendActivity_9HeTe8_text()
-- - *** DEBUG *** User conversation initiated with ${dialog.foreach.value.id}.
-# SendActivity_k5bnXa()
-[Activity
-    Text = ${SendActivity_k5bnXa_text()}
-]
-
-# SendActivity_k5bnXa_text()
-- *** DEBUG *** Conversation initiated with ${dialog.foreach.value.id}. Waiting for a user to connect...
