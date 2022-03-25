@@ -34,17 +34,14 @@
             "inlineSeparator": ", "
           },
           "outputFormat": "value",
-          "choices": [
-            "Yes",
-            "No"
-          ],
           "property": "dialog.GISIncomeChangeChoice",
           "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_lo1yRa()}"
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_lo1yRa()}",
+          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -75,7 +72,7 @@
           "$designer": {
             "id": "yDL6js"
           },
-          "condition": "=dialog.GISIncomeChangeChoice==\"Yes\"",
+          "condition": "=dialog.GISIncomeChangeChoice==conversation.answer.confirmation",
           "elseActions": [
             {
               "$kind": "Microsoft.EndDialog",
@@ -103,17 +100,14 @@
                 "inlineSeparator": ", "
               },
               "outputFormat": "value",
-              "choices": [
-                "Yes",
-                "No"
-              ],
               "property": "dialog.GISDidWorkChoice",
               "style": "suggestedAction",
               "recognizerOptions": {
                 "recognizeOrdinals": true,
                 "recognizeNumbers": true
               },
-              "invalidPrompt": "${ChoiceInput_InvalidPrompt_mZxpce()}"
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_mZxpce()}",
+              "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
             },
             {
               "$kind": "Microsoft.IfCondition",
@@ -196,7 +190,7 @@
                   ]
                 }
               ],
-              "condition": "=dialog.GISDidWorkChoice==\"Yes\"",
+              "condition": "=dialog.GISDidWorkChoice==conversation.answer.confirmation",
               "elseActions": []
             },
             {
@@ -218,10 +212,6 @@
                 "inlineSeparator": ", "
               },
               "outputFormat": "value",
-              "choices": [
-                "Yes",
-                "No"
-              ],
               "property": "dialog.GISDidEarnInvestmentsChoice",
               "style": "suggestedAction",
               "recognizerOptions": {
@@ -229,7 +219,8 @@
                 "recognizeNumbers": true
               },
               "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_IiEkXK()}",
-              "invalidPrompt": "${ChoiceInput_InvalidPrompt_IiEkXK()}"
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_IiEkXK()}",
+              "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
             },
             {
               "$kind": "Microsoft.IfCondition",
@@ -260,7 +251,7 @@
               "$designer": {
                 "id": "Mqbvl8"
               },
-              "condition": "=dialog.GISDidEarnInvestmentsChoice==\"Yes\"",
+              "condition": "=dialog.GISDidEarnInvestmentsChoice==conversation.answer.confirmation",
               "actions": [
                 {
                   "$kind": "Microsoft.NumberInput",
