@@ -73,7 +73,7 @@
           "$designer": {
             "id": "UqqMnj"
           },
-          "condition": "=turn.Activity.Locale==\"fr-CA\"",
+          "condition": "=turn.Activity.Locale==\"fr-ca\"",
           "actions": [
             {
               "$kind": "Microsoft.SetProperties",
