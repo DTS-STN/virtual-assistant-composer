@@ -135,11 +135,11 @@
     "intents": [
       {
         "intent": "Yes",
-        "pattern": "Yes"
+        "pattern": "Yes|Oui"
       },
       {
         "intent": "No",
-        "pattern": "No"
+        "pattern": "No|Non"
       }
     ]
   }
