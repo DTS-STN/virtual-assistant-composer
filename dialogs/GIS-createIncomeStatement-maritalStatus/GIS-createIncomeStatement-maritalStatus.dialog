@@ -34,17 +34,14 @@
             "inlineSeparator": ", "
           },
           "outputFormat": "value",
-          "choices": [
-            "Yes",
-            "No"
-          ],
           "property": "dialog.GIS.newIncomeStatement.martialStatus",
           "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_qTyq0n()}"
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_qTyq0n()}",
+          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -75,7 +72,7 @@
           "$designer": {
             "id": "Ia4Auk"
           },
-          "condition": "=dialog.GIS.newIncomeStatement.martialStatus==\"Yes\"",
+          "condition": "=dialog.GIS.newIncomeStatement.martialStatus==conversation.answer.confirmation",
           "actions": [
             {
               "$kind": "Microsoft.ChoiceInput",

@@ -98,6 +98,14 @@
           "activityProcessed": true,
           "dialog": "Blocker-GIS-Payment-Onhold",
           "options": {}
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "Mummer"
+          },
+          "activityProcessed": true,
+          "dialog": "moreHelpDialogFlow"
         }
       ]
     },
@@ -112,10 +120,10 @@
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "HryoBB"
+            "id": "unHKU2"
           },
           "activityProcessed": true,
-          "dialog": "mainMenuFlows"
+          "dialog": "moreHelpDialogFlow"
         }
       ]
     }

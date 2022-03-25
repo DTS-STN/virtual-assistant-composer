@@ -67,6 +67,49 @@
               "value": "111-222-3333"
             }
           ]
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "UqqMnj"
+          },
+          "condition": "=turn.Activity.Locale==\"fr-CA\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "td27Jb"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.confirmation",
+                  "value": "Oui"
+                },
+                {
+                  "property": "conversation.answer.refusal",
+                  "value": "Non"
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "L2ALzY"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.confirmation",
+                  "value": "Yes1"
+                },
+                {
+                  "property": "conversation.answer.refusal",
+                  "value": "No1"
+                }
+              ]
+            }
+          ]
         }
       ]
     }

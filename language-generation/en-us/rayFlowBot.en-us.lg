@@ -14,13 +14,11 @@
     Text = ${SendActivity_Greeting_text()}
 ]
 
-
 # SendActivity_CE626B_text()
 - I can see your Guaranteed Income Supplement payments have stopped. Would you like me to find out what happened and suggest solutions?
 # SendActivity_CE626B()
 [Activity
     Text = ${SendActivity_CE626B_text()}
-    SuggestedActions = Yes|No
-
-
+    SuggestedActions = Yes | No
 ]
+

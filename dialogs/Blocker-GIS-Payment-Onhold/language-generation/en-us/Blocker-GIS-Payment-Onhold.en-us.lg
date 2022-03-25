@@ -70,7 +70,7 @@ Would you like me to create a statement of income?```
 
 I want to submit my statement of income for the purpose of the Guaranteed Income Supplement.
 
-I declare that, to the best of my knowledge the information on this statement is true and complete.
+I declare that, to the best of my knowledge, the information on this statement is true and complete.
 
 I realize that my personal information is governed by the Privacy Act and may be disclosed, where authorized, under the Old Age Security Act.```
 # ChoiceInput_Prompt_MjYK79()
@@ -158,3 +158,10 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 
 # SendActivity_BmCWXX_text()
 - In 2019, you declared the following income:
+# ChoiceInput_InvalidPrompt_DeQH6L()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_DeQH6L_text()}
+]
+
+# ChoiceInput_InvalidPrompt_DeQH6L_text()
+- Hmm, I'm not sure what you meant. Do you want to try again?

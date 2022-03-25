@@ -72,17 +72,14 @@
                 "inlineSeparator": ", "
               },
               "outputFormat": "value",
-              "choices": [
-                "Yes",
-                "No"
-              ],
               "property": "dialog.GISCreateIncomeStatementChoice",
               "style": "suggestedAction",
               "recognizerOptions": {
                 "recognizeOrdinals": true,
                 "recognizeNumbers": true
               },
-              "invalidPrompt": "${ChoiceInput_InvalidPrompt_Q8yLjp()}"
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_Q8yLjp()}",
+              "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
             },
             {
               "$kind": "Microsoft.IfCondition",
@@ -113,7 +110,7 @@
               "$designer": {
                 "id": "8YoEEn"
               },
-              "condition": "=dialog.GISCreateIncomeStatementChoice==\"Yes\"",
+              "condition": "=dialog.GISCreateIncomeStatementChoice==conversation.answer.confirmation",
               "elseActions": [],
               "actions": [
                 {
@@ -348,7 +345,6 @@
                                       "maxTurnCount": 2,
                                       "alwaysPrompt": true,
                                       "allowInterruptions": false,
-                                      "unrecognizedPrompt": "",
                                       "prompt": "${ChoiceInput_Prompt_DeQH6L()}",
                                       "choiceOptions": {
                                         "includeNumbers": true,
@@ -365,7 +361,8 @@
                                       "recognizerOptions": {
                                         "recognizeOrdinals": true,
                                         "recognizeNumbers": true
-                                      }
+                                      },
+                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_DeQH6L()}"
                                     },
                                     {
                                       "$kind": "Microsoft.IfCondition",
