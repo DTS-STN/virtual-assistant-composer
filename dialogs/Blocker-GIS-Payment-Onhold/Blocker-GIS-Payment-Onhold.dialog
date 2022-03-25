@@ -345,7 +345,6 @@
                                       "maxTurnCount": 2,
                                       "alwaysPrompt": true,
                                       "allowInterruptions": false,
-                                      "unrecognizedPrompt": "",
                                       "prompt": "${ChoiceInput_Prompt_DeQH6L()}",
                                       "choiceOptions": {
                                         "includeNumbers": true,
@@ -362,7 +361,8 @@
                                       "recognizerOptions": {
                                         "recognizeOrdinals": true,
                                         "recognizeNumbers": true
-                                      }
+                                      },
+                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_DeQH6L()}"
                                     },
                                     {
                                       "$kind": "Microsoft.IfCondition",

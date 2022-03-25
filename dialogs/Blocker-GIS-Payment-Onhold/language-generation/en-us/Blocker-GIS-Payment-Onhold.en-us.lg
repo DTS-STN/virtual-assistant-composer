@@ -158,3 +158,10 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 
 # SendActivity_BmCWXX_text()
 - In 2019, you declared the following income:
+# ChoiceInput_InvalidPrompt_DeQH6L()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_DeQH6L_text()}
+]
+
+# ChoiceInput_InvalidPrompt_DeQH6L_text()
+- Hmm, I'm not sure what you meant. Do you want to try again?
