@@ -102,10 +102,10 @@
         {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "qETzN5"
+            "id": "Mummer"
           },
           "activityProcessed": true,
-          "dialog": "mainMenuFlows"
+          "dialog": "moreHelpDialogFlow"
         }
       ]
     },
