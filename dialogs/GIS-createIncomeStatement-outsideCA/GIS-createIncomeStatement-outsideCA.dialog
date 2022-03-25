@@ -34,17 +34,14 @@
             "inlineSeparator": ", "
           },
           "outputFormat": "value",
-          "choices": [
-            "Yes",
-            "No"
-          ],
           "property": "dialog.GIS.newIncomeStatement.inCAChoice",
           "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_COcmjQ()}"
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_COcmjQ()}",
+          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -75,7 +72,7 @@
           "$designer": {
             "id": "B5i2TC"
           },
-          "condition": "=dialog.GIS.newIncomeStatement.inCAChoice==\"Yes\"",
+          "condition": "=dialog.GIS.newIncomeStatement.inCAChoice==conversation.answer.confirmation",
           "actions": [
             {
               "$kind": "Microsoft.SetProperty",
@@ -104,17 +101,14 @@
                 "inlineSeparator": ", "
               },
               "outputFormat": "value",
-              "choices": [
-                "Yes",
-                "No"
-              ],
               "property": "dialog.GIS.newIncomeStatement.liveAbroad",
               "style": "suggestedAction",
               "recognizerOptions": {
                 "recognizeOrdinals": true,
                 "recognizeNumbers": true
               },
-              "invalidPrompt": "${ChoiceInput_InvalidPrompt_nnkiVa()}"
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_nnkiVa()}",
+              "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
             },
             {
               "$kind": "Microsoft.IfCondition",
@@ -145,7 +139,7 @@
               "$designer": {
                 "id": "wQpck5"
               },
-              "condition": "=dialog.GIS.newIncomeStatement.liveAbroad==\"Yes\"",
+              "condition": "=dialog.GIS.newIncomeStatement.liveAbroad==conversation.answer.confirmation",
               "actions": [
                 {
                   "$kind": "Microsoft.BeginSkill",
