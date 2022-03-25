@@ -34,6 +34,13 @@
               "condition": "string(dialog.foreach.value.id) != string(turn.Activity.Recipient.id)",
               "actions": [
                 {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "9HeTe8"
+                  },
+                  "activity": "${SendActivity_9HeTe8()}"
+                },
+                {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
                     "id": "mcTabQ"
@@ -55,6 +62,15 @@
                     "id": "CE626B"
                   },
                   "activity": "${SendActivity_CE626B()}"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "k5bnXa"
+                  },
+                  "activity": "${SendActivity_k5bnXa()}"
                 }
               ]
             }
