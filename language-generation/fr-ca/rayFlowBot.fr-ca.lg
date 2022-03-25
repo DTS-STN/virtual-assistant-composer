@@ -9,33 +9,16 @@
 - Hum, j'ai de la difficulté à vous comprendre. Excusez-moi!
 # SendActivity_Greeting_text()
 - Bonjour ${conversation.user.firstName}, Je suis votre assistant virtuel.
-# SendActivity_Dhsjxy()
+# SendActivity_XwK9ld()
 [Activity
     Text = ${SendActivity_Greeting_text()}
 ]
 
-# TextInput_Prompt_Jn2XD6()
+# SendActivity_CE626B_text()
+- Je vois que vos paiements de Supplément de revenu garanti sont arrêtés. Voulez-vous que j'en détermine la cause et vous propose des solutions?
+# SendActivity_CE626B()
 [Activity
-    Text = ${TextInput_Prompt_Jn2XD6_text()}
+    Text = ${SendActivity_CE626B_text()}
+    SuggestedActions = Oui | Non
 ]
 
-# TextInput_Prompt_Jn2XD6_text()
-- french
-# SendActivity_Xb6tpb()
--
-# SendActivity_mm2BZB()
--
-# SendActivity_xvLvAi()
--
-# SendActivity_x18Lqj()
--
-# SendActivity_qqyfUI()
--
-# SendActivity_9HeTe8()
--
-# SendActivity_k5bnXa()
--
-# SendActivity_XwK9ld()
--
-# SendActivity_CE626B()
--
