@@ -1,7 +1,7 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_lo1yRa_text()
-- Did your income (excluding Old Age Security and Guaranteed Income Supplement) change in 2020?
+- Est-ce que votre revenu (excluant votre pension de la Sécurité de la vieillesse et votre Supplément de revenu garanti) a changé en 2020?
 # ChoiceInput_Prompt_lo1yRa()
 [Activity
     Text = ${ChoiceInput_Prompt_lo1yRa_text()}
