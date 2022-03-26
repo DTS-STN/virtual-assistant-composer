@@ -42,17 +42,14 @@
             "inlineSeparator": ", "
           },
           "style": "suggestedAction",
-          "choices": [
-            "Yes",
-            "No"
-          ],
           "property": "dialog.updateEmailChoice",
           "outputFormat": "value",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_7zqrKu()}"
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_7zqrKu()}",
+          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -83,7 +80,7 @@
           "$designer": {
             "id": "AnZQm3"
           },
-          "condition": "=dialog.updateEmailChoice==\"Yes\"",
+          "condition": "=dialog.updateEmailChoice==conversation.answer.confirmation",
           "actions": [
             {
               "$kind": "Microsoft.SetProperty",
@@ -125,7 +122,7 @@
                     "id": "87j9qO"
                   },
                   "property": "conversation.user.email",
-                  "value": "user.userEmail"
+                  "value": "=user.userEmail"
                 }
               ],
               "elseActions": [
