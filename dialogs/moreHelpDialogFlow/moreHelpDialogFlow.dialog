@@ -35,16 +35,13 @@
             "inlineOr": " or ",
             "inlineSeparator": ", "
           },
-          "choices": [
-            "Yes",
-            "No"
-          ],
           "property": "dialog.moreHelpChoice",
           "outputFormat": "index",
           "recognizerOptions": {
             "recognizeOrdinals": true
           },
-          "style": "suggestedAction"
+          "style": "suggestedAction",
+          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
         },
         {
           "$kind": "Microsoft.SwitchCondition",

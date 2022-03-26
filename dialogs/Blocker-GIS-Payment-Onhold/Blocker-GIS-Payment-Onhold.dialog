@@ -292,17 +292,14 @@
                                     "inlineOr": " or ",
                                     "inlineSeparator": ", "
                                   },
-                                  "choices": [
-                                    "Yes",
-                                    "No"
-                                  ],
                                   "property": "dialog.accurateInfoPromptChoice",
                                   "style": "suggestedAction",
                                   "recognizerOptions": {
                                     "recognizeOrdinals": true,
                                     "recognizeNumbers": true
                                   },
-                                  "validations": []
+                                  "validations": [],
+                                  "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
                                 },
                                 {
                                   "$kind": "Microsoft.IfCondition",
@@ -333,7 +330,7 @@
                                   "$designer": {
                                     "id": "xQI2HJ"
                                   },
-                                  "condition": "=dialog.accurateInfoPromptChoice==\"Yes\"",
+                                  "condition": "=dialog.accurateInfoPromptChoice==conversation.answer.confirmation",
                                   "elseActions": [
                                     {
                                       "$kind": "Microsoft.ChoiceInput",
@@ -352,17 +349,14 @@
                                         "inlineOr": " or ",
                                         "inlineSeparator": ", "
                                       },
-                                      "choices": [
-                                        "Yes",
-                                        "No"
-                                      ],
                                       "property": "dialog.GISBlockerRepeatChoice",
                                       "style": "suggestedAction",
                                       "recognizerOptions": {
                                         "recognizeOrdinals": true,
                                         "recognizeNumbers": true
                                       },
-                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_DeQH6L()}"
+                                      "invalidPrompt": "${ChoiceInput_InvalidPrompt_DeQH6L()}",
+                                      "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
                                     },
                                     {
                                       "$kind": "Microsoft.IfCondition",
@@ -393,7 +387,7 @@
                                       "$designer": {
                                         "id": "mv2aDq"
                                       },
-                                      "condition": "=dialog.GISBlockerRepeatChoice==\"Yes\"",
+                                      "condition": "=dialog.GISBlockerRepeatChoice==conversation.answer.confirmation",
                                       "actions": [
                                         {
                                           "$kind": "Microsoft.RepeatDialog",
@@ -426,17 +420,14 @@
                                         "inlineOr": " or ",
                                         "inlineSeparator": ", "
                                       },
-                                      "choices": [
-                                        "Yes",
-                                        "No"
-                                      ],
                                       "property": "dialog.agreedDeclarationPromptChoice",
                                       "style": "suggestedAction",
                                       "recognizerOptions": {
                                         "recognizeOrdinals": true,
                                         "recognizeNumbers": true
                                       },
-                                      "validations": []
+                                      "validations": [],
+                                      "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
                                     },
                                     {
                                       "$kind": "Microsoft.IfCondition",
@@ -467,7 +458,7 @@
                                       "$designer": {
                                         "id": "3ngIo6"
                                       },
-                                      "condition": "=dialog.agreedDeclarationPromptChoice==\"Yes\"",
+                                      "condition": "=dialog.agreedDeclarationPromptChoice==conversation.answer.confirmation",
                                       "actions": [
                                         {
                                           "$kind": "Microsoft.BeginDialog",
@@ -501,17 +492,14 @@
                                             "inlineOr": " or ",
                                             "inlineSeparator": ", "
                                           },
-                                          "choices": [
-                                            "Yes",
-                                            "No"
-                                          ],
                                           "property": "dialog.requestEmailCopyIncomeStatementChoice",
                                           "style": "suggestedAction",
                                           "recognizerOptions": {
                                             "recognizeOrdinals": true,
                                             "recognizeNumbers": true
                                           },
-                                          "invalidPrompt": "${ChoiceInput_InvalidPrompt_ZDDcKR()}"
+                                          "invalidPrompt": "${ChoiceInput_InvalidPrompt_ZDDcKR()}",
+                                          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
                                         },
                                         {
                                           "$kind": "Microsoft.IfCondition",
@@ -542,7 +530,7 @@
                                           "$designer": {
                                             "id": "6LjEf5"
                                           },
-                                          "condition": "=dialog.requestEmailCopyIncomeStatementChoice==\"Yes\"",
+                                          "condition": "=dialog.requestEmailCopyIncomeStatementChoice==conversation.answer.confirmation",
                                           "actions": [
                                             {
                                               "$kind": "Microsoft.ChoiceInput",
@@ -561,17 +549,14 @@
                                                 "inlineOr": " or ",
                                                 "inlineSeparator": ", "
                                               },
-                                              "choices": [
-                                                "Yes",
-                                                "No"
-                                              ],
                                               "property": "dialog.isYourEmailChoice",
                                               "style": "suggestedAction",
                                               "recognizerOptions": {
                                                 "recognizeOrdinals": true,
                                                 "recognizeNumbers": true
                                               },
-                                              "invalidPrompt": "${ChoiceInput_InvalidPrompt_zTVjrE()}"
+                                              "invalidPrompt": "${ChoiceInput_InvalidPrompt_zTVjrE()}",
+                                              "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
                                             },
                                             {
                                               "$kind": "Microsoft.IfCondition",
@@ -602,7 +587,7 @@
                                               "$designer": {
                                                 "id": "m2wtFx"
                                               },
-                                              "condition": "=dialog.isYourEmailChoice==\"Yes\"",
+                                              "condition": "=dialog.isYourEmailChoice==conversation.answer.confirmation",
                                               "actions": [
                                                 {
                                                   "$kind": "Microsoft.SendActivity",
