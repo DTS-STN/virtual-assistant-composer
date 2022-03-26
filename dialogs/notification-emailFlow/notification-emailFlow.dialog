@@ -122,7 +122,7 @@
                     "id": "87j9qO"
                   },
                   "property": "conversation.user.email",
-                  "value": "user.userEmail"
+                  "value": "=user.userEmail"
                 }
               ],
               "elseActions": [
