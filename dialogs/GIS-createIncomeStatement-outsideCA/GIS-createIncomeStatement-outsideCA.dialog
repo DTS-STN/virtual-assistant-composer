@@ -142,17 +142,13 @@
               "condition": "=dialog.GIS.newIncomeStatement.liveAbroad==conversation.answer.confirmation",
               "actions": [
                 {
-                  "$kind": "Microsoft.BeginSkill",
+                  "$kind": "Microsoft.SetProperty",
                   "$designer": {
-                    "id": "zNOUcK"
+                    "id": "dMRS5x",
+                    "comment": "TODO: See if this can be done in what the \"End this dialog\" returns"
                   },
-                  "activityProcessed": true,
-                  "botId": "=settings.MicrosoftAppId",
-                  "skillHostEndpoint": "=settings.skillHostEndpoint",
-                  "connectionName": "=settings.connectionName",
-                  "allowInterruptions": true,
-                  "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
-                  "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
+                  "property": "user.GIS.createStatementIsValid",
+                  "value": false
                 },
                 {
                   "$kind": "Microsoft.BeginDialog",
@@ -160,10 +156,28 @@
                     "id": "HQpaY7"
                   },
                   "activityProcessed": true,
-                  "dialog": "moreHelpDialogFlow"
+                  "dialog": "callback-flow"
                 }
               ],
-              "elseActions": []
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "Q0EbdQ",
+                    "comment": "TODO: See if this can be done in what the \"End this dialog\" returns"
+                  },
+                  "property": "user.GIS.createStatementIsValid",
+                  "value": false
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "zA5mik",
+                    "comment": "Luke note: Now what?"
+                  },
+                  "value": false
+                }
+              ]
             }
           ]
         }

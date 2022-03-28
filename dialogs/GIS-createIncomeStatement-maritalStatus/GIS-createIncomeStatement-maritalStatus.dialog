@@ -142,25 +142,12 @@
                   "value": false
                 },
                 {
-                  "$kind": "Microsoft.BeginSkill",
-                  "$designer": {
-                    "id": "tbsZN9"
-                  },
-                  "activityProcessed": true,
-                  "botId": "=settings.MicrosoftAppId",
-                  "skillHostEndpoint": "=settings.skillHostEndpoint",
-                  "connectionName": "=settings.connectionName",
-                  "allowInterruptions": true,
-                  "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
-                  "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
-                },
-                {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "k4ZqyW"
+                    "id": "WCxli3"
                   },
                   "activityProcessed": true,
-                  "dialog": "moreHelpDialogFlow"
+                  "dialog": "callback-flow"
                 }
               ],
               "elseActions": [

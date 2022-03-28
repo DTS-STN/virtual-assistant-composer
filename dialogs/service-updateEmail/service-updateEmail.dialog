@@ -66,12 +66,72 @@
           ],
           "elseActions": [
             {
-              "$kind": "Microsoft.BeginDialog",
+              "$kind": "Microsoft.ChoiceInput",
               "$designer": {
-                "id": "gORMlk"
+                "id": "CRAgRi"
               },
-              "activityProcessed": true,
-              "dialog": "error-userError-Response"
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 2,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "prompt": "${ChoiceInput_Prompt_CRAgRi()}",
+              "choiceOptions": {
+                "includeNumbers": true,
+                "inlineOrMore": ", or ",
+                "inlineOr": " or ",
+                "inlineSeparator": ", "
+              },
+              "outputFormat": "value",
+              "property": "dialog.goToCallBackChoice",
+              "style": "suggestedAction",
+              "recognizerOptions": {
+                "recognizeOrdinals": true,
+                "recognizeNumbers": true
+              },
+              "invalidPrompt": "${ChoiceInput_InvalidPrompt_CRAgRi()}",
+              "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "3TsqWw"
+              },
+              "condition": "=dialog.goToCallBackChoice",
+              "actions": [],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "v7hgPM"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "error-userError-Response"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "B7gASC"
+                  }
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "fe2yh8"
+              },
+              "condition": "=dialog.goToCallBackChoice==conversation.answer.confirmation",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "8h1gio"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "callback-flow"
+                }
+              ]
             }
           ]
         }
