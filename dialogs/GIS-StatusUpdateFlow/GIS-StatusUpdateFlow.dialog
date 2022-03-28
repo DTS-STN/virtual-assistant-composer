@@ -21,7 +21,7 @@
           "$designer": {
             "id": "I2AK6R"
           },
-          "condition": "=turn.Activity.Locale==\"fr-ca\"",
+          "condition": "=turn.Activity.Locale==\"fr-ca\" || turn.Activity.Locale==\"fr\"",
           "actions": [
             {
               "$kind": "Microsoft.SetProperties",
