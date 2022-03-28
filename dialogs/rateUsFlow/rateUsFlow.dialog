@@ -17,17 +17,33 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.TextInput",
+          "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "dm42Zg"
+            "id": "m3fpFX"
           },
+          "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
-          "alwaysPrompt": true,
+          "alwaysPrompt": false,
           "allowInterruptions": false,
-          "prompt": "${TextInput_Prompt_dm42Zg()}",
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "prompt": "${ChoiceInput_Prompt_m3fpFX()}",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "style": "suggestedAction",
+          "choices": [
+            "1=😡",
+            "2=🙁",
+            "3=😐",
+            "4=🙂",
+            "5=😄"
+          ],
           "property": "user.rateUs"
         },
         {
