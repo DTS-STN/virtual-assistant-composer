@@ -17,14 +17,6 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.BeginDialog",
-          "$designer": {
-            "id": "6NInUY"
-          },
-          "activityProcessed": true,
-          "dialog": "getGISData"
-        },
-        {
           "$kind": "Microsoft.SetProperty",
           "$designer": {
             "id": "CvZpZQ"

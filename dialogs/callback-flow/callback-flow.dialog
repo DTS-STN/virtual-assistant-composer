@@ -1,8 +1,8 @@
 {
   "$kind": "Microsoft.AdaptiveDialog",
   "$designer": {
-    "id": "0Zur5a",
-    "name": "updatePhoneNumberFlow",
+    "id": "EZ0uCs",
+    "name": "callback-flow",
     "comment": ""
   },
   "autoEndDialog": true,
@@ -13,48 +13,48 @@
       "$designer": {
         "name": "BeginDialog",
         "description": "",
-        "id": "X20lzo"
+        "id": "LXNX7A"
       },
       "actions": [
         {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
-            "id": "JqLYeL"
+            "id": "tItX1A"
           },
           "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 2,
           "alwaysPrompt": true,
           "allowInterruptions": false,
-          "prompt": "${ChoiceInput_Prompt_JqLYeL()}",
+          "prompt": "${ChoiceInput_Prompt_tItX1A()}",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
             "inlineOr": " or ",
             "inlineSeparator": ", "
           },
-          "style": "suggestedAction",
-          "property": "dialog.updatePhoneNumberChoice",
           "outputFormat": "value",
+          "property": "dialog.callBackConfirmPhoneChoice",
+          "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_JqLYeL()}",
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_tItX1A()}",
           "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
         },
         {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "21QfsV"
+            "id": "4J2iMf"
           },
-          "condition": "=dialog.updatePhoneNumberChoice",
+          "condition": "=dialog.callBackConfirmPhoneChoice",
           "actions": [],
           "elseActions": [
             {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
-                "id": "kqoFxC"
+                "id": "qIFON0"
               },
               "activityProcessed": true,
               "dialog": "error-userError-Response"
@@ -62,7 +62,7 @@
             {
               "$kind": "Microsoft.EndDialog",
               "$designer": {
-                "id": "Vfanod"
+                "id": "mSQFtS"
               }
             }
           ]
@@ -70,40 +70,32 @@
         {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "lvXKBs"
+            "id": "xT5cli"
           },
-          "condition": "=dialog.updatePhoneNumberChoice==conversation.answer.confirmation",
-          "actions": [
+          "condition": "=dialog.callBackConfirmPhoneChoice==conversation.answer.confirmation",
+          "actions": [],
+          "elseActions": [
             {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
-                "id": "MCJIdE"
+                "id": "0W8iLk"
               },
               "activityProcessed": true,
               "dialog": "service-updatePhoneNumber"
-            },
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "YzTd1M"
-              },
-              "activity": "${SendActivity_YzTd1M()}"
-            }
-          ],
-          "elseActions": [
-            {
-              "$kind": "Microsoft.SendActivity",
-              "$designer": {
-                "id": "LF2xj8"
-              },
-              "activity": "${SendActivity_LF2xj8()}"
             }
           ]
         },
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "vezhYG"
+          },
+          "activity": "${SendActivity_vezhYG()}"
+        },
+        {
           "$kind": "Microsoft.BeginDialog",
           "$designer": {
-            "id": "TiroRo"
+            "id": "xSbKgS"
           },
           "activityProcessed": true,
           "dialog": "moreHelpDialogFlow"
@@ -111,7 +103,7 @@
       ]
     }
   ],
-  "generator": "updatePhoneNumberFlow.lg",
-  "recognizer": "updatePhoneNumberFlow.lu.qna",
-  "id": "updatePhoneNumberFlow"
+  "generator": "callback-flow.lg",
+  "recognizer": "callback-flow.lu.qna",
+  "id": "callback-flow"
 }
