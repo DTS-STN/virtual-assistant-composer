@@ -21,3 +21,10 @@
 
 # ChoiceInput_InvalidPrompt_LdcDJr_text()
 - Hmm, I'm not sure what you meant. How can I help?
+# SendActivity_wltN2W()
+[Activity
+    Text = ${SendActivity_wltN2W_text()}
+]
+
+# SendActivity_wltN2W_text()
+- turn.Activity.Locale: ${turn.Activity.Locale}
