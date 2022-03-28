@@ -17,6 +17,49 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "I2AK6R"
+          },
+          "condition": "=turn.Activity.Locale==\"fr-ca\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "4GD6CO"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.gismenu1",
+                  "value": "Où en est ma demande de Supplément de revenu garanti?"
+                },
+                {
+                  "property": "conversation.answer.gismenu2",
+                  "value": "Puis-je recevoir mon état de revenu pour l'année 2020 par courriel?"
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "ky6KjY"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.gismenu1",
+                  "value": "What is the status of my Guaranteed Income Supplement application?"
+                },
+                {
+                  "property": "conversation.answer.gismenu2",
+                  "value": "Can I receive my 2020 statement of income by email?"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "2fjviM"
@@ -34,17 +77,14 @@
             "inlineSeparator": ", "
           },
           "prompt": "${ChoiceInput_Prompt_2fjviM()}",
-          "choices": [
-            "What is the status of my Guaranteed Income Supplement application?",
-            "Can I receive my 2020 statement of income by email?"
-          ],
           "outputFormat": "index",
           "property": "dialog.GISMenuChoice",
           "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
-          }
+          },
+          "choices": " [conversation.answer.gismenu1, conversation.answer.gismenu2]"
         },
         {
           "$kind": "Microsoft.IfCondition",
