@@ -42,14 +42,6 @@
                   "dialog": "setDataVariables"
                 },
                 {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "4Kax62"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "callback-flow"
-                },
-                {
                   "$kind": "Microsoft.SendActivity",
                   "$designer": {
                     "id": "XwK9ld",

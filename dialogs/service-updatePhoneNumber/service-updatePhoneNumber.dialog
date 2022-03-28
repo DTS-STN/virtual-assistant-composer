@@ -66,17 +66,12 @@
           ],
           "elseActions": [
             {
-              "$kind": "Microsoft.BeginSkill",
+              "$kind": "Microsoft.BeginDialog",
               "$designer": {
-                "id": "CoSyYJ"
+                "id": "RUCsdx"
               },
               "activityProcessed": true,
-              "botId": "=settings.MicrosoftAppId",
-              "skillHostEndpoint": "=settings.skillHostEndpoint",
-              "connectionName": "=settings.connectionName",
-              "allowInterruptions": false,
-              "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
-              "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
+              "dialog": "error-userError-Response"
             }
           ]
         }
