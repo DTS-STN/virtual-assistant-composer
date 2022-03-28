@@ -17,6 +17,49 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "FRdX5Y"
+          },
+          "condition": "=turn.Activity.Locale==\"fr-ca\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "OaW24N"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.personalmenu1",
+                  "value": "Mettre à jour mon numéro de téléphone"
+                },
+                {
+                  "property": "conversation.answer.personalmenu2",
+                  "value": "Mettre à jour mon adresse de courrier électronique"
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "B5saXM"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.personalmenu1",
+                  "value": "Update my phone number"
+                },
+                {
+                  "value": "Update my email address",
+                  "property": "conversation.answer.personalmenu2"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "A4GRgh"
@@ -36,17 +79,13 @@
           },
           "outputFormat": "index",
           "style": "suggestedAction",
-          "choices": [
-            "Update my address",
-            "Update my phone number",
-            "Update my email"
-          ],
           "property": "dialog.subMenu.UpdateContactInfoChoice",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
           },
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_A4GRgh()}"
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_A4GRgh()}",
+          "choices": "[conversation.answer.personalmenu1, conversation.answer.personalmenu2]"
         },
         {
           "$kind": "Microsoft.IfCondition",
@@ -83,25 +122,12 @@
               "value": "0",
               "actions": [
                 {
-                  "$kind": "Microsoft.BeginSkill",
-                  "$designer": {
-                    "id": "tdLTMU"
-                  },
-                  "activityProcessed": true,
-                  "botId": "=settings.MicrosoftAppId",
-                  "skillHostEndpoint": "=settings.skillHostEndpoint",
-                  "connectionName": "=settings.connectionName",
-                  "allowInterruptions": true,
-                  "skillEndpoint": "=settings.skill['addressSkill-1'].endpointUrl",
-                  "skillAppId": "=settings.skill['addressSkill-1'].msAppId"
-                },
-                {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "uCAYNO"
+                    "id": "BdSKUj"
                   },
                   "activityProcessed": true,
-                  "dialog": "moreHelpDialogFlow"
+                  "dialog": "updatePhoneNumberFlow"
                 }
               ]
             },
@@ -111,20 +137,7 @@
                 {
                   "$kind": "Microsoft.BeginDialog",
                   "$designer": {
-                    "id": "K5Zk3v"
-                  },
-                  "activityProcessed": true,
-                  "dialog": "updatePhoneNumberFlow"
-                }
-              ]
-            },
-            {
-              "value": "2",
-              "actions": [
-                {
-                  "$kind": "Microsoft.BeginDialog",
-                  "$designer": {
-                    "id": "umz6M6"
+                    "id": "bnFND9"
                   },
                   "activityProcessed": true,
                   "dialog": "updateEmailFlow"
