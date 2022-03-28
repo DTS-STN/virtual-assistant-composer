@@ -17,6 +17,57 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "BVvBPJ"
+          },
+          "condition": "=turn.Activity.Locale==\"fr-ca\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "Bjm4uG"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.mainmenu1",
+                  "value": "J'ai une question concernant l'arrêt de mes paiements de Supplément de revenu garanti"
+                },
+                {
+                  "property": "conversation.answer.mainmenu2",
+                  "value": "J'ai une question concernant ma pension de la Sécurité de la vieillesse"
+                },
+                {
+                  "property": "conversation.answer.mainmenu3",
+                  "value": "Je veux mettre à jour mes renseignements personnels"
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "h2bzwz"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.mainmenu1",
+                  "value": "I have a question about my Guaranteed Income Supplement (GIS)"
+                },
+                {
+                  "property": "conversation.answer.mainmenu2",
+                  "value": "I have a question about my Old Age Security pension"
+                },
+                {
+                  "property": "conversation.answer.mainmenu3",
+                  "value": "I want to update my personal information"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "LdcDJr"
@@ -33,11 +84,6 @@
             "inlineSeparator": ", "
           },
           "prompt": "${ChoiceInput_Prompt_LdcDJr()}",
-          "choices": [
-            "I have a question about my Guaranteed Income Supplement (GIS)",
-            "I have a question about my Old Age Security pension",
-            "I want to update my personal information"
-          ],
           "outputFormat": "index",
           "property": "dialog.mainMenuChoice",
           "style": "suggestedAction",
@@ -46,7 +92,8 @@
             "recognizeNumbers": true
           },
           "defaultValueResponse": "${ChoiceInput_DefaultValueResponse_LdcDJr()}",
-          "invalidPrompt": "${ChoiceInput_InvalidPrompt_LdcDJr()}"
+          "invalidPrompt": "${ChoiceInput_InvalidPrompt_LdcDJr()}",
+          "choices": "[conversation.answer.mainmenu1, conversation.answer.mainmenu2, conversation.answer.mainmenu3]"
         },
         {
           "$kind": "Microsoft.IfCondition",
