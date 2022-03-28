@@ -17,6 +17,41 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "qmJBdh"
+          },
+          "condition": "=turn.Activity.Locale==\"fr-ca\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "KV81nt"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.oasmenu1",
+                  "value": " Quel est l'état de ma demande de pension?"
+                }
+              ]
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "7P7dxw"
+              },
+              "assignments": [
+                {
+                  "property": "conversation.answer.oasmenu1",
+                  "value": "What's my pension status?"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.ChoiceInput",
           "$designer": {
             "id": "4ExkmF"
@@ -34,16 +69,14 @@
             "inlineSeparator": ", "
           },
           "prompt": "${ChoiceInput_Prompt_4ExkmF()}",
-          "choices": [
-            "What's my pension status?"
-          ],
           "outputFormat": "index",
           "property": "dialog.OASMenuChoice",
           "style": "suggestedAction",
           "recognizerOptions": {
             "recognizeOrdinals": true,
             "recognizeNumbers": true
-          }
+          },
+          "choices": "[conversation.answer.oasmenu1]"
         },
         {
           "$kind": "Microsoft.IfCondition",
