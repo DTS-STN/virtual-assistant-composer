@@ -17,13 +17,6 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "wltN2W"
-          },
-          "activity": "${SendActivity_wltN2W()}"
-        },
-        {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
             "id": "BVvBPJ"

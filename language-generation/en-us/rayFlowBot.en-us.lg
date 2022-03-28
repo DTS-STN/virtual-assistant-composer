@@ -22,10 +22,3 @@
     SuggestedActions = Yes | No
 ]
 
-
-# SendActivity_9NoANk_text()
-- turn.Activity.Locale: ${turn.Activity.Locale}
-# SendActivity_9NoANk()
-[Activity
-    Text = ${SendActivity_9NoANk_text()}
-]
