@@ -440,10 +440,10 @@
                                         {
                                           "$kind": "Microsoft.BeginDialog",
                                           "$designer": {
-                                            "id": "RAtYYL"
+                                            "id": "xSwPtH"
                                           },
                                           "activityProcessed": true,
-                                          "dialog": "error-userError-Response"
+                                          "dialog": "callback-flow"
                                         },
                                         {
                                           "$kind": "Microsoft.EndDialog",
