@@ -101,11 +101,11 @@
               "assignments": [
                 {
                   "property": "conversation.answer.confirmation",
-                  "value": "Yes1"
+                  "value": "Yes"
                 },
                 {
                   "property": "conversation.answer.refusal",
-                  "value": "No1"
+                  "value": "No"
                 }
               ]
             }
