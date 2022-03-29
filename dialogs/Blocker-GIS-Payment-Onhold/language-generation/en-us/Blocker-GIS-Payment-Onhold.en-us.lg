@@ -165,3 +165,18 @@ Because you have declared $${user.gis.new.incomeTotal}, you can expect to receiv
 
 # ChoiceInput_InvalidPrompt_DeQH6L_text()
 - Hmm, I'm not sure what you meant. Do you want to try again?
+# ChoiceInput_Prompt_Dz7NU0_text()
+- ```I'm sorry, but it looks like I can't help you today. If you'd like, I can have a Service Canada representative call you on the phone to help you with your phone number update.
+
+Would you like me to set up a call?```
+# ChoiceInput_Prompt_Dz7NU0()
+[Activity
+    Text = ${ChoiceInput_Prompt_Dz7NU0_text()}
+]
+
+# ChoiceInput_InvalidPrompt_Dz7NU0_text()
+- Hmm, I'm not sure what you meant. Do you want to continue and create a statement of income for you?
+# ChoiceInput_InvalidPrompt_Dz7NU0()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_Dz7NU0_text()}
+]

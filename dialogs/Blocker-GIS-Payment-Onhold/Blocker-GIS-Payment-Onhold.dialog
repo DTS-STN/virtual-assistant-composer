@@ -440,15 +440,15 @@
                                         {
                                           "$kind": "Microsoft.BeginDialog",
                                           "$designer": {
-                                            "id": "xSwPtH"
+                                            "id": "VDn3j4"
                                           },
                                           "activityProcessed": true,
-                                          "dialog": "callback-flow"
+                                          "dialog": "error-userError-Response"
                                         },
                                         {
                                           "$kind": "Microsoft.EndDialog",
                                           "$designer": {
-                                            "id": "wQJ7jg"
+                                            "id": "1CsidA"
                                           }
                                         }
                                       ]
@@ -642,25 +642,94 @@
                                       ],
                                       "elseActions": [
                                         {
-                                          "$kind": "Microsoft.BeginSkill",
+                                          "$kind": "Microsoft.ChoiceInput",
                                           "$designer": {
-                                            "id": "gA8Gwk"
+                                            "id": "Dz7NU0"
                                           },
-                                          "activityProcessed": true,
-                                          "botId": "=settings.MicrosoftAppId",
-                                          "skillHostEndpoint": "=settings.skillHostEndpoint",
-                                          "connectionName": "=settings.connectionName",
-                                          "allowInterruptions": true,
-                                          "skillEndpoint": "=settings.skill['callbackSkill-1'].endpointUrl",
-                                          "skillAppId": "=settings.skill['callbackSkill-1'].msAppId"
+                                          "defaultLocale": "en-us",
+                                          "disabled": false,
+                                          "maxTurnCount": 2,
+                                          "alwaysPrompt": true,
+                                          "allowInterruptions": false,
+                                          "prompt": "${ChoiceInput_Prompt_Dz7NU0()}",
+                                          "choiceOptions": {
+                                            "includeNumbers": true,
+                                            "inlineOrMore": ", or ",
+                                            "inlineOr": " or ",
+                                            "inlineSeparator": ", "
+                                          },
+                                          "outputFormat": "value",
+                                          "property": "dialog.declarationSetupCall",
+                                          "style": "suggestedAction",
+                                          "recognizerOptions": {
+                                            "recognizeOrdinals": true,
+                                            "recognizeNumbers": true
+                                          },
+                                          "invalidPrompt": "${ChoiceInput_InvalidPrompt_Dz7NU0()}",
+                                          "choices": "[conversation.answer.confirmation, conversation.answer.refusal]"
                                         },
                                         {
-                                          "$kind": "Microsoft.BeginDialog",
+                                          "$kind": "Microsoft.IfCondition",
                                           "$designer": {
-                                            "id": "9YwH8b"
+                                            "id": "D2a5PR"
                                           },
-                                          "activityProcessed": true,
-                                          "dialog": "moreHelpDialogFlow"
+                                          "condition": "=dialog.declarationSetupCall",
+                                          "actions": [],
+                                          "elseActions": [
+                                            {
+                                              "$kind": "Microsoft.BeginDialog",
+                                              "$designer": {
+                                                "id": "X8Iah1"
+                                              },
+                                              "activityProcessed": true,
+                                              "dialog": "error-userError-Response"
+                                            },
+                                            {
+                                              "$kind": "Microsoft.EndDialog",
+                                              "$designer": {
+                                                "id": "JEcDMC"
+                                              }
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "$kind": "Microsoft.IfCondition",
+                                          "$designer": {
+                                            "id": "6KqWg8"
+                                          },
+                                          "condition": "=dialog.declarationSetupCall==conversation.answer.confirmation",
+                                          "actions": [
+                                            {
+                                              "$kind": "Microsoft.BeginDialog",
+                                              "$designer": {
+                                                "id": "zk5hy1"
+                                              },
+                                              "activityProcessed": true,
+                                              "dialog": "callback-flow"
+                                            },
+                                            {
+                                              "$kind": "Microsoft.EndDialog",
+                                              "$designer": {
+                                                "id": "A8JZCD"
+                                              }
+                                            }
+                                          ],
+                                          "elseActions": [
+                                            {
+                                              "$kind": "Microsoft.BeginDialog",
+                                              "$designer": {
+                                                "id": "53NHqc"
+                                              },
+                                              "activityProcessed": true,
+                                              "dialog": "moreHelpDialogFlow"
+                                            },
+                                            {
+                                              "$kind": "Microsoft.EndDialog",
+                                              "$designer": {
+                                                "id": "f06Fy8"
+                                              }
+                                            }
+                                          ]
                                         }
                                       ]
                                     }
