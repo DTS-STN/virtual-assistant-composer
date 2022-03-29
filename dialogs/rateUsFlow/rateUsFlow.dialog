@@ -48,7 +48,7 @@
           },
           "prompt": "${ChoiceInput_Prompt_m3fpFX()}",
           "defaultLocale": "en-us",
-          "outputFormat": "value"
+          "outputFormat": "index"
         },
         {
           "$kind": "Microsoft.IfCondition",
