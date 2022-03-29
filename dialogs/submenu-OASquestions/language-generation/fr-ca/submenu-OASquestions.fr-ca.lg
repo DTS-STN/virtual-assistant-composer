@@ -1,14 +1,14 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_4ExkmF_text()
-- Here's what I can answer:
+- Voici les questions auxquelles je peux répondre:
 # ChoiceInput_Prompt_4ExkmF()
 [Activity
     Text = ${ChoiceInput_Prompt_4ExkmF_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_4ExkmF_text()
-- Hmm, I'm not sure what you meant. Here's what I can answer:
+- Hum, je ne comprends pas. Voici les questions auxquelles je peux répondre:
 # ChoiceInput_InvalidPrompt_4ExkmF()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_4ExkmF_text()}
@@ -20,4 +20,4 @@
 ]
 
 # SendActivity_9xKNhE_text()
-- Right now, you're enrolled in Old Age Security and you receive $${conversation.user.oasPayment} every month.
+- En ce moment, vous recevez  ${conversation.user.oasPayment}$ par mois de la pension de la Sécurité de la vieillesse

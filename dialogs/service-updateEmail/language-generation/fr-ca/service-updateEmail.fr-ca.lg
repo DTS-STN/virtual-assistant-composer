@@ -6,34 +6,34 @@
 ]
 
 # TextInput_Prompt_UKCgwj_text()
-- What's your new email address?
+- Quelle est votre nouvelle adresse de courrier électronique?
 # TextInput_InvalidPrompt_UKCgwj()
 [Activity
     Text = ${TextInput_InvalidPrompt_UKCgwj_text()}
 ]
 
 # TextInput_InvalidPrompt_UKCgwj_text()
-- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+- Oups, il semble que l'adresse de courrier électronique que vous avez entrée n'utilise pas le bon format (voici un exemple: nom@courriel.com). Essayez à nouveau.
 # SendActivity_MieHpA()
 [Activity
     Text = ${SendActivity_MieHpA_text()}
 ]
 
 # SendActivity_MieHpA_text()
-- Perfect! I've updated your email address to ${conversation.user.email}.
+- Parfait! J'ai mis à jour votre adresse de courrier électronique ${user.userEmail}.
 # TextInput_UnrecognizedPrompt_UKCgwj()
 -
 # ChoiceInput_Prompt_CRAgRi_text()
-- ```I'm sorry, but it looks like I can't help you today. If you'd like, I can have a Service Canada representative call you on the phone to help you with your email address update. 
+- ```Je suis désolé, je ne crois pas pouvoir vous aider aujourd'hui. Par contre, je peux demander à un représentant de Service Canada de vous téléphoner pour vous aider à mettre à jour votre numéro de téléphone. 
 
-Would you like me to set up a call?```
+Voulez-vous que je planifie un appel?```
 # ChoiceInput_Prompt_CRAgRi()
 [Activity
     Text = ${ChoiceInput_Prompt_CRAgRi_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_CRAgRi_text()
-- Hmm, I'm not sure what you meant. Did you work in 2020?
+- Hum, je ne comprends pas. Avez-vous travaillé en 2020?
 # ChoiceInput_InvalidPrompt_CRAgRi()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_CRAgRi_text()}

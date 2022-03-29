@@ -1,25 +1,25 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_tItX1A_text()
-- Ok, is ${conversation.user.phoneNumber} still the best phone number to reach you?
+- D'accord! Est-ce que le ${conversation.user.phoneNumber} est toujours le meilleur numéro de téléphone pour vous joindre?
 # ChoiceInput_Prompt_tItX1A()
 [Activity
     Text = ${ChoiceInput_Prompt_tItX1A_text()}
 ]
 
 # ChoiceInput_InvalidPrompt_tItX1A_text()
-- Hmm, I'm not sure what you meant. Is ${conversation.user.phoneNumber} still the best phone number to reach you?
+- Hum, je ne comprends pas. Est-ce que le ${conversation.user.phoneNumber} est toujours le meilleur numéro de téléphone pour vous joindre?
 # ChoiceInput_InvalidPrompt_tItX1A()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_tItX1A_text()}
 ]
 
 # SendActivity_vezhYG_text()
-- ```Great! A Service Canada representative will call you within the next 48 hours, between 9 a.m. and 5 p.m. (EST).
+- ```Très bien! Je vais demander à un représentant de Service Canada de vous téléphoner dans les prochaines 48 heures, entre 9h et 17h (HNE).
 
-I'm also going to share a confirmation code with you. When the representative calls you, they'll read this code to prove they aren't a spam caller.
+Je vais également vous donner un code de confirmation. Lorsque le représentant vous appellera, il vous transmettra ce code pour prouver qu'il ne s'agit pas d'un appel frauduleux.
 
-Here is your confirmation code: XXX\-XXXXXXXXXXXXXXX.```
+Voici votre code de confirmation: XXX\-XXXXXXXXXXXXXXX.```
 # SendActivity_vezhYG()
 [Activity
     Text = ${SendActivity_vezhYG_text()}

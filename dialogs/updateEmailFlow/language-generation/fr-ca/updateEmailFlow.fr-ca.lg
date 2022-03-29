@@ -1,7 +1,7 @@
 [import](common.lg)
 
 # ChoiceInput_Prompt_QT3xWJ_text()
-- Ok, great! I can help with that. The email address I have for you is ${conversation.user.email}. Do you want to update to a new email address?
+- D'accord, je peux vous aider. L'adresse de courrier électronique que j'ai es ${conversation.user.email}. Voulez-vous mettre à jour cette adresse?
 # ChoiceInput_Prompt_QT3xWJ()
 [Activity
     Text = ${ChoiceInput_Prompt_QT3xWJ_text()}
@@ -13,16 +13,16 @@
 ]
 
 # ChoiceInput_InvalidPrompt_QT3xWJ_text()
-- Hmm, I'm not sure what you meant. Do you want to update this email address?
+- Hum, je ne comprends pas. Voulez-vous mettre à jour cette adresse de courrier électronique?
 # SendActivity_3gEHiU()
 [Activity
     Text = ${SendActivity_3gEHiU_text()}
 ]
 
 # SendActivity_3gEHiU_text()
-- Ok, no problem!
+- D'accord, pas de problème.
 # SendActivity_BbU3yV_text()
-- Ok, you're all set then!
+- Pour le moment, vous avez tout ce qu'il vous faut!
 # SendActivity_BbU3yV()
 [Activity
     Text = ${SendActivity_BbU3yV_text()}
