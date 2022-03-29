@@ -69,6 +69,18 @@
           ]
         },
         {
+          "$kind": "Microsoft.SetProperties",
+          "$designer": {
+            "id": "XeQ0Vc"
+          },
+          "assignments": [
+            {
+              "property": "user.gis.blockCompleted",
+              "value": false
+            }
+          ]
+        },
+        {
           "$kind": "Microsoft.IfCondition",
           "$designer": {
             "id": "UqqMnj"
