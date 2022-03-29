@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_FtSRpb_text()
+- Y a-t-il autre chose que je puisse faire pour vous aujourd'hui?
+# ChoiceInput_Prompt_FtSRpb()
+[Activity
+    Text = ${ChoiceInput_Prompt_FtSRpb_text()}
+]
+
+# ChoiceInput_InvalidPrompt_FtSRpb()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_FtSRpb_text()}
+]
+
+# ChoiceInput_InvalidPrompt_FtSRpb_text()
+- Hum, je ne comprends pas. Y a-t-il autre chose que je puisse faire pour vous aujourd'hui?
