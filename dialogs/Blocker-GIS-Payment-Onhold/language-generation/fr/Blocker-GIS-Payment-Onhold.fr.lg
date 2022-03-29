@@ -1,0 +1,172 @@
+[import](common.lg)
+
+# SendActivity_hQSfbz_text()
+- D'accord, voyons voir. Chaque année, nous examinons votre déclaration de revenus pour déterminer le montant de votre Supplément de revenu garanti. Nous n'avons pas votre déclaration de revenus pour 2020. C'est pourquoi vos paiements ont été suspendus.
+# SendActivity_hQSfbz()
+[Activity
+    Text = ${SendActivity_hQSfbz_text()}
+]
+
+# ChoiceInput_Prompt_69Dedt_text()
+- Si vous le voulez, je peux vous créer un état de revenu. Ça nous permettra de recommencer à vous verser vos paiements. Vous n'aurez pas besoin de d'abord faire votre déclaration d'impôts. Ce sera plus rapide.
+
+- Voulez-vous que je crée un état de revenu?
+# ChoiceInput_Prompt_69Dedt()
+[Activity
+    Text = ${ChoiceInput_Prompt_69Dedt_text()}
+]
+
+# ChoiceInput_Prompt_hPpLlR()
+[Activity
+    Text = ${ChoiceInput_Prompt_hPpLlR_text()}
+]
+
+# ChoiceInput_Prompt_hPpLlR_text()
+- Est-ce que ces renseignements sont exacts?
+# ChoiceInput_Prompt_DeQH6L_text()
+- Pas de problème. Voulez-vous essayer à nouveau?
+# ChoiceInput_Prompt_DeQH6L()
+[Activity
+    Text = ${ChoiceInput_Prompt_DeQH6L_text()}
+]
+
+# ChoiceInput_Prompt_KsCK9C_text()
+- Je vois que vos paiements de Supplément de revenu garanti sont arrêtés. Voulez-vous que j'en détermine la cause et vous propose des solutions?
+# ChoiceInput_Prompt_KsCK9C()
+[Activity
+    Text = ${ChoiceInput_Prompt_KsCK9C_text()}
+]
+
+# SendActivity_bseUqk_text()
+- D'accord, voyons voir. Chaque année, nous examinons votre déclaration de revenus pour déterminer le montant de votre Supplément de revenu garanti. Nous n'avons pas votre déclaration de revenus pour 2020. C'est pourquoi vos paiements ont été suspendus.
+# SendActivity_bseUqk()
+[Activity
+    Text = ${SendActivity_bseUqk_text()}
+]
+
+# ChoiceInput_Prompt_Q8yLjp_text()
+- ```Si vous le voulez, je peux vous créer un état de revenu. Ça nous permettra de recommencer à vous verser vos paiements. Vous n'aurez pas besoin de d'abord faire votre déclaration d'impôts. Ce sera plus rapide.
+
+Voulez-vous que je crée un état de revenu?```
+# ChoiceInput_Prompt_Q8yLjp()
+[Activity
+    Text = ${ChoiceInput_Prompt_Q8yLjp_text()}
+]
+
+# ChoiceInput_InvalidPrompt_KsCK9C()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_KsCK9C_text()}
+]
+
+# ChoiceInput_InvalidPrompt_KsCK9C_text()
+- Hum, je ne comprends pas. Voulez-vous que je vous aide à déterminer la cause de l'arrêt de vos paiements de Supplément de revenu?
+# ChoiceInput_InvalidPrompt_hPpLlR()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_hPpLlR_text()}
+]
+
+# ChoiceInput_InvalidPrompt_hPpLlR_text()
+- Hum, je ne comprends pas. Est-ce que ces renseignements sont exacts?
+# ChoiceInput_InvalidPrompt_Q8yLjp()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_Q8yLjp_text()}
+]
+
+# ChoiceInput_InvalidPrompt_Q8yLjp_text()
+- Hum, je ne comprends pas. Voulez-vous continuer et créer un état de revenu?
+# SendActivity_1v2LqC()
+[Activity
+    Text = ${SendActivity_1v2LqC_text()}
+]
+
+# SendActivity_1v2LqC_text()
+- Voici votre état de revenu pour l'année 2020
+# ChoiceInput_Prompt_MjYK79_text()
+- ```Êtes-vous d'accord avec cet énoncé?
+
+Je désire soumettre ma déclaration de revenus afin de recevoir le Supplément de revenu garanti.
+
+Je déclare que, au meilleur de ma connaissance, les renseignements fournis dans cette demande sont vrais et complets.
+
+Je comprends que mes renseignements personnels sont régis par la Loi sur la protection des renseignements personnels et qu'ils peuvent être divulgués dans les cas prévus dans la Loi de la sécurité des la vieillesse.```
+# ChoiceInput_Prompt_MjYK79()
+[Activity
+    Text = ${ChoiceInput_Prompt_MjYK79_text()}
+]
+
+# ChoiceInput_InvalidPrompt_MjYK79_text()
+- Hum, je ne comprends pas. Êtes-vous d'accord avec cet énoncé?
+# ChoiceInput_InvalidPrompt_MjYK79()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_MjYK79_text()}
+]
+
+# SendActivity_380OWy_text()
+- Parfait! J'ai complété votre état de revenu.
+# SendActivity_380OWy()
+[Activity
+    Text = ${SendActivity_380OWy_text()}
+]
+
+# ChoiceInput_Prompt_ZDDcKR_text()
+- Aimeriez-vous recevoir votre état de revenu pour l'année 2020 par courriel?
+# ChoiceInput_Prompt_ZDDcKR()
+[Activity
+    Text = ${ChoiceInput_Prompt_ZDDcKR_text()}
+]
+
+# ChoiceInput_InvalidPrompt_ZDDcKR_text()
+- Hum, je ne comprends pas. Voulez-vous recevoir votre état de revenu par courriel?
+# ChoiceInput_InvalidPrompt_ZDDcKR()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_ZDDcKR_text()}
+]
+
+# ChoiceInput_Prompt_zTVjrE_text()
+- L'adresse de courrier électronique que j'ai est ${conversation.user.email}. Est-ce que cette adresse est correcte?
+# ChoiceInput_Prompt_zTVjrE()
+[Activity
+    Text = ${ChoiceInput_Prompt_zTVjrE_text()}
+]
+
+# ChoiceInput_InvalidPrompt_zTVjrE_text()
+- Hum, je ne comprends pas. Est-ce la bonne adresse de courrier électonique?
+# ChoiceInput_InvalidPrompt_zTVjrE()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_zTVjrE_text()}
+]
+
+# SendActivity_bReOq5_text()
+- D'accord, je vous envoie votre état de revenu par courriel ào ${conversation.user.email}.
+# SendActivity_bReOq5()
+[Activity
+    Text = ${SendActivity_bReOq5_text()}
+]
+
+# SendActivity_sirgtx_text()
+- D'accord, je vous envoie votre état de revenu par courriel à ${conversation.user.email}.
+# SendActivity_sirgtx()
+[Activity
+    Text = ${SendActivity_sirgtx_text()}
+]
+
+# SendActivity_KqcDoB_text()
+- ```Le traitement d'un état de revenu prend environ 14 jours. Si vous êtes admissible, vos paiements de Supplément de revenu garanti devraient recommencer d'ici 2 semaines. Ils incluront les paiements que vous avez manqués, si tel est le cas.
+
+Comme vous avez déclaré $${user.gis.new.incomeTotal}, vous recevrez probablement le paiement maximal, soit $${user.gis.GISPayment}```
+# SendActivity_KqcDoB()
+[Activity
+    Text = ${SendActivity_KqcDoB_text()}
+]
+
+# SendActivity_eURum9_text()
+- Si vous êtes en situation d'urgence, telle qu'une expulsion ou que vous n'avez pas assez d'argent pour vous nourrir ou vous déplacer, veuillez appeler le ${conversation.urgentSupportNumber} pour une aide immédiate.
+# SendActivity_eURum9()
+[Activity
+    Text = ${SendActivity_eURum9_text()}
+]
+
+# SendActivity_BmCWXX()
+-
+# ChoiceInput_InvalidPrompt_DeQH6L()
+-

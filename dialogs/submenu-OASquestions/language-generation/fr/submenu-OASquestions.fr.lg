@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_4ExkmF_text()
+- Voici les questions auxquelles je peux répondre:
+# ChoiceInput_Prompt_4ExkmF()
+[Activity
+    Text = ${ChoiceInput_Prompt_4ExkmF_text()}
+]
+
+# ChoiceInput_InvalidPrompt_4ExkmF_text()
+- Hum, je ne comprends pas. Voici les questions auxquelles je peux répondre:
+# ChoiceInput_InvalidPrompt_4ExkmF()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_4ExkmF_text()}
+]
+
+# SendActivity_9xKNhE()
+[Activity
+    Text = ${SendActivity_9xKNhE_text()}
+]
+
+# SendActivity_9xKNhE_text()
+- En ce moment, vous recevez  ${conversation.user.oasPayment}$ par mois de la pension de la Sécurité de la vieillesse
