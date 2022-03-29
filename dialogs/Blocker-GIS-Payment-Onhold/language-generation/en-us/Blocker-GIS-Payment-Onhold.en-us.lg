@@ -175,7 +175,7 @@ Would you like me to set up a call?```
 ]
 
 # ChoiceInput_InvalidPrompt_Dz7NU0_text()
-- Hmm, I'm not sure what you meant. Do you want to continue and create a statement of income for you?
+- Hmm, I'm not sure what you meant. Would you like me to set up a call for you?
 # ChoiceInput_InvalidPrompt_Dz7NU0()
 [Activity
     Text = ${ChoiceInput_InvalidPrompt_Dz7NU0_text()}
