@@ -36,11 +36,29 @@
           ]
         },
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "aaWSMM"
+            "id": "NDWtEe"
           },
-          "activity": "${SendActivity_aaWSMM()}"
+          "condition": "=turn.Activity.Locale==\"fr-ca\" || turn.Activity.Locale==\"fr\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "cGkvEI"
+              },
+              "activity": "${SendActivity_cGkvEI()}"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "sRTNuE"
+              },
+              "activity": "${SendActivity_sRTNuE()}"
+            }
+          ]
         },
         {
           "$kind": "Microsoft.BeginDialog",
