@@ -21,15 +21,12 @@
           "$designer": {
             "id": "m3fpFX"
           },
-          "defaultLocale": "en-us",
           "disabled": false,
           "maxTurnCount": 3,
           "alwaysPrompt": false,
           "allowInterruptions": false,
           "unrecognizedPrompt": "",
           "invalidPrompt": "",
-          "defaultValueResponse": "",
-          "prompt": "${ChoiceInput_Prompt_m3fpFX()}",
           "choiceOptions": {
             "includeNumbers": true,
             "inlineOrMore": ", or ",
@@ -44,7 +41,11 @@
             "4=🙂",
             "5=😄"
           ],
-          "property": "user.rateUs"
+          "property": "user.rateUs",
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "prompt": "${ChoiceInput_Prompt_m3fpFX()}"
         },
         {
           "$kind": "Microsoft.IfCondition",
