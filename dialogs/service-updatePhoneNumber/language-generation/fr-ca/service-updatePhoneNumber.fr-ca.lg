@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# TextInput_Prompt_SDugR7_text()
+- What's your new phone number?
+# TextInput_Prompt_SDugR7()
+[Activity
+    Text = ${TextInput_Prompt_SDugR7_text()}
+]
+
+# TextInput_InvalidPrompt_SDugR7()
+[Activity
+    Text = ${TextInput_InvalidPrompt_SDugR7_text()}
+]
+
+# TextInput_InvalidPrompt_SDugR7_text()
+- Oops, looks like the phone number you entered isn't formatted correctly (here's an example: 123-456-7890). Let's try again.
+# SendActivity_h2kzWz()
+[Activity
+    Text = ${SendActivity_h2kzWz_text()}
+]
+
+# SendActivity_h2kzWz_text()
+- Perfect! I have updated your phone number to ${conversation.user.phoneNumber}.

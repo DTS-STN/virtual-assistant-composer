@@ -1,0 +1,40 @@
+[import](common.lg)
+
+# TextInput_Prompt_UKCgwj()
+[Activity
+    Text = ${TextInput_Prompt_UKCgwj_text()}
+]
+
+# TextInput_Prompt_UKCgwj_text()
+- What's your new email address?
+# TextInput_InvalidPrompt_UKCgwj()
+[Activity
+    Text = ${TextInput_InvalidPrompt_UKCgwj_text()}
+]
+
+# TextInput_InvalidPrompt_UKCgwj_text()
+- Oops, looks like the email address you entered isn’t formatted correctly (here’s an example: name@mail.com). Let’s try again.
+# SendActivity_MieHpA()
+[Activity
+    Text = ${SendActivity_MieHpA_text()}
+]
+
+# SendActivity_MieHpA_text()
+- Perfect! I've updated your email address to ${conversation.user.email}.
+# TextInput_UnrecognizedPrompt_UKCgwj()
+-
+# ChoiceInput_Prompt_CRAgRi_text()
+- ```I'm sorry, but it looks like I can't help you today. If you'd like, I can have a Service Canada representative call you on the phone to help you with your email address update. 
+
+Would you like me to set up a call?```
+# ChoiceInput_Prompt_CRAgRi()
+[Activity
+    Text = ${ChoiceInput_Prompt_CRAgRi_text()}
+]
+
+# ChoiceInput_InvalidPrompt_CRAgRi_text()
+- Hmm, I'm not sure what you meant. Did you work in 2020?
+# ChoiceInput_InvalidPrompt_CRAgRi()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_CRAgRi_text()}
+]

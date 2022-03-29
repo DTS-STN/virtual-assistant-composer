@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_4ExkmF_text()
+- Here's what I can answer:
+# ChoiceInput_Prompt_4ExkmF()
+[Activity
+    Text = ${ChoiceInput_Prompt_4ExkmF_text()}
+]
+
+# ChoiceInput_InvalidPrompt_4ExkmF_text()
+- Hmm, I'm not sure what you meant. Here's what I can answer:
+# ChoiceInput_InvalidPrompt_4ExkmF()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_4ExkmF_text()}
+]
+
+# SendActivity_9xKNhE()
+[Activity
+    Text = ${SendActivity_9xKNhE_text()}
+]
+
+# SendActivity_9xKNhE_text()
+- Right now, you're enrolled in Old Age Security and you receive $${conversation.user.oasPayment} every month.

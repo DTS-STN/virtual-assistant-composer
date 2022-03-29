@@ -1,0 +1,26 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_tItX1A_text()
+- Ok, is ${conversation.user.phoneNumber} still the best phone number to reach you?
+# ChoiceInput_Prompt_tItX1A()
+[Activity
+    Text = ${ChoiceInput_Prompt_tItX1A_text()}
+]
+
+# ChoiceInput_InvalidPrompt_tItX1A_text()
+- Hmm, I'm not sure what you meant. Is ${conversation.user.phoneNumber} still the best phone number to reach you?
+# ChoiceInput_InvalidPrompt_tItX1A()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_tItX1A_text()}
+]
+
+# SendActivity_vezhYG_text()
+- ```Great! A Service Canada representative will call you within the next 48 hours, between 9 a.m. and 5 p.m. (EST).
+
+I'm also going to share a confirmation code with you. When the representative calls you, they'll read this code to prove they aren't a spam caller.
+
+Here is your confirmation code: XXX\-XXXXXXXXXXXXXXX.```
+# SendActivity_vezhYG()
+[Activity
+    Text = ${SendActivity_vezhYG_text()}
+]
