@@ -70,7 +70,8 @@
 ]
 
 # NumberInput_Prompt_U1uZzy_text()
-- How much investment income did you earn in 2020 (including interest, capital gains, and dividends)?
+- Combien avez-vous tirer des revenus de vos investissements en 2020 (incluant les intérêts, les gains en capital et les dividendes)? 
+
 # NumberInput_InvalidPrompt_U1uZzy()
 [Activity
     Text = ${NumberInput_InvalidPrompt_U1uZzy_text()}
