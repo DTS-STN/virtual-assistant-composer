@@ -15,3 +15,7 @@
 # TextInput_Prompt_dm42Zg_text()
 - ```Avant de partir, puis-je vous demander d'évaluer le service que vous avez reçu aujourd'hui?
 1=😡, 2=🙁, 3=😐, 4=🙂, 5=😄```
+# ChoiceInput_Prompt_m3fpFX()
+[Activity
+    Text = Avant de partir, puis-je vous demander d'évaluer le service que vous avez reçu aujourd'hui?
+]
