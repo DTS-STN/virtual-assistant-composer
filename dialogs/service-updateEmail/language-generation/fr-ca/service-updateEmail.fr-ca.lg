@@ -23,3 +23,7 @@
 - Parfait! J'ai mis à jour votre adresse de courrier électronique ${user.userEmail}.
 # TextInput_UnrecognizedPrompt_UKCgwj()
 -
+# ChoiceInput_Prompt_CRAgRi()
+-
+# ChoiceInput_InvalidPrompt_CRAgRi()
+-
