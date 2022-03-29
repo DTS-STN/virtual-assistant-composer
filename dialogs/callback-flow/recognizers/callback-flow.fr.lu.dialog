@@ -1,8 +1,0 @@
-{
-  "$kind": "Microsoft.LuisRecognizer",
-  "id": "LUIS_callback-flow",
-  "applicationId": "=settings.luis.callback_flow_fr_lu.appId",
-  "version": "=settings.luis.callback_flow_fr_lu.version",
-  "endpoint": "=settings.luis.endpoint",
-  "endpointKey": "=settings.luis.endpointKey"
-}

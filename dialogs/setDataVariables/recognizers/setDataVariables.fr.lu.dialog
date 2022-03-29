@@ -1,8 +1,0 @@
-{
-  "$kind": "Microsoft.LuisRecognizer",
-  "id": "LUIS_setDataVariables",
-  "applicationId": "=settings.luis.setDataVariables_fr_lu.appId",
-  "version": "=settings.luis.setDataVariables_fr_lu.version",
-  "endpoint": "=settings.luis.endpoint",
-  "endpointKey": "=settings.luis.endpointKey"
-}
