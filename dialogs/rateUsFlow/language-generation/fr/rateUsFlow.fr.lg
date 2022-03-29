@@ -1,0 +1,11 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_m3fpFX()
+[Activity
+    Text = ${ChoiceInput_Prompt_m3fpFX_text()}
+]
+
+# ChoiceInput_Prompt_m3fpFX_text()
+- Avant de partir, puis-je vous demander d'évaluer le service que vous avez reçu aujourd'hui?
+# SendActivity_vtZIvE()
+- Merci pour votre temps!

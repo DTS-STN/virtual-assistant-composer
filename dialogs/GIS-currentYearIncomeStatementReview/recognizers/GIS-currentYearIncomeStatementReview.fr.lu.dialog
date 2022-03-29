@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_GIS-currentYearIncomeStatementReview",
+  "applicationId": "=settings.luis.GIS_currentYearIncomeStatementReview_fr_lu.appId",
+  "version": "=settings.luis.GIS_currentYearIncomeStatementReview_fr_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

@@ -1,0 +1,40 @@
+[import](common.lg)
+
+# TextInput_Prompt_UKCgwj()
+[Activity
+    Text = ${TextInput_Prompt_UKCgwj_text()}
+]
+
+# TextInput_Prompt_UKCgwj_text()
+- Quelle est votre nouvelle adresse de courrier électronique?
+# TextInput_InvalidPrompt_UKCgwj()
+[Activity
+    Text = ${TextInput_InvalidPrompt_UKCgwj_text()}
+]
+
+# TextInput_InvalidPrompt_UKCgwj_text()
+- Oups, il semble que l'adresse de courrier électronique que vous avez entrée n'utilise pas le bon format (voici un exemple: nom@courriel.com). Essayez à nouveau.
+# SendActivity_MieHpA()
+[Activity
+    Text = ${SendActivity_MieHpA_text()}
+]
+
+# SendActivity_MieHpA_text()
+- Parfait! J'ai mis à jour votre adresse de courrier électronique ${user.userEmail}.
+# TextInput_UnrecognizedPrompt_UKCgwj()
+-
+# ChoiceInput_Prompt_CRAgRi_text()
+- ```Je suis désolé, je ne crois pas pouvoir vous aider aujourd'hui. Par contre, je peux demander à un représentant de Service Canada de vous téléphoner pour vous aider à mettre à jour votre numéro de téléphone. 
+
+Voulez-vous que je planifie un appel?```
+# ChoiceInput_Prompt_CRAgRi()
+[Activity
+    Text = ${ChoiceInput_Prompt_CRAgRi_text()}
+]
+
+# ChoiceInput_InvalidPrompt_CRAgRi_text()
+- Hum, je ne comprends pas. Avez-vous travaillé en 2020?
+# ChoiceInput_InvalidPrompt_CRAgRi()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_CRAgRi_text()}
+]

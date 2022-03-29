@@ -1,0 +1,8 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_oqSiRn_text()
+- Quelles informations personnelles souhaitez-vous mettre à jour?
+# ChoiceInput_Prompt_oqSiRn()
+[Activity
+    Text = ${ChoiceInput_Prompt_oqSiRn_text()}
+]

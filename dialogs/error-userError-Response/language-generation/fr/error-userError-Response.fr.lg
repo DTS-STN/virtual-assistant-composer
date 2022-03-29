@@ -1,0 +1,63 @@
+[import](common.lg)
+
+# SendActivity_cGkvEI_attachment_GH91ek()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Hum, j'ai de la difficulté à vous comprendre. Excusez-moi! Veuillez consulter notre centre d'aide ou nous appeler au ${conversation.helpDeskNumber}",
+            "wrap": true,
+            "horizontalAlignment": "Center"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Accéder au centre d'aide",
+            "url": "https://www.canada.ca/en/employment-social-development/corporate/contact/oas.html",
+            "style": "positive"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+# SendActivity_cGkvEI()
+[Activity
+    Attachments = ${json(SendActivity_cGkvEI_attachment_GH91ek())}
+]
+
+# SendActivity_sRTNuE_attachment_GH91ek()
+> To learn more Adaptive Cards format, read the documentation at
+> https://docs.microsoft.com/en-us/adaptive-cards/getting-started/bots
+- ```
+{
+    "type": "AdaptiveCard",
+    "body": [
+        {
+            "type": "TextBlock",
+            "text": "Hmm, I'm having a hard time understanding you. Sorry about that! Please visit our Help Centre or give us a call at [XXX-XXX-XXXX].",
+            "wrap": true,
+            "horizontalAlignment": "Center"
+        }
+    ],
+    "actions": [
+        {
+            "type": "Action.OpenUrl",
+            "title": "Go To Help Centre",
+            "url": "https://www.canada.ca/en/employment-social-development/corporate/contact/oas.html",
+            "style": "positive"
+        }
+    ],
+    "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+    "version": "1.2"
+}
+```
+# SendActivity_sRTNuE()
+[Activity
+    Attachments = ${json(SendActivity_sRTNuE_attachment_GH91ek())}
+]

@@ -1,0 +1,37 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_2fjviM_text()
+- Voici les questions auxquelles je peux répondre:
+# ChoiceInput_Prompt_2fjviM()
+[Activity
+    Text = ${ChoiceInput_Prompt_2fjviM_text()}
+]
+
+# ChoiceInput_InvalidPrompt_2fjviM_text()
+- Hum, je ne comprends pas. Voici les questions auxquelles je peux répondre:
+# ChoiceInput_InvalidPrompt_2fjviM()
+[Activity
+    Text = ${ChoiceInput_InvalidPrompt_2fjviM_text()}
+]
+
+# SendActivity_hytfFh_text()
+- Nous avons reçu votre état de revenu pour l'année 2020, il est en traitement.
+# SendActivity_hytfFh()
+[Activity
+    Text = ${SendActivity_hytfFh_text()}
+]
+
+# SendActivity_DGjroI_text()
+- Si vous êtes admissible, vos paiements de Supplément de revenu garanti devraient recommencer d'ici le [XYZ]. Ils incluront les paiements que vous avez manqués, si tel est le cas. vous recevrez probablement le paiement maximal, soit $${user.gis.GISPayment}.
+# SendActivity_DGjroI()
+[Activity
+    Text = ${SendActivity_DGjroI_text()}
+]
+
+# SendActivity_J4sIll_text()
+- Si vous êtes en situation d'urgence, telle qu'une expulsion ou que vous n'avez pas assez d'argent pour vous nourrir ou vous déplacer, veuillez appeler le ${conversation.urgentSupportNumber} pour une aide immédiate.
+# SendActivity_J4sIll()
+[Activity
+    Text = ${SendActivity_J4sIll_text()}
+]
+
