@@ -22,7 +22,7 @@
 ]
 
 # SendActivity_DGjroI_text()
-- Si vous êtes admissible, vos paiements de Supplément de revenu garanti devraient recommencer d'ici le [XYZ]. Ils incluront les paiements que vous avez manqués, si tel est le cas. vous recevrez probablement le paiement maximal, soit $${user.gis.GISPayment}.
+- Si vous êtes admissible, vos paiements de Supplément de revenu garanti devraient recommencer d'ici le [XYZ]. Ils incluront les paiements que vous avez manqués, si tel est le cas. vous recevrez probablement $${user.gis.GISPayment}.
 # SendActivity_DGjroI()
 [Activity
     Text = ${SendActivity_DGjroI_text()}
