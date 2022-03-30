@@ -25,3 +25,7 @@ From Package Manager in Composer you can find useful packages to help add additi
 ### Extend your bot with code
 
 You can also extend your bot with code - simply open up the folder that was generated for you in the location you chose during the creation process with your favorite IDE (like Visual Studio). You can do things like create custom actions that can be used during dialog flows, create custom middleware to pre-process (or post-process) messages, and more. See [our documentation](https://aka.ms/bf-extend-with-code) for more information.
+
+## How to restart the ray bot
+
+As we deploy the application to k8s cluster, there is no way to just restart the pod. so we need to kill the pod and the k8s will automatically create a new pod. this require you have k8s access. the another way is just go to teamcity(our CI/CD pipeline server) to run a build. this will trigger a new deployment and create a new pod in k8s.
