@@ -55,4 +55,4 @@
 ]
 
 # SendActivity_7mA3Mn_text()
-- Ok, I'll email your statment to ${conversation.user.email}.
+- D'accord, je vous envoie votre état de revenu par courriel à  ${conversation.user.email}.
