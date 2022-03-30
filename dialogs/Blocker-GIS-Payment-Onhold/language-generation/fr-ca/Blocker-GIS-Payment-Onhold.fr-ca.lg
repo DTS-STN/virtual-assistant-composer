@@ -139,7 +139,7 @@ Je comprends que mes renseignements personnels sont régis par la Loi sur la pro
 # SendActivity_KqcDoB_text()
 - ```Le traitement d'un état de revenu prend environ 14 jours. Si vous êtes admissible, vos paiements de Supplément de revenu garanti devraient recommencer d'ici 2 semaines. Ils incluront les paiements que vous avez manqués, si tel est le cas.
 
-Comme vous avez déclaré $${user.gis.new.incomeTotal}, vous recevrez probablement le paiement maximal, soit $${user.gis.GISPayment}```
+Comme vous avez déclaré $${user.gis.new.incomeTotal}, vous recevrez probablement $${user.gis.GISPayment}```
 # SendActivity_KqcDoB()
 [Activity
     Text = ${SendActivity_KqcDoB_text()}
